@@ -1,0 +1,1464 @@
+[2019-12-09 16:34:22] [marian] Marian v1.8.21 bb779a6 2019-09-13 21:53:29 +0100
+[2019-12-09 16:34:22] [marian] Running on utopias.scream.lab as process 127830 with command line:
+[2019-12-09 16:34:22] [marian] /dgx/active/jgwinnup/wmt19/dev/marian-utopias/bin/marian --model /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz --type transformer --devices 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 --sync-sgd --train-sets /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/corpus.spm.en /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/corpus.spm.de --guided-alignment /dgx/active/jgwinnup/wmt19/moses/en-de/pb-wmt19-escjsp2/model/aligned.2.grow-diag-final-and --guided-alignment-cost mse --guided-alignment-weight 0.1 --max-length 100 --vocabs /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/vocab.ende.yml /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/vocab.ende.yml --dim-vocabs 46000 46000 --mini-batch-fit --mini-batch 1000 --maxi-batch 1000 --workspace 30000 --valid-freq 5000 --save-freq 5000 --disp-freq 500 --valid-metrics ce-mean-words perplexity translation --valid-sets /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/newstest2016.spm.en /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/newstest2016.spm.de --valid-script-path /dgx/active/jgwinnup/wmt19/marian/scripts/validate-newstest2016-ende-sppre.sh --valid-translation-output /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/valid.bpe.de.output --quiet-translation --beam-size 12 --normalize 1 --cost-type ce-mean-words --log /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/train.log --valid-log /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/valid.log --valid-mini-batch 32 --valid-max-length 100 --overwrite --keep-best --early-stopping 20 --after-epochs 1000 --dim-rnn 2048 --enc-depth 6 --dec-depth 6 --tied-embeddings-all --transformer-dropout 0.1 --label-smoothing 0.1 --learn-rate 0.0003 --lr-warmup 16000 --lr-decay-inv-sqrt 16000 --lr-report --optimizer-params 0.9 0.98 1e-09 --clip-norm 5 --exponential-smoothing --shuffle-in-ram
+[2019-12-09 16:34:22] [config] after-batches: 0
+[2019-12-09 16:34:22] [config] after-epochs: 1000
+[2019-12-09 16:34:22] [config] all-caps-every: 0
+[2019-12-09 16:34:22] [config] allow-unk: false
+[2019-12-09 16:34:22] [config] authors: false
+[2019-12-09 16:34:22] [config] beam-size: 12
+[2019-12-09 16:34:22] [config] bert-class-symbol: "[CLS]"
+[2019-12-09 16:34:22] [config] bert-mask-symbol: "[MASK]"
+[2019-12-09 16:34:22] [config] bert-masking-fraction: 0.15
+[2019-12-09 16:34:22] [config] bert-sep-symbol: "[SEP]"
+[2019-12-09 16:34:22] [config] bert-train-type-embeddings: true
+[2019-12-09 16:34:22] [config] bert-type-vocab-size: 2
+[2019-12-09 16:34:22] [config] char-conv-filters-num:
+[2019-12-09 16:34:22] [config]   - 200
+[2019-12-09 16:34:22] [config]   - 200
+[2019-12-09 16:34:22] [config]   - 250
+[2019-12-09 16:34:22] [config]   - 250
+[2019-12-09 16:34:22] [config]   - 300
+[2019-12-09 16:34:22] [config]   - 300
+[2019-12-09 16:34:22] [config]   - 300
+[2019-12-09 16:34:22] [config]   - 300
+[2019-12-09 16:34:22] [config] char-conv-filters-widths:
+[2019-12-09 16:34:22] [config]   - 1
+[2019-12-09 16:34:22] [config]   - 2
+[2019-12-09 16:34:22] [config]   - 3
+[2019-12-09 16:34:22] [config]   - 4
+[2019-12-09 16:34:22] [config]   - 5
+[2019-12-09 16:34:22] [config]   - 6
+[2019-12-09 16:34:22] [config]   - 7
+[2019-12-09 16:34:22] [config]   - 8
+[2019-12-09 16:34:22] [config] char-highway: 4
+[2019-12-09 16:34:22] [config] char-stride: 5
+[2019-12-09 16:34:22] [config] cite: false
+[2019-12-09 16:34:22] [config] clip-gemm: 0
+[2019-12-09 16:34:22] [config] clip-norm: 5
+[2019-12-09 16:34:22] [config] cost-scaling:
+[2019-12-09 16:34:22] [config]   []
+[2019-12-09 16:34:22] [config] cost-type: ce-mean-words
+[2019-12-09 16:34:22] [config] cpu-threads: 0
+[2019-12-09 16:34:22] [config] data-weighting: ""
+[2019-12-09 16:34:22] [config] data-weighting-type: sentence
+[2019-12-09 16:34:22] [config] dec-cell: gru
+[2019-12-09 16:34:22] [config] dec-cell-base-depth: 2
+[2019-12-09 16:34:22] [config] dec-cell-high-depth: 1
+[2019-12-09 16:34:22] [config] dec-depth: 6
+[2019-12-09 16:34:22] [config] devices:
+[2019-12-09 16:34:22] [config]   - 0
+[2019-12-09 16:34:22] [config]   - 1
+[2019-12-09 16:34:22] [config]   - 2
+[2019-12-09 16:34:22] [config]   - 3
+[2019-12-09 16:34:22] [config]   - 4
+[2019-12-09 16:34:22] [config]   - 5
+[2019-12-09 16:34:22] [config]   - 6
+[2019-12-09 16:34:22] [config]   - 7
+[2019-12-09 16:34:22] [config]   - 8
+[2019-12-09 16:34:22] [config]   - 9
+[2019-12-09 16:34:22] [config]   - 10
+[2019-12-09 16:34:22] [config]   - 11
+[2019-12-09 16:34:22] [config]   - 12
+[2019-12-09 16:34:22] [config]   - 13
+[2019-12-09 16:34:22] [config]   - 14
+[2019-12-09 16:34:22] [config]   - 15
+[2019-12-09 16:34:22] [config] dim-emb: 512
+[2019-12-09 16:34:22] [config] dim-rnn: 2048
+[2019-12-09 16:34:22] [config] dim-vocabs:
+[2019-12-09 16:34:22] [config]   - 46000
+[2019-12-09 16:34:22] [config]   - 46000
+[2019-12-09 16:34:22] [config] disp-first: 0
+[2019-12-09 16:34:22] [config] disp-freq: 500
+[2019-12-09 16:34:22] [config] disp-label-counts: false
+[2019-12-09 16:34:22] [config] dropout-rnn: 0
+[2019-12-09 16:34:22] [config] dropout-src: 0
+[2019-12-09 16:34:22] [config] dropout-trg: 0
+[2019-12-09 16:34:22] [config] dump-config: ""
+[2019-12-09 16:34:22] [config] early-stopping: 20
+[2019-12-09 16:34:22] [config] embedding-fix-src: false
+[2019-12-09 16:34:22] [config] embedding-fix-trg: false
+[2019-12-09 16:34:22] [config] embedding-normalization: false
+[2019-12-09 16:34:22] [config] embedding-vectors:
+[2019-12-09 16:34:22] [config]   []
+[2019-12-09 16:34:22] [config] enc-cell: gru
+[2019-12-09 16:34:22] [config] enc-cell-depth: 1
+[2019-12-09 16:34:22] [config] enc-depth: 6
+[2019-12-09 16:34:22] [config] enc-type: bidirectional
+[2019-12-09 16:34:22] [config] english-title-case-every: 0
+[2019-12-09 16:34:22] [config] exponential-smoothing: 0.0001
+[2019-12-09 16:34:22] [config] factor-weight: 1
+[2019-12-09 16:34:22] [config] grad-dropping-momentum: 0
+[2019-12-09 16:34:22] [config] grad-dropping-rate: 0
+[2019-12-09 16:34:22] [config] grad-dropping-warmup: 100
+[2019-12-09 16:34:22] [config] gradient-checkpointing: false
+[2019-12-09 16:34:22] [config] guided-alignment: /dgx/active/jgwinnup/wmt19/moses/en-de/pb-wmt19-escjsp2/model/aligned.2.grow-diag-final-and
+[2019-12-09 16:34:22] [config] guided-alignment-cost: mse
+[2019-12-09 16:34:22] [config] guided-alignment-weight: 0.1
+[2019-12-09 16:34:22] [config] ignore-model-config: false
+[2019-12-09 16:34:22] [config] input-types:
+[2019-12-09 16:34:22] [config]   []
+[2019-12-09 16:34:22] [config] interpolate-env-vars: false
+[2019-12-09 16:34:22] [config] keep-best: true
+[2019-12-09 16:34:22] [config] label-smoothing: 0.1
+[2019-12-09 16:34:22] [config] layer-normalization: false
+[2019-12-09 16:34:22] [config] learn-rate: 0.0003
+[2019-12-09 16:34:22] [config] lemma-dim-emb: 0
+[2019-12-09 16:34:22] [config] log: /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/train.log
+[2019-12-09 16:34:22] [config] log-level: info
+[2019-12-09 16:34:22] [config] log-time-zone: ""
+[2019-12-09 16:34:22] [config] lr-decay: 0
+[2019-12-09 16:34:22] [config] lr-decay-freq: 50000
+[2019-12-09 16:34:22] [config] lr-decay-inv-sqrt:
+[2019-12-09 16:34:22] [config]   - 16000
+[2019-12-09 16:34:22] [config] lr-decay-repeat-warmup: false
+[2019-12-09 16:34:22] [config] lr-decay-reset-optimizer: false
+[2019-12-09 16:34:22] [config] lr-decay-start:
+[2019-12-09 16:34:22] [config]   - 10
+[2019-12-09 16:34:22] [config]   - 1
+[2019-12-09 16:34:22] [config] lr-decay-strategy: epoch+stalled
+[2019-12-09 16:34:22] [config] lr-report: true
+[2019-12-09 16:34:22] [config] lr-warmup: 16000
+[2019-12-09 16:34:22] [config] lr-warmup-at-reload: false
+[2019-12-09 16:34:22] [config] lr-warmup-cycle: false
+[2019-12-09 16:34:22] [config] lr-warmup-start-rate: 0
+[2019-12-09 16:34:22] [config] max-length: 100
+[2019-12-09 16:34:22] [config] max-length-crop: false
+[2019-12-09 16:34:22] [config] max-length-factor: 3
+[2019-12-09 16:34:22] [config] maxi-batch: 1000
+[2019-12-09 16:34:22] [config] maxi-batch-sort: trg
+[2019-12-09 16:34:22] [config] mini-batch: 1000
+[2019-12-09 16:34:22] [config] mini-batch-fit: true
+[2019-12-09 16:34:22] [config] mini-batch-fit-step: 10
+[2019-12-09 16:34:22] [config] mini-batch-overstuff: 1
+[2019-12-09 16:34:22] [config] mini-batch-track-lr: false
+[2019-12-09 16:34:22] [config] mini-batch-understuff: 1
+[2019-12-09 16:34:22] [config] mini-batch-warmup: 0
+[2019-12-09 16:34:22] [config] mini-batch-words: 0
+[2019-12-09 16:34:22] [config] mini-batch-words-ref: 0
+[2019-12-09 16:34:22] [config] model: /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-09 16:34:22] [config] multi-loss-type: sum
+[2019-12-09 16:34:22] [config] multi-node: false
+[2019-12-09 16:34:22] [config] multi-node-overlap: true
+[2019-12-09 16:34:22] [config] n-best: false
+[2019-12-09 16:34:22] [config] no-nccl: false
+[2019-12-09 16:34:22] [config] no-reload: false
+[2019-12-09 16:34:22] [config] no-restore-corpus: false
+[2019-12-09 16:34:22] [config] normalize: 1
+[2019-12-09 16:34:22] [config] normalize-gradient: false
+[2019-12-09 16:34:22] [config] num-devices: 0
+[2019-12-09 16:34:22] [config] optimizer: adam
+[2019-12-09 16:34:22] [config] optimizer-delay: 1
+[2019-12-09 16:34:22] [config] optimizer-params:
+[2019-12-09 16:34:22] [config]   - 0.9
+[2019-12-09 16:34:22] [config]   - 0.98
+[2019-12-09 16:34:22] [config]   - 1e-09
+[2019-12-09 16:34:22] [config] overwrite: true
+[2019-12-09 16:34:22] [config] precision:
+[2019-12-09 16:34:22] [config]   - float32
+[2019-12-09 16:34:22] [config]   - float32
+[2019-12-09 16:34:22] [config]   - float32
+[2019-12-09 16:34:22] [config] pretrained-model: ""
+[2019-12-09 16:34:22] [config] quiet: false
+[2019-12-09 16:34:22] [config] quiet-translation: true
+[2019-12-09 16:34:22] [config] relative-paths: false
+[2019-12-09 16:34:22] [config] right-left: false
+[2019-12-09 16:34:22] [config] save-freq: 5000
+[2019-12-09 16:34:22] [config] seed: 0
+[2019-12-09 16:34:22] [config] sentencepiece-alphas:
+[2019-12-09 16:34:22] [config]   []
+[2019-12-09 16:34:22] [config] sentencepiece-max-lines: 10000000
+[2019-12-09 16:34:22] [config] sentencepiece-options: ""
+[2019-12-09 16:34:22] [config] shuffle: data
+[2019-12-09 16:34:22] [config] shuffle-in-ram: true
+[2019-12-09 16:34:22] [config] skip: false
+[2019-12-09 16:34:22] [config] sqlite: ""
+[2019-12-09 16:34:22] [config] sqlite-drop: false
+[2019-12-09 16:34:22] [config] sync-sgd: true
+[2019-12-09 16:34:22] [config] tempdir: /tmp
+[2019-12-09 16:34:22] [config] tied-embeddings: false
+[2019-12-09 16:34:22] [config] tied-embeddings-all: true
+[2019-12-09 16:34:22] [config] tied-embeddings-src: false
+[2019-12-09 16:34:22] [config] train-sets:
+[2019-12-09 16:34:22] [config]   - /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/corpus.spm.en
+[2019-12-09 16:34:22] [config]   - /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/corpus.spm.de
+[2019-12-09 16:34:22] [config] transformer-aan-activation: swish
+[2019-12-09 16:34:22] [config] transformer-aan-depth: 2
+[2019-12-09 16:34:22] [config] transformer-aan-nogate: false
+[2019-12-09 16:34:22] [config] transformer-decoder-autoreg: self-attention
+[2019-12-09 16:34:22] [config] transformer-depth-scaling: false
+[2019-12-09 16:34:22] [config] transformer-dim-aan: 2048
+[2019-12-09 16:34:22] [config] transformer-dim-ffn: 2048
+[2019-12-09 16:34:22] [config] transformer-dropout: 0.1
+[2019-12-09 16:34:22] [config] transformer-dropout-attention: 0
+[2019-12-09 16:34:22] [config] transformer-dropout-ffn: 0
+[2019-12-09 16:34:22] [config] transformer-ffn-activation: swish
+[2019-12-09 16:34:22] [config] transformer-ffn-depth: 2
+[2019-12-09 16:34:22] [config] transformer-guided-alignment-layer: last
+[2019-12-09 16:34:22] [config] transformer-heads: 8
+[2019-12-09 16:34:22] [config] transformer-no-projection: false
+[2019-12-09 16:34:22] [config] transformer-postprocess: dan
+[2019-12-09 16:34:22] [config] transformer-postprocess-emb: d
+[2019-12-09 16:34:22] [config] transformer-preprocess: ""
+[2019-12-09 16:34:22] [config] transformer-tied-layers:
+[2019-12-09 16:34:22] [config]   []
+[2019-12-09 16:34:22] [config] transformer-train-position-embeddings: false
+[2019-12-09 16:34:22] [config] type: transformer
+[2019-12-09 16:34:22] [config] ulr: false
+[2019-12-09 16:34:22] [config] ulr-dim-emb: 0
+[2019-12-09 16:34:22] [config] ulr-dropout: 0
+[2019-12-09 16:34:22] [config] ulr-keys-vectors: ""
+[2019-12-09 16:34:22] [config] ulr-query-vectors: ""
+[2019-12-09 16:34:22] [config] ulr-softmax-temperature: 1
+[2019-12-09 16:34:22] [config] ulr-trainable-transformation: false
+[2019-12-09 16:34:22] [config] valid-freq: 5000
+[2019-12-09 16:34:22] [config] valid-log: /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/valid.log
+[2019-12-09 16:34:22] [config] valid-max-length: 100
+[2019-12-09 16:34:22] [config] valid-metrics:
+[2019-12-09 16:34:22] [config]   - ce-mean-words
+[2019-12-09 16:34:22] [config]   - perplexity
+[2019-12-09 16:34:22] [config]   - translation
+[2019-12-09 16:34:22] [config] valid-mini-batch: 32
+[2019-12-09 16:34:22] [config] valid-script-args:
+[2019-12-09 16:34:22] [config]   []
+[2019-12-09 16:34:22] [config] valid-script-path: /dgx/active/jgwinnup/wmt19/marian/scripts/validate-newstest2016-ende-sppre.sh
+[2019-12-09 16:34:22] [config] valid-sets:
+[2019-12-09 16:34:22] [config]   - /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/newstest2016.spm.en
+[2019-12-09 16:34:22] [config]   - /dgx/active/jgwinnup/wmt19/data/de-en-wmt19-escjsp2/newstest2016.spm.de
+[2019-12-09 16:34:22] [config] valid-translation-output: /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/valid.bpe.de.output
+[2019-12-09 16:34:22] [config] vocabs:
+[2019-12-09 16:34:22] [config]   - /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/vocab.ende.yml
+[2019-12-09 16:34:22] [config]   - /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/vocab.ende.yml
+[2019-12-09 16:34:22] [config] word-penalty: 0
+[2019-12-09 16:34:22] [config] workspace: 30000
+[2019-12-09 16:34:22] [config] Model is being created with Marian v1.8.21 bb779a6 2019-09-13 21:53:29 +0100
+[2019-12-09 16:34:22] Using synchronous training
+[2019-12-09 16:34:22] [data] Loading vocabulary from JSON/Yaml file /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/vocab.ende.yml
+[2019-12-09 16:34:22] [data] Setting vocabulary size for input 0 to 46000
+[2019-12-09 16:34:22] [data] Loading vocabulary from JSON/Yaml file /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/vocab.ende.yml
+[2019-12-09 16:34:23] [data] Setting vocabulary size for input 1 to 46000
+[2019-12-09 16:34:23] [data] Using word alignments from file /dgx/active/jgwinnup/wmt19/moses/en-de/pb-wmt19-escjsp2/model/aligned.2.grow-diag-final-and
+[2019-12-09 16:34:23] Compiled without MPI support. Falling back to FakeMPIWrapper
+[2019-12-09 16:34:23] [batching] Collecting statistics for batch fitting with step size 10
+[2019-12-09 16:34:26] [memory] Extending reserved space to 30080 MB (device gpu0)
+[2019-12-09 16:34:28] [memory] Extending reserved space to 30080 MB (device gpu1)
+[2019-12-09 16:34:31] [memory] Extending reserved space to 30080 MB (device gpu2)
+[2019-12-09 16:34:33] [memory] Extending reserved space to 30080 MB (device gpu3)
+[2019-12-09 16:34:35] [memory] Extending reserved space to 30080 MB (device gpu4)
+[2019-12-09 16:34:37] [memory] Extending reserved space to 30080 MB (device gpu5)
+[2019-12-09 16:34:39] [memory] Extending reserved space to 30080 MB (device gpu6)
+[2019-12-09 16:34:41] [memory] Extending reserved space to 30080 MB (device gpu7)
+[2019-12-09 16:34:43] [memory] Extending reserved space to 30080 MB (device gpu8)
+[2019-12-09 16:34:45] [memory] Extending reserved space to 30080 MB (device gpu9)
+[2019-12-09 16:34:47] [memory] Extending reserved space to 30080 MB (device gpu10)
+[2019-12-09 16:34:50] [memory] Extending reserved space to 30080 MB (device gpu11)
+[2019-12-09 16:34:53] [memory] Extending reserved space to 30080 MB (device gpu12)
+[2019-12-09 16:34:56] [memory] Extending reserved space to 30080 MB (device gpu13)
+[2019-12-09 16:34:58] [memory] Extending reserved space to 30080 MB (device gpu14)
+[2019-12-09 16:35:02] [memory] Extending reserved space to 30080 MB (device gpu15)
+[2019-12-09 16:35:02] [comm] Using NCCL 2.4.2 for GPU communication
+[2019-12-09 16:35:16] [comm] NCCLCommunicator constructed successfully.
+[2019-12-09 16:35:16] [training] Using 16 GPUs
+[2019-12-09 16:35:16] [logits] applyLossFunction() for 1 factors
+[2019-12-09 16:35:16] [memory] Reserving 258 MB, device gpu0
+[2019-12-09 16:35:16] [gpu] 16-bit TensorCores enabled for float32 matrix operations
+[2019-12-09 16:35:16] [memory] Reserving 258 MB, device gpu0
+[2019-12-09 16:35:45] [batching] Done. Typical MB size is 383696 target words
+[2019-12-09 16:35:47] [memory] Extending reserved space to 30080 MB (device gpu0)
+[2019-12-09 16:35:47] [memory] Extending reserved space to 30080 MB (device gpu1)
+[2019-12-09 16:35:47] [memory] Extending reserved space to 30080 MB (device gpu2)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu3)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu4)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu5)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu6)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu7)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu8)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu9)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu10)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu11)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu12)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu13)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu14)
+[2019-12-09 16:35:48] [memory] Extending reserved space to 30080 MB (device gpu15)
+[2019-12-09 16:35:48] [comm] Using NCCL 2.4.2 for GPU communication
+[2019-12-09 16:36:03] [comm] NCCLCommunicator constructed successfully.
+[2019-12-09 16:36:03] [training] Using 16 GPUs
+[2019-12-09 16:36:03] Training started
+[2019-12-09 16:36:03] [data] Shuffling data
+[2019-12-09 16:36:37] [data] Done reading 15720785 sentences
+[2019-12-09 16:36:39] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 16:38:48] [training] Batches are processed as 1 process(es) x 16 devices/process
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu7
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu8
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu11
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu2
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu0
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu13
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu5
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu3
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu1
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu15
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu6
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu14
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu12
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu4
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu10
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu9
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu7
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu11
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu0
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu5
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu13
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu3
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu8
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu2
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu15
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu6
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu1
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu14
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu12
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu10
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu4
+[2019-12-09 16:38:48] [memory] Reserving 258 MB, device gpu9
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu0
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu1
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu2
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu3
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu4
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu5
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu6
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu7
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu8
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu9
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu10
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu11
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu12
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu13
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu14
+[2019-12-09 16:38:49] [memory] Reserving 16 MB, device gpu15
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu10
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu0
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu2
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu14
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu7
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu1
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu6
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu5
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu13
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu12
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu4
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu8
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu11
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu15
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu9
+[2019-12-09 16:38:49] [memory] Reserving 32 MB, device gpu3
+[2019-12-09 16:46:04] Ep. 1 : Up. 500 : Sen. 3,246,262 : Cost 1.77839923 : Time 701.10s : 167786.66 words/s : L.r. 9.3750e-06
+[2019-12-09 16:52:51] Ep. 1 : Up. 1000 : Sen. 6,458,337 : Cost 1.48179173 : Time 407.53s : 287962.70 words/s : L.r. 1.8750e-05
+[2019-12-09 16:59:31] Ep. 1 : Up. 1500 : Sen. 9,701,679 : Cost 1.40040016 : Time 399.94s : 294283.86 words/s : L.r. 2.8125e-05
+[2019-12-09 17:06:19] Ep. 1 : Up. 2000 : Sen. 12,929,777 : Cost 1.32242656 : Time 408.26s : 288383.97 words/s : L.r. 3.7500e-05
+[2019-12-09 17:11:39] Seen 15446171 samples
+[2019-12-09 17:11:39] Starting epoch 2
+[2019-12-09 17:11:39] [data] Shuffling data
+[2019-12-09 17:11:41] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 17:14:20] Ep. 2 : Up. 2500 : Sen. 564,483 : Cost 1.23754251 : Time 480.22s : 234753.50 words/s : L.r. 4.6875e-05
+[2019-12-09 17:21:39] Ep. 2 : Up. 3000 : Sen. 3,829,046 : Cost 1.19136882 : Time 438.86s : 268857.79 words/s : L.r. 5.6250e-05
+[2019-12-09 17:29:18] Ep. 2 : Up. 3500 : Sen. 7,046,142 : Cost 1.11249924 : Time 459.76s : 255369.28 words/s : L.r. 6.5625e-05
+[2019-12-09 17:36:05] Ep. 2 : Up. 4000 : Sen. 10,281,071 : Cost 1.04600811 : Time 406.85s : 289404.42 words/s : L.r. 7.5000e-05
+[2019-12-09 17:42:43] Ep. 2 : Up. 4500 : Sen. 13,537,112 : Cost 0.98580199 : Time 397.42s : 296597.03 words/s : L.r. 8.4375e-05
+[2019-12-09 17:46:21] Seen 15446171 samples
+[2019-12-09 17:46:21] Starting epoch 3
+[2019-12-09 17:46:21] [data] Shuffling data
+[2019-12-09 17:46:23] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 17:50:42] Ep. 3 : Up. 5000 : Sen. 1,163,209 : Cost 0.91801870 : Time 478.97s : 233596.83 words/s : L.r. 9.3750e-05
+[2019-12-09 17:50:42] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-09 17:50:47] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-09 17:50:51] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-09 17:50:59] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-09 17:51:00] [valid] Ep. 3 : Up. 5000 : ce-mean-words : 4.01663 : new best
+[2019-12-09 17:51:01] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-09 17:51:02] [valid] Ep. 3 : Up. 5000 : perplexity : 55.5137 : new best
+[2019-12-09 17:51:11] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-09 17:51:13] [valid] Ep. 3 : Up. 5000 : translation : 8.65 : new best
+[2019-12-09 17:57:54] Ep. 3 : Up. 5500 : Sen. 4,374,504 : Cost 0.84549546 : Time 432.88s : 271279.29 words/s : L.r. 1.0313e-04
+[2019-12-09 18:05:13] Ep. 3 : Up. 6000 : Sen. 7,605,833 : Cost 0.79926330 : Time 439.04s : 269150.37 words/s : L.r. 1.1250e-04
+[2019-12-09 18:12:26] Ep. 3 : Up. 6500 : Sen. 10,835,059 : Cost 0.75736129 : Time 432.81s : 270095.13 words/s : L.r. 1.2188e-04
+[2019-12-09 18:21:12] Ep. 3 : Up. 7000 : Sen. 14,080,089 : Cost 0.72364104 : Time 526.22s : 223741.38 words/s : L.r. 1.3125e-04
+[2019-12-09 18:23:36] Seen 15446171 samples
+[2019-12-09 18:23:36] Starting epoch 4
+[2019-12-09 18:23:36] [data] Shuffling data
+[2019-12-09 18:23:40] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 18:29:14] Ep. 4 : Up. 7500 : Sen. 1,711,511 : Cost 0.69131052 : Time 481.78s : 233664.40 words/s : L.r. 1.4063e-04
+[2019-12-09 18:36:04] Ep. 4 : Up. 8000 : Sen. 4,961,987 : Cost 0.68015712 : Time 409.61s : 287814.67 words/s : L.r. 1.5000e-04
+[2019-12-09 18:43:45] Ep. 4 : Up. 8500 : Sen. 8,198,891 : Cost 0.65957201 : Time 461.03s : 255335.32 words/s : L.r. 1.5938e-04
+[2019-12-09 18:50:38] Ep. 4 : Up. 9000 : Sen. 11,482,749 : Cost 0.65401131 : Time 412.87s : 285974.40 words/s : L.r. 1.6875e-04
+[2019-12-09 18:57:26] Ep. 4 : Up. 9500 : Sen. 14,709,762 : Cost 0.62814909 : Time 407.93s : 290225.34 words/s : L.r. 1.7813e-04
+[2019-12-09 18:58:45] Seen 15446171 samples
+[2019-12-09 18:58:45] Starting epoch 5
+[2019-12-09 18:58:45] [data] Shuffling data
+[2019-12-09 18:58:46] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 19:05:10] Ep. 5 : Up. 10000 : Sen. 2,339,763 : Cost 0.62015516 : Time 464.05s : 242070.47 words/s : L.r. 1.8750e-04
+[2019-12-09 19:05:10] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-09 19:05:14] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-09 19:05:18] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-09 19:05:27] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-09 19:05:28] [valid] Ep. 5 : Up. 10000 : ce-mean-words : 2.14069 : new best
+[2019-12-09 19:05:29] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-09 19:05:30] [valid] Ep. 5 : Up. 10000 : perplexity : 8.50526 : new best
+[2019-12-09 19:05:37] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-09 19:05:38] [valid] Ep. 5 : Up. 10000 : translation : 25.77 : new best
+[2019-12-09 19:12:03] Ep. 5 : Up. 10500 : Sen. 5,539,332 : Cost 0.61139983 : Time 413.34s : 284268.93 words/s : L.r. 1.9688e-04
+[2019-12-09 19:19:35] Ep. 5 : Up. 11000 : Sen. 8,803,542 : Cost 0.60742134 : Time 451.56s : 262103.85 words/s : L.r. 2.0625e-04
+[2019-12-09 19:27:36] Ep. 5 : Up. 11500 : Sen. 12,037,040 : Cost 0.59937847 : Time 481.72s : 243961.16 words/s : L.r. 2.1563e-04
+[2019-12-09 19:33:49] Ep. 5 : Up. 12000 : Sen. 15,204,037 : Cost 0.59196383 : Time 372.57s : 309996.21 words/s : L.r. 2.2500e-04
+[2019-12-09 19:34:17] Seen 15446171 samples
+[2019-12-09 19:34:17] Starting epoch 6
+[2019-12-09 19:34:17] [data] Shuffling data
+[2019-12-09 19:34:18] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 19:43:58] Ep. 6 : Up. 12500 : Sen. 2,926,196 : Cost 0.58401322 : Time 609.42s : 188874.59 words/s : L.r. 2.3438e-04
+[2019-12-09 19:53:49] Ep. 6 : Up. 13000 : Sen. 6,172,479 : Cost 0.58297521 : Time 590.69s : 198049.85 words/s : L.r. 2.4375e-04
+[2019-12-09 20:02:40] Ep. 6 : Up. 13500 : Sen. 9,400,288 : Cost 0.57202011 : Time 531.30s : 223401.42 words/s : L.r. 2.5313e-04
+[2019-12-09 20:11:07] Ep. 6 : Up. 14000 : Sen. 12,638,551 : Cost 0.57415724 : Time 506.87s : 230899.88 words/s : L.r. 2.6250e-04
+[2019-12-09 20:18:12] Seen 15446171 samples
+[2019-12-09 20:18:12] Starting epoch 7
+[2019-12-09 20:18:12] [data] Shuffling data
+[2019-12-09 20:18:17] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 20:21:13] Ep. 7 : Up. 14500 : Sen. 264,139 : Cost 0.56183487 : Time 605.72s : 185823.99 words/s : L.r. 2.7188e-04
+[2019-12-09 20:29:38] Ep. 7 : Up. 15000 : Sen. 3,465,748 : Cost 0.56175762 : Time 505.44s : 230465.47 words/s : L.r. 2.8125e-04
+[2019-12-09 20:29:38] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-09 20:29:45] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-09 20:29:52] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-09 20:30:08] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-09 20:30:10] [valid] Ep. 7 : Up. 15000 : ce-mean-words : 1.75476 : new best
+[2019-12-09 20:30:11] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-09 20:30:14] [valid] Ep. 7 : Up. 15000 : perplexity : 5.78204 : new best
+[2019-12-09 20:30:20] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-09 20:30:22] [valid] Ep. 7 : Up. 15000 : translation : 29.36 : new best
+[2019-12-09 20:38:41] Ep. 7 : Up. 15500 : Sen. 6,756,350 : Cost 0.56047285 : Time 542.94s : 220345.00 words/s : L.r. 2.9063e-04
+[2019-12-09 20:47:40] Ep. 7 : Up. 16000 : Sen. 9,968,486 : Cost 0.55625653 : Time 538.72s : 217071.65 words/s : L.r. 3.0000e-04
+[2019-12-09 20:57:35] Ep. 7 : Up. 16500 : Sen. 13,200,600 : Cost 0.54997641 : Time 595.35s : 198527.13 words/s : L.r. 2.9542e-04
+[2019-12-09 21:02:19] Seen 15446171 samples
+[2019-12-09 21:02:19] Starting epoch 8
+[2019-12-09 21:02:19] [data] Shuffling data
+[2019-12-09 21:02:21] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 21:05:49] Ep. 8 : Up. 17000 : Sen. 844,734 : Cost 0.55136853 : Time 493.41s : 226584.17 words/s : L.r. 2.9104e-04
+[2019-12-09 21:13:56] Ep. 8 : Up. 17500 : Sen. 4,070,877 : Cost 0.54724079 : Time 487.14s : 240970.01 words/s : L.r. 2.8685e-04
+[2019-12-09 21:19:16] Ep. 8 : Up. 18000 : Sen. 7,314,929 : Cost 0.54450142 : Time 319.73s : 368770.20 words/s : L.r. 2.8284e-04
+[2019-12-09 21:24:31] Ep. 8 : Up. 18500 : Sen. 10,526,720 : Cost 0.53921598 : Time 315.41s : 373886.64 words/s : L.r. 2.7899e-04
+[2019-12-09 21:29:52] Ep. 8 : Up. 19000 : Sen. 13,775,502 : Cost 0.54350990 : Time 320.50s : 365155.26 words/s : L.r. 2.7530e-04
+[2019-12-09 21:32:32] Seen 15446171 samples
+[2019-12-09 21:32:32] Starting epoch 9
+[2019-12-09 21:32:32] [data] Shuffling data
+[2019-12-09 21:32:33] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 21:36:08] Ep. 9 : Up. 19500 : Sen. 1,381,250 : Cost 0.53106767 : Time 376.80s : 296332.77 words/s : L.r. 2.7175e-04
+[2019-12-09 21:41:25] Ep. 9 : Up. 20000 : Sen. 4,649,263 : Cost 0.53490496 : Time 316.54s : 374622.66 words/s : L.r. 2.6833e-04
+[2019-12-09 21:41:25] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-09 21:41:29] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-09 21:41:32] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-09 21:41:40] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-09 21:41:42] [valid] Ep. 9 : Up. 20000 : ce-mean-words : 1.59833 : new best
+[2019-12-09 21:41:42] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-09 21:41:44] [valid] Ep. 9 : Up. 20000 : perplexity : 4.94478 : new best
+[2019-12-09 21:41:49] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-09 21:41:50] [valid] Ep. 9 : Up. 20000 : translation : 31 : new best
+[2019-12-09 21:46:49] Ep. 9 : Up. 20500 : Sen. 7,900,399 : Cost 0.53727859 : Time 323.88s : 362959.41 words/s : L.r. 2.6504e-04
+[2019-12-09 21:52:25] Ep. 9 : Up. 21000 : Sen. 11,112,366 : Cost 0.52851576 : Time 335.86s : 350737.35 words/s : L.r. 2.6186e-04
+[2019-12-09 21:57:42] Ep. 9 : Up. 21500 : Sen. 14,371,775 : Cost 0.53101552 : Time 316.99s : 375837.16 words/s : L.r. 2.5880e-04
+[2019-12-09 21:59:14] Seen 15446171 samples
+[2019-12-09 21:59:14] Starting epoch 10
+[2019-12-09 21:59:14] [data] Shuffling data
+[2019-12-09 21:59:15] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 22:03:40] Ep. 10 : Up. 22000 : Sen. 1,979,425 : Cost 0.52609771 : Time 358.18s : 309575.19 words/s : L.r. 2.5584e-04
+[2019-12-09 22:09:02] Ep. 10 : Up. 22500 : Sen. 5,199,461 : Cost 0.52603644 : Time 321.95s : 367234.41 words/s : L.r. 2.5298e-04
+[2019-12-09 22:14:15] Ep. 10 : Up. 23000 : Sen. 8,478,135 : Cost 0.52893567 : Time 312.89s : 375250.25 words/s : L.r. 2.5022e-04
+[2019-12-09 22:19:19] Ep. 10 : Up. 23500 : Sen. 11,658,810 : Cost 0.52226704 : Time 304.80s : 383204.96 words/s : L.r. 2.4754e-04
+[2019-12-09 22:24:11] Ep. 10 : Up. 24000 : Sen. 14,914,915 : Cost 0.52625895 : Time 291.34s : 406633.10 words/s : L.r. 2.4495e-04
+[2019-12-09 22:24:57] Seen 15446171 samples
+[2019-12-09 22:24:57] Starting epoch 11
+[2019-12-09 22:24:57] [data] Shuffling data
+[2019-12-09 22:24:58] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 22:30:04] Ep. 11 : Up. 24500 : Sen. 2,560,376 : Cost 0.51983780 : Time 353.07s : 318541.55 words/s : L.r. 2.4244e-04
+[2019-12-09 22:34:49] Ep. 11 : Up. 25000 : Sen. 5,769,171 : Cost 0.52076721 : Time 284.97s : 411367.09 words/s : L.r. 2.4000e-04
+[2019-12-09 22:34:49] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-09 22:34:52] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-09 22:34:56] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-09 22:35:04] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-09 22:35:05] [valid] Ep. 11 : Up. 25000 : ce-mean-words : 1.52021 : new best
+[2019-12-09 22:35:06] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-09 22:35:07] [valid] Ep. 11 : Up. 25000 : perplexity : 4.57316 : new best
+[2019-12-09 22:35:13] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-09 22:35:14] [valid] Ep. 11 : Up. 25000 : translation : 31.9 : new best
+[2019-12-09 22:40:08] Ep. 11 : Up. 25500 : Sen. 9,037,344 : Cost 0.52269357 : Time 319.25s : 370241.08 words/s : L.r. 2.3764e-04
+[2019-12-09 22:44:55] Ep. 11 : Up. 26000 : Sen. 12,282,468 : Cost 0.52227002 : Time 286.72s : 409166.69 words/s : L.r. 2.3534e-04
+[2019-12-09 22:49:26] Ep. 11 : Up. 26500 : Sen. 15,375,899 : Cost 0.51563466 : Time 271.38s : 418322.71 words/s : L.r. 2.3311e-04
+[2019-12-09 22:49:32] Seen 15446171 samples
+[2019-12-09 22:49:32] Starting epoch 12
+[2019-12-09 22:49:32] [data] Shuffling data
+[2019-12-09 22:49:33] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 22:55:34] Ep. 12 : Up. 27000 : Sen. 3,154,334 : Cost 0.51926541 : Time 368.33s : 318588.18 words/s : L.r. 2.3094e-04
+[2019-12-09 23:00:24] Ep. 12 : Up. 27500 : Sen. 6,364,268 : Cost 0.51579714 : Time 289.37s : 404015.36 words/s : L.r. 2.2883e-04
+[2019-12-09 23:05:09] Ep. 12 : Up. 28000 : Sen. 9,603,749 : Cost 0.51595116 : Time 285.49s : 410770.78 words/s : L.r. 2.2678e-04
+[2019-12-09 23:09:56] Ep. 12 : Up. 28500 : Sen. 12,855,174 : Cost 0.51784265 : Time 286.90s : 412989.71 words/s : L.r. 2.2478e-04
+[2019-12-09 23:13:45] Seen 15446171 samples
+[2019-12-09 23:13:45] Starting epoch 13
+[2019-12-09 23:13:45] [data] Shuffling data
+[2019-12-09 23:13:46] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 23:15:43] Ep. 13 : Up. 29000 : Sen. 463,840 : Cost 0.51418370 : Time 346.66s : 321232.33 words/s : L.r. 2.2283e-04
+[2019-12-09 23:20:32] Ep. 13 : Up. 29500 : Sen. 3,730,723 : Cost 0.51224649 : Time 289.06s : 411092.47 words/s : L.r. 2.2094e-04
+[2019-12-09 23:25:15] Ep. 13 : Up. 30000 : Sen. 6,958,686 : Cost 0.51443130 : Time 283.16s : 415020.51 words/s : L.r. 2.1909e-04
+[2019-12-09 23:25:15] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-09 23:25:19] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-09 23:25:22] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-09 23:25:30] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-09 23:25:31] [valid] Ep. 13 : Up. 30000 : ce-mean-words : 1.47536 : new best
+[2019-12-09 23:25:31] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-09 23:25:33] [valid] Ep. 13 : Up. 30000 : perplexity : 4.37263 : new best
+[2019-12-09 23:25:38] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-09 23:25:40] [valid] Ep. 13 : Up. 30000 : translation : 32.37 : new best
+[2019-12-09 23:30:32] Ep. 13 : Up. 30500 : Sen. 10,224,097 : Cost 0.51528859 : Time 317.23s : 372403.29 words/s : L.r. 2.1729e-04
+[2019-12-09 23:35:20] Ep. 13 : Up. 31000 : Sen. 13,473,406 : Cost 0.51393515 : Time 287.62s : 410413.44 words/s : L.r. 2.1553e-04
+[2019-12-09 23:38:15] Seen 15446171 samples
+[2019-12-09 23:38:15] Starting epoch 14
+[2019-12-09 23:38:15] [data] Shuffling data
+[2019-12-09 23:38:16] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-09 23:41:10] Ep. 14 : Up. 31500 : Sen. 1,079,043 : Cost 0.50960356 : Time 350.36s : 318716.72 words/s : L.r. 2.1381e-04
+[2019-12-09 23:45:57] Ep. 14 : Up. 32000 : Sen. 4,292,791 : Cost 0.50888425 : Time 286.47s : 411840.19 words/s : L.r. 2.1213e-04
+[2019-12-09 23:50:44] Ep. 14 : Up. 32500 : Sen. 7,525,528 : Cost 0.51326346 : Time 286.74s : 410528.54 words/s : L.r. 2.1049e-04
+[2019-12-09 23:55:28] Ep. 14 : Up. 33000 : Sen. 10,762,289 : Cost 0.51137251 : Time 284.58s : 411127.82 words/s : L.r. 2.0889e-04
+[2019-12-10 00:00:26] Ep. 14 : Up. 33500 : Sen. 14,033,683 : Cost 0.51128572 : Time 297.51s : 399442.03 words/s : L.r. 2.0733e-04
+[2019-12-10 00:02:24] Seen 15446171 samples
+[2019-12-10 00:02:24] Starting epoch 15
+[2019-12-10 00:02:24] [data] Shuffling data
+[2019-12-10 00:02:24] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 00:06:07] Ep. 15 : Up. 34000 : Sen. 1,703,654 : Cost 0.50916457 : Time 341.72s : 328988.93 words/s : L.r. 2.0580e-04
+[2019-12-10 00:10:58] Ep. 15 : Up. 34500 : Sen. 4,918,464 : Cost 0.50697893 : Time 290.19s : 408252.28 words/s : L.r. 2.0430e-04
+[2019-12-10 00:15:51] Ep. 15 : Up. 35000 : Sen. 8,112,718 : Cost 0.50886595 : Time 293.73s : 397606.47 words/s : L.r. 2.0284e-04
+[2019-12-10 00:15:51] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 00:15:55] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 00:15:59] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 00:16:06] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 00:16:08] [valid] Ep. 15 : Up. 35000 : ce-mean-words : 1.44494 : new best
+[2019-12-10 00:16:08] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 00:16:10] [valid] Ep. 15 : Up. 35000 : perplexity : 4.2416 : new best
+[2019-12-10 00:16:15] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 00:16:17] [valid] Ep. 15 : Up. 35000 : translation : 32.69 : new best
+[2019-12-10 00:20:58] Ep. 15 : Up. 35500 : Sen. 11,383,098 : Cost 0.51350206 : Time 306.72s : 385690.98 words/s : L.r. 2.0140e-04
+[2019-12-10 00:25:45] Ep. 15 : Up. 36000 : Sen. 14,582,635 : Cost 0.50443566 : Time 286.84s : 406374.70 words/s : L.r. 2.0000e-04
+[2019-12-10 00:26:57] Seen 15446171 samples
+[2019-12-10 00:26:57] Starting epoch 16
+[2019-12-10 00:26:57] [data] Shuffling data
+[2019-12-10 00:26:58] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 00:31:36] Ep. 16 : Up. 36500 : Sen. 2,249,408 : Cost 0.51157284 : Time 351.42s : 320258.74 words/s : L.r. 1.9863e-04
+[2019-12-10 00:36:24] Ep. 16 : Up. 37000 : Sen. 5,497,679 : Cost 0.51035601 : Time 287.98s : 409992.98 words/s : L.r. 1.9728e-04
+[2019-12-10 00:41:11] Ep. 16 : Up. 37500 : Sen. 8,699,220 : Cost 0.50114536 : Time 286.93s : 411917.14 words/s : L.r. 1.9596e-04
+[2019-12-10 00:45:58] Ep. 16 : Up. 38000 : Sen. 11,943,496 : Cost 0.50815046 : Time 286.88s : 409230.61 words/s : L.r. 1.9467e-04
+[2019-12-10 00:50:39] Ep. 16 : Up. 38500 : Sen. 15,139,781 : Cost 0.51001132 : Time 281.13s : 412840.63 words/s : L.r. 1.9340e-04
+[2019-12-10 00:51:07] Seen 15446171 samples
+[2019-12-10 00:51:07] Starting epoch 17
+[2019-12-10 00:51:07] [data] Shuffling data
+[2019-12-10 00:51:08] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 00:56:33] Ep. 17 : Up. 39000 : Sen. 2,819,826 : Cost 0.50275689 : Time 354.04s : 322047.53 words/s : L.r. 1.9215e-04
+[2019-12-10 01:01:33] Ep. 17 : Up. 39500 : Sen. 6,038,140 : Cost 0.50652784 : Time 300.06s : 390374.52 words/s : L.r. 1.9093e-04
+[2019-12-10 01:06:22] Ep. 17 : Up. 40000 : Sen. 9,301,681 : Cost 0.50659364 : Time 288.40s : 412322.59 words/s : L.r. 1.8974e-04
+[2019-12-10 01:06:22] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 01:06:25] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 01:06:29] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 01:06:37] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 01:06:38] [valid] Ep. 17 : Up. 40000 : ce-mean-words : 1.42485 : new best
+[2019-12-10 01:06:39] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 01:06:40] [valid] Ep. 17 : Up. 40000 : perplexity : 4.15724 : new best
+[2019-12-10 01:06:46] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 01:06:47] [valid] Ep. 17 : Up. 40000 : translation : 32.83 : new best
+[2019-12-10 01:11:31] Ep. 17 : Up. 40500 : Sen. 12,571,095 : Cost 0.50701761 : Time 309.38s : 381654.37 words/s : L.r. 1.8856e-04
+[2019-12-10 01:15:45] Seen 15446171 samples
+[2019-12-10 01:15:45] Starting epoch 18
+[2019-12-10 01:15:45] [data] Shuffling data
+[2019-12-10 01:15:46] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 01:17:18] Ep. 18 : Up. 41000 : Sen. 144,242 : Cost 0.50219202 : Time 347.39s : 318498.08 words/s : L.r. 1.8741e-04
+[2019-12-10 01:22:05] Ep. 18 : Up. 41500 : Sen. 3,396,638 : Cost 0.50611442 : Time 286.27s : 412110.50 words/s : L.r. 1.8628e-04
+[2019-12-10 01:26:52] Ep. 18 : Up. 42000 : Sen. 6,597,923 : Cost 0.50441343 : Time 286.96s : 409229.87 words/s : L.r. 1.8516e-04
+[2019-12-10 01:31:54] Ep. 18 : Up. 42500 : Sen. 9,866,843 : Cost 0.50476098 : Time 302.24s : 391917.42 words/s : L.r. 1.8407e-04
+[2019-12-10 01:36:56] Ep. 18 : Up. 43000 : Sen. 13,098,829 : Cost 0.50640148 : Time 301.77s : 391139.58 words/s : L.r. 1.8300e-04
+[2019-12-10 01:40:23] Seen 15446171 samples
+[2019-12-10 01:40:23] Starting epoch 19
+[2019-12-10 01:40:23] [data] Shuffling data
+[2019-12-10 01:40:24] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 01:42:45] Ep. 19 : Up. 43500 : Sen. 744,146 : Cost 0.50201184 : Time 349.09s : 321969.66 words/s : L.r. 1.8194e-04
+[2019-12-10 01:47:31] Ep. 19 : Up. 44000 : Sen. 3,986,560 : Cost 0.50775069 : Time 285.96s : 409351.10 words/s : L.r. 1.8091e-04
+[2019-12-10 01:52:44] Ep. 19 : Up. 44500 : Sen. 7,204,142 : Cost 0.50138187 : Time 313.43s : 375691.71 words/s : L.r. 1.7989e-04
+[2019-12-10 01:57:42] Ep. 19 : Up. 45000 : Sen. 10,482,687 : Cost 0.50392878 : Time 297.67s : 400304.54 words/s : L.r. 1.7889e-04
+[2019-12-10 01:57:42] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 01:57:45] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 01:57:48] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 01:57:55] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 01:57:57] [valid] Ep. 19 : Up. 45000 : ce-mean-words : 1.41068 : new best
+[2019-12-10 01:57:58] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 01:57:59] [valid] Ep. 19 : Up. 45000 : perplexity : 4.09872 : new best
+[2019-12-10 01:58:04] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 01:58:06] [valid] Ep. 19 : Up. 45000 : translation : 33.07 : new best
+[2019-12-10 02:02:55] Ep. 19 : Up. 45500 : Sen. 13,720,894 : Cost 0.50869459 : Time 312.72s : 374868.49 words/s : L.r. 1.7790e-04
+[2019-12-10 02:05:29] Seen 15446171 samples
+[2019-12-10 02:05:29] Starting epoch 20
+[2019-12-10 02:05:29] [data] Shuffling data
+[2019-12-10 02:05:30] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 02:08:47] Ep. 20 : Up. 46000 : Sen. 1,300,031 : Cost 0.49623796 : Time 352.47s : 316461.33 words/s : L.r. 1.7693e-04
+[2019-12-10 02:13:39] Ep. 20 : Up. 46500 : Sen. 4,578,152 : Cost 0.50424486 : Time 291.85s : 406639.57 words/s : L.r. 1.7598e-04
+[2019-12-10 02:18:32] Ep. 20 : Up. 47000 : Sen. 7,814,302 : Cost 0.50597757 : Time 292.87s : 399886.22 words/s : L.r. 1.7504e-04
+[2019-12-10 02:23:50] Ep. 20 : Up. 47500 : Sen. 11,059,236 : Cost 0.50376028 : Time 317.79s : 372186.49 words/s : L.r. 1.7411e-04
+[2019-12-10 02:28:42] Ep. 20 : Up. 48000 : Sen. 14,302,275 : Cost 0.50040275 : Time 292.22s : 406404.13 words/s : L.r. 1.7321e-04
+[2019-12-10 02:30:18] Seen 15446171 samples
+[2019-12-10 02:30:18] Starting epoch 21
+[2019-12-10 02:30:18] [data] Shuffling data
+[2019-12-10 02:30:18] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 02:34:24] Ep. 21 : Up. 48500 : Sen. 1,907,480 : Cost 0.50286752 : Time 342.65s : 322024.15 words/s : L.r. 1.7231e-04
+[2019-12-10 02:39:26] Ep. 21 : Up. 49000 : Sen. 5,138,346 : Cost 0.50280201 : Time 301.83s : 390271.96 words/s : L.r. 1.7143e-04
+[2019-12-10 02:44:17] Ep. 21 : Up. 49500 : Sen. 8,366,126 : Cost 0.49975649 : Time 290.96s : 405981.20 words/s : L.r. 1.7056e-04
+[2019-12-10 02:49:07] Ep. 21 : Up. 50000 : Sen. 11,607,840 : Cost 0.50511801 : Time 290.13s : 406601.19 words/s : L.r. 1.6971e-04
+[2019-12-10 02:49:07] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 02:49:11] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 02:49:14] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 02:49:21] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 02:49:23] [valid] Ep. 21 : Up. 50000 : ce-mean-words : 1.39881 : new best
+[2019-12-10 02:49:24] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 02:49:25] [valid] Ep. 21 : Up. 50000 : perplexity : 4.05039 : new best
+[2019-12-10 02:49:31] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 02:49:32] [valid] Ep. 21 : Up. 50000 : translation : 33.19 : new best
+[2019-12-10 02:54:24] Ep. 21 : Up. 50500 : Sen. 14,855,744 : Cost 0.50151777 : Time 317.16s : 372539.25 words/s : L.r. 1.6886e-04
+[2019-12-10 02:55:15] Seen 15446171 samples
+[2019-12-10 02:55:15] Starting epoch 22
+[2019-12-10 02:55:15] [data] Shuffling data
+[2019-12-10 02:55:16] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 03:00:17] Ep. 22 : Up. 51000 : Sen. 2,481,586 : Cost 0.50113398 : Time 352.42s : 317920.13 words/s : L.r. 1.6803e-04
+[2019-12-10 03:05:04] Ep. 22 : Up. 51500 : Sen. 5,739,635 : Cost 0.50585747 : Time 287.03s : 406808.98 words/s : L.r. 1.6722e-04
+[2019-12-10 03:09:54] Ep. 22 : Up. 52000 : Sen. 8,961,760 : Cost 0.50049740 : Time 289.84s : 407897.12 words/s : L.r. 1.6641e-04
+[2019-12-10 03:14:49] Ep. 22 : Up. 52500 : Sen. 12,188,168 : Cost 0.50071144 : Time 295.33s : 401137.81 words/s : L.r. 1.6562e-04
+[2019-12-10 03:19:29] Ep. 22 : Up. 53000 : Sen. 15,323,623 : Cost 0.50437075 : Time 279.70s : 404327.16 words/s : L.r. 1.6483e-04
+[2019-12-10 03:19:40] Seen 15446171 samples
+[2019-12-10 03:19:40] Starting epoch 23
+[2019-12-10 03:19:40] [data] Shuffling data
+[2019-12-10 03:19:41] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 03:25:49] Ep. 23 : Up. 53500 : Sen. 3,071,675 : Cost 0.50036323 : Time 380.21s : 305717.11 words/s : L.r. 1.6406e-04
+[2019-12-10 03:30:42] Ep. 23 : Up. 54000 : Sen. 6,321,810 : Cost 0.50307930 : Time 292.50s : 403280.91 words/s : L.r. 1.6330e-04
+[2019-12-10 03:35:31] Ep. 23 : Up. 54500 : Sen. 9,530,487 : Cost 0.50200683 : Time 289.04s : 404173.01 words/s : L.r. 1.6255e-04
+[2019-12-10 03:40:25] Ep. 23 : Up. 55000 : Sen. 12,760,441 : Cost 0.50031739 : Time 294.92s : 399600.79 words/s : L.r. 1.6181e-04
+[2019-12-10 03:40:25] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 03:40:29] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 03:40:32] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 03:40:39] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 03:40:41] [valid] Ep. 23 : Up. 55000 : ce-mean-words : 1.39142 : new best
+[2019-12-10 03:40:41] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 03:40:43] [valid] Ep. 23 : Up. 55000 : perplexity : 4.02054 : new best
+[2019-12-10 03:40:49] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 03:40:50] [valid] Ep. 23 : Up. 55000 : translation : 33.25 : new best
+[2019-12-10 03:44:50] Seen 15446171 samples
+[2019-12-10 03:44:50] Starting epoch 24
+[2019-12-10 03:44:50] [data] Shuffling data
+[2019-12-10 03:44:51] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 03:46:46] Ep. 24 : Up. 55500 : Sen. 388,530 : Cost 0.49781674 : Time 380.94s : 295811.00 words/s : L.r. 1.6108e-04
+[2019-12-10 03:51:36] Ep. 24 : Up. 56000 : Sen. 3,655,060 : Cost 0.50531727 : Time 289.39s : 402519.03 words/s : L.r. 1.6036e-04
+[2019-12-10 03:56:41] Ep. 24 : Up. 56500 : Sen. 6,885,549 : Cost 0.50088382 : Time 305.56s : 389456.59 words/s : L.r. 1.5965e-04
+[2019-12-10 04:01:54] Ep. 24 : Up. 57000 : Sen. 10,109,307 : Cost 0.49821129 : Time 312.79s : 377408.04 words/s : L.r. 1.5894e-04
+[2019-12-10 04:06:49] Ep. 24 : Up. 57500 : Sen. 13,386,355 : Cost 0.50668764 : Time 294.99s : 398800.00 words/s : L.r. 1.5825e-04
+[2019-12-10 04:09:51] Seen 15446171 samples
+[2019-12-10 04:09:51] Starting epoch 25
+[2019-12-10 04:09:51] [data] Shuffling data
+[2019-12-10 04:09:51] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 04:12:49] Ep. 25 : Up. 58000 : Sen. 1,004,016 : Cost 0.49650246 : Time 359.54s : 312765.65 words/s : L.r. 1.5757e-04
+[2019-12-10 04:17:50] Ep. 25 : Up. 58500 : Sen. 4,246,484 : Cost 0.49980375 : Time 301.66s : 389745.46 words/s : L.r. 1.5689e-04
+[2019-12-10 04:23:00] Ep. 25 : Up. 59000 : Sen. 7,466,165 : Cost 0.49938947 : Time 310.06s : 379893.92 words/s : L.r. 1.5623e-04
+[2019-12-10 04:27:58] Ep. 25 : Up. 59500 : Sen. 10,658,220 : Cost 0.49915197 : Time 297.70s : 392858.34 words/s : L.r. 1.5557e-04
+[2019-12-10 04:33:01] Ep. 25 : Up. 60000 : Sen. 13,921,268 : Cost 0.50669467 : Time 302.81s : 388470.34 words/s : L.r. 1.5492e-04
+[2019-12-10 04:33:01] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 04:33:04] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 04:33:08] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 04:33:15] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 04:33:16] [valid] Ep. 25 : Up. 60000 : ce-mean-words : 1.38568 : new best
+[2019-12-10 04:33:17] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 04:33:18] [valid] Ep. 25 : Up. 60000 : perplexity : 3.99753 : new best
+[2019-12-10 04:33:24] [valid] Ep. 25 : Up. 60000 : translation : 33.16 : stalled 1 times (last best: 33.25)
+[2019-12-10 04:35:35] Seen 15446171 samples
+[2019-12-10 04:35:35] Starting epoch 26
+[2019-12-10 04:35:35] [data] Shuffling data
+[2019-12-10 04:35:36] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 04:39:24] Ep. 26 : Up. 60500 : Sen. 1,578,401 : Cost 0.49678218 : Time 382.64s : 296890.56 words/s : L.r. 1.5428e-04
+[2019-12-10 04:44:30] Ep. 26 : Up. 61000 : Sen. 4,772,388 : Cost 0.50031120 : Time 306.54s : 379565.23 words/s : L.r. 1.5364e-04
+[2019-12-10 04:49:38] Ep. 26 : Up. 61500 : Sen. 8,024,480 : Cost 0.50246251 : Time 307.67s : 382393.38 words/s : L.r. 1.5302e-04
+[2019-12-10 04:54:24] Ep. 26 : Up. 62000 : Sen. 11,248,210 : Cost 0.49886742 : Time 286.36s : 412120.84 words/s : L.r. 1.5240e-04
+[2019-12-10 04:59:09] Ep. 26 : Up. 62500 : Sen. 14,460,912 : Cost 0.50311577 : Time 284.69s : 408572.57 words/s : L.r. 1.5179e-04
+[2019-12-10 05:00:31] Seen 15446171 samples
+[2019-12-10 05:00:31] Starting epoch 27
+[2019-12-10 05:00:31] [data] Shuffling data
+[2019-12-10 05:00:32] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 05:05:03] Ep. 27 : Up. 63000 : Sen. 2,147,447 : Cost 0.49799106 : Time 354.38s : 320894.82 words/s : L.r. 1.5119e-04
+[2019-12-10 05:09:54] Ep. 27 : Up. 63500 : Sen. 5,396,811 : Cost 0.50284010 : Time 290.97s : 403322.76 words/s : L.r. 1.5059e-04
+[2019-12-10 05:14:51] Ep. 27 : Up. 64000 : Sen. 8,617,241 : Cost 0.49871510 : Time 296.84s : 398895.46 words/s : L.r. 1.5000e-04
+[2019-12-10 05:19:37] Ep. 27 : Up. 64500 : Sen. 11,817,737 : Cost 0.49937704 : Time 286.23s : 409355.91 words/s : L.r. 1.4942e-04
+[2019-12-10 05:24:38] Ep. 27 : Up. 65000 : Sen. 15,058,374 : Cost 0.50205803 : Time 300.48s : 389871.31 words/s : L.r. 1.4884e-04
+[2019-12-10 05:24:38] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 05:24:41] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 05:24:44] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 05:24:51] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 05:24:52] [valid] Ep. 27 : Up. 65000 : ce-mean-words : 1.3808 : new best
+[2019-12-10 05:24:53] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 05:24:54] [valid] Ep. 27 : Up. 65000 : perplexity : 3.9781 : new best
+[2019-12-10 05:25:00] [valid] Ep. 27 : Up. 65000 : translation : 33.08 : stalled 2 times (last best: 33.25)
+[2019-12-10 05:25:38] Seen 15446171 samples
+[2019-12-10 05:25:38] Starting epoch 28
+[2019-12-10 05:25:38] [data] Shuffling data
+[2019-12-10 05:25:40] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 05:31:19] Ep. 28 : Up. 65500 : Sen. 2,666,159 : Cost 0.49394953 : Time 401.38s : 282041.24 words/s : L.r. 1.4827e-04
+[2019-12-10 05:36:16] Ep. 28 : Up. 66000 : Sen. 5,940,413 : Cost 0.50255066 : Time 297.02s : 396355.51 words/s : L.r. 1.4771e-04
+[2019-12-10 05:41:29] Ep. 28 : Up. 66500 : Sen. 9,160,972 : Cost 0.50172889 : Time 313.24s : 373457.33 words/s : L.r. 1.4715e-04
+[2019-12-10 05:46:25] Ep. 28 : Up. 67000 : Sen. 12,390,188 : Cost 0.49860325 : Time 296.10s : 399458.00 words/s : L.r. 1.4660e-04
+[2019-12-10 05:50:55] Seen 15446171 samples
+[2019-12-10 05:50:55] Starting epoch 29
+[2019-12-10 05:50:55] [data] Shuffling data
+[2019-12-10 05:50:56] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 05:52:20] Ep. 29 : Up. 67500 : Sen. 38,617 : Cost 0.50221229 : Time 354.63s : 313126.32 words/s : L.r. 1.4606e-04
+[2019-12-10 05:57:12] Ep. 29 : Up. 68000 : Sen. 3,252,205 : Cost 0.49951357 : Time 292.24s : 402437.43 words/s : L.r. 1.4552e-04
+[2019-12-10 06:02:15] Ep. 29 : Up. 68500 : Sen. 6,516,370 : Cost 0.50122738 : Time 301.99s : 391116.51 words/s : L.r. 1.4499e-04
+[2019-12-10 06:07:20] Ep. 29 : Up. 69000 : Sen. 9,748,243 : Cost 0.50006151 : Time 304.41s : 387238.17 words/s : L.r. 1.4446e-04
+[2019-12-10 06:12:14] Ep. 29 : Up. 69500 : Sen. 12,953,999 : Cost 0.49833956 : Time 294.41s : 398151.95 words/s : L.r. 1.4394e-04
+[2019-12-10 06:16:05] Seen 15446171 samples
+[2019-12-10 06:16:05] Starting epoch 30
+[2019-12-10 06:16:05] [data] Shuffling data
+[2019-12-10 06:16:05] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 06:18:15] Ep. 30 : Up. 70000 : Sen. 594,447 : Cost 0.49728799 : Time 360.84s : 310558.73 words/s : L.r. 1.4343e-04
+[2019-12-10 06:18:15] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 06:18:18] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 06:18:22] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 06:18:29] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 06:18:30] [valid] Ep. 30 : Up. 70000 : ce-mean-words : 1.37707 : new best
+[2019-12-10 06:18:31] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 06:18:32] [valid] Ep. 30 : Up. 70000 : perplexity : 3.96328 : new best
+[2019-12-10 06:18:38] [valid] Ep. 30 : Up. 70000 : translation : 33.13 : stalled 3 times (last best: 33.25)
+[2019-12-10 06:23:36] Ep. 30 : Up. 70500 : Sen. 3,841,909 : Cost 0.50138283 : Time 321.49s : 366634.28 words/s : L.r. 1.4292e-04
+[2019-12-10 06:28:46] Ep. 30 : Up. 71000 : Sen. 7,091,538 : Cost 0.50138074 : Time 309.56s : 381748.17 words/s : L.r. 1.4241e-04
+[2019-12-10 06:33:48] Ep. 30 : Up. 71500 : Sen. 10,302,048 : Cost 0.49635229 : Time 302.07s : 390592.87 words/s : L.r. 1.4191e-04
+[2019-12-10 06:38:37] Ep. 30 : Up. 72000 : Sen. 13,523,079 : Cost 0.49900445 : Time 289.11s : 406493.74 words/s : L.r. 1.4142e-04
+[2019-12-10 06:41:24] Seen 15446171 samples
+[2019-12-10 06:41:24] Starting epoch 31
+[2019-12-10 06:41:24] [data] Shuffling data
+[2019-12-10 06:41:25] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 06:44:35] Ep. 31 : Up. 72500 : Sen. 1,180,821 : Cost 0.50476003 : Time 357.60s : 313139.17 words/s : L.r. 1.4093e-04
+[2019-12-10 06:49:42] Ep. 31 : Up. 73000 : Sen. 4,391,107 : Cost 0.49403036 : Time 307.59s : 382325.73 words/s : L.r. 1.4045e-04
+[2019-12-10 06:54:40] Ep. 31 : Up. 73500 : Sen. 7,642,251 : Cost 0.50313747 : Time 297.66s : 394402.26 words/s : L.r. 1.3997e-04
+[2019-12-10 06:59:43] Ep. 31 : Up. 74000 : Sen. 10,871,693 : Cost 0.49825624 : Time 302.97s : 389613.53 words/s : L.r. 1.3950e-04
+[2019-12-10 07:04:47] Ep. 31 : Up. 74500 : Sen. 14,115,290 : Cost 0.50111479 : Time 304.67s : 387153.87 words/s : L.r. 1.3903e-04
+[2019-12-10 07:06:38] Seen 15446171 samples
+[2019-12-10 07:06:38] Starting epoch 32
+[2019-12-10 07:06:38] [data] Shuffling data
+[2019-12-10 07:06:38] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 07:10:27] Ep. 32 : Up. 75000 : Sen. 1,751,171 : Cost 0.50027233 : Time 339.81s : 327817.71 words/s : L.r. 1.3856e-04
+[2019-12-10 07:10:27] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 07:10:31] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 07:10:34] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 07:10:41] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 07:10:42] [valid] Ep. 32 : Up. 75000 : ce-mean-words : 1.37353 : new best
+[2019-12-10 07:10:43] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 07:10:44] [valid] Ep. 32 : Up. 75000 : perplexity : 3.94926 : new best
+[2019-12-10 07:10:50] [valid] Ep. 32 : Up. 75000 : translation : 33.2 : stalled 4 times (last best: 33.25)
+[2019-12-10 07:15:38] Ep. 32 : Up. 75500 : Sen. 4,979,568 : Cost 0.49663502 : Time 310.79s : 380106.52 words/s : L.r. 1.3810e-04
+[2019-12-10 07:20:52] Ep. 32 : Up. 76000 : Sen. 8,236,469 : Cost 0.50391895 : Time 314.09s : 373749.46 words/s : L.r. 1.3765e-04
+[2019-12-10 07:25:47] Ep. 32 : Up. 76500 : Sen. 11,441,041 : Cost 0.49451450 : Time 294.57s : 400412.76 words/s : L.r. 1.3720e-04
+[2019-12-10 07:30:57] Ep. 32 : Up. 77000 : Sen. 14,703,544 : Cost 0.50350404 : Time 310.06s : 379300.13 words/s : L.r. 1.3675e-04
+[2019-12-10 07:32:05] Seen 15446171 samples
+[2019-12-10 07:32:05] Starting epoch 33
+[2019-12-10 07:32:05] [data] Shuffling data
+[2019-12-10 07:32:06] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 07:37:12] Ep. 33 : Up. 77500 : Sen. 2,344,282 : Cost 0.49400803 : Time 375.50s : 300950.94 words/s : L.r. 1.3631e-04
+[2019-12-10 07:42:00] Ep. 33 : Up. 78000 : Sen. 5,541,330 : Cost 0.49938890 : Time 288.12s : 402732.79 words/s : L.r. 1.3587e-04
+[2019-12-10 07:46:52] Ep. 33 : Up. 78500 : Sen. 8,823,999 : Cost 0.50162309 : Time 291.94s : 409261.99 words/s : L.r. 1.3544e-04
+[2019-12-10 07:51:46] Ep. 33 : Up. 79000 : Sen. 12,033,834 : Cost 0.49818543 : Time 293.98s : 397767.08 words/s : L.r. 1.3501e-04
+[2019-12-10 07:56:18] Ep. 33 : Up. 79500 : Sen. 15,201,614 : Cost 0.50064373 : Time 271.73s : 425936.83 words/s : L.r. 1.3459e-04
+[2019-12-10 07:56:40] Seen 15446171 samples
+[2019-12-10 07:56:40] Starting epoch 34
+[2019-12-10 07:56:40] [data] Shuffling data
+[2019-12-10 07:56:41] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 08:02:15] Ep. 34 : Up. 80000 : Sen. 2,915,428 : Cost 0.49683315 : Time 356.65s : 321956.71 words/s : L.r. 1.3416e-04
+[2019-12-10 08:02:15] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 08:02:18] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 08:02:22] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 08:02:29] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 08:02:31] [valid] Ep. 34 : Up. 80000 : ce-mean-words : 1.37089 : new best
+[2019-12-10 08:02:32] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 08:02:33] [valid] Ep. 34 : Up. 80000 : perplexity : 3.93886 : new best
+[2019-12-10 08:02:38] [valid] Ep. 34 : Up. 80000 : translation : 33.16 : stalled 5 times (last best: 33.25)
+[2019-12-10 08:07:29] Ep. 34 : Up. 80500 : Sen. 6,153,102 : Cost 0.49998739 : Time 313.88s : 373583.23 words/s : L.r. 1.3375e-04
+[2019-12-10 08:12:11] Ep. 34 : Up. 81000 : Sen. 9,369,539 : Cost 0.49999022 : Time 282.33s : 414423.89 words/s : L.r. 1.3333e-04
+[2019-12-10 08:16:59] Ep. 34 : Up. 81500 : Sen. 12,631,155 : Cost 0.49741480 : Time 288.42s : 413837.90 words/s : L.r. 1.3292e-04
+[2019-12-10 08:21:08] Seen 15446171 samples
+[2019-12-10 08:21:08] Starting epoch 35
+[2019-12-10 08:21:08] [data] Shuffling data
+[2019-12-10 08:21:09] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 08:22:49] Ep. 35 : Up. 82000 : Sen. 236,662 : Cost 0.49851838 : Time 349.55s : 318723.78 words/s : L.r. 1.3252e-04
+[2019-12-10 08:27:38] Ep. 35 : Up. 82500 : Sen. 3,504,128 : Cost 0.49788797 : Time 288.67s : 411615.56 words/s : L.r. 1.3212e-04
+[2019-12-10 08:32:24] Ep. 35 : Up. 83000 : Sen. 6,746,653 : Cost 0.49900213 : Time 286.32s : 410185.69 words/s : L.r. 1.3172e-04
+[2019-12-10 08:37:10] Ep. 35 : Up. 83500 : Sen. 9,975,538 : Cost 0.49977225 : Time 285.96s : 411332.28 words/s : L.r. 1.3132e-04
+[2019-12-10 08:42:03] Ep. 35 : Up. 84000 : Sen. 13,200,487 : Cost 0.50084126 : Time 293.65s : 400794.23 words/s : L.r. 1.3093e-04
+[2019-12-10 08:45:15] Seen 15446171 samples
+[2019-12-10 08:45:15] Starting epoch 36
+[2019-12-10 08:45:15] [data] Shuffling data
+[2019-12-10 08:45:16] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 08:47:43] Ep. 36 : Up. 84500 : Sen. 868,803 : Cost 0.49733225 : Time 339.98s : 331752.35 words/s : L.r. 1.3054e-04
+[2019-12-10 08:52:35] Ep. 36 : Up. 85000 : Sen. 4,071,267 : Cost 0.49701044 : Time 291.42s : 401296.94 words/s : L.r. 1.3016e-04
+[2019-12-10 08:52:35] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 08:52:38] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 08:52:42] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 08:52:50] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 08:52:51] [valid] Ep. 36 : Up. 85000 : ce-mean-words : 1.36877 : new best
+[2019-12-10 08:52:52] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 08:52:54] [valid] Ep. 36 : Up. 85000 : perplexity : 3.93052 : new best
+[2019-12-10 08:52:59] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 08:53:01] [valid] Ep. 36 : Up. 85000 : translation : 33.27 : new best
+[2019-12-10 08:57:43] Ep. 36 : Up. 85500 : Sen. 7,341,189 : Cost 0.49928936 : Time 307.61s : 386623.44 words/s : L.r. 1.2978e-04
+[2019-12-10 09:02:27] Ep. 36 : Up. 86000 : Sen. 10,580,714 : Cost 0.50067890 : Time 284.13s : 414994.04 words/s : L.r. 1.2940e-04
+[2019-12-10 09:07:05] Ep. 36 : Up. 86500 : Sen. 13,762,804 : Cost 0.49772629 : Time 278.78s : 415666.56 words/s : L.r. 1.2902e-04
+[2019-12-10 09:09:32] Seen 15446171 samples
+[2019-12-10 09:09:32] Starting epoch 37
+[2019-12-10 09:09:32] [data] Shuffling data
+[2019-12-10 09:09:32] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 09:12:52] Ep. 37 : Up. 87000 : Sen. 1,437,510 : Cost 0.49895048 : Time 346.43s : 326176.55 words/s : L.r. 1.2865e-04
+[2019-12-10 09:17:37] Ep. 37 : Up. 87500 : Sen. 4,669,621 : Cost 0.50042486 : Time 284.99s : 413202.38 words/s : L.r. 1.2829e-04
+[2019-12-10 09:26:26] Ep. 37 : Up. 88000 : Sen. 7,875,777 : Cost 0.49884829 : Time 529.09s : 221251.66 words/s : L.r. 1.2792e-04
+[2019-12-10 09:40:50] Ep. 37 : Up. 88500 : Sen. 11,107,444 : Cost 0.49813277 : Time 863.63s : 136179.03 words/s : L.r. 1.2756e-04
+[2019-12-10 09:53:08] Ep. 37 : Up. 89000 : Sen. 14,356,827 : Cost 0.49993953 : Time 738.00s : 159057.08 words/s : L.r. 1.2720e-04
+[2019-12-10 09:55:13] Seen 15446171 samples
+[2019-12-10 09:55:13] Starting epoch 38
+[2019-12-10 09:55:13] [data] Shuffling data
+[2019-12-10 09:55:15] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 10:05:30] Ep. 38 : Up. 89500 : Sen. 1,964,058 : Cost 0.49512714 : Time 742.37s : 150958.53 words/s : L.r. 1.2684e-04
+[2019-12-10 10:19:34] Ep. 38 : Up. 90000 : Sen. 5,216,878 : Cost 0.50103217 : Time 844.03s : 139089.92 words/s : L.r. 1.2649e-04
+[2019-12-10 10:19:34] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 10:19:55] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 10:20:08] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 10:20:36] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 10:20:42] [valid] Ep. 38 : Up. 90000 : ce-mean-words : 1.36638 : new best
+[2019-12-10 10:20:44] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 10:20:51] [valid] Ep. 38 : Up. 90000 : perplexity : 3.92111 : new best
+[2019-12-10 10:21:03] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 10:21:10] [valid] Ep. 38 : Up. 90000 : translation : 33.28 : new best
+[2019-12-10 10:31:45] Ep. 38 : Up. 90500 : Sen. 8,404,890 : Cost 0.49257335 : Time 730.67s : 161179.26 words/s : L.r. 1.2614e-04
+[2019-12-10 10:42:59] Ep. 38 : Up. 91000 : Sen. 11,677,710 : Cost 0.50204396 : Time 674.48s : 175408.63 words/s : L.r. 1.2579e-04
+[2019-12-10 10:55:02] Ep. 38 : Up. 91500 : Sen. 14,919,442 : Cost 0.50117433 : Time 723.03s : 162741.12 words/s : L.r. 1.2545e-04
+[2019-12-10 10:56:01] Seen 15446171 samples
+[2019-12-10 10:56:01] Starting epoch 39
+[2019-12-10 10:56:01] [data] Shuffling data
+[2019-12-10 10:56:03] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 11:08:37] Ep. 39 : Up. 92000 : Sen. 2,586,908 : Cost 0.49896917 : Time 815.02s : 138190.30 words/s : L.r. 1.2511e-04
+[2019-12-10 11:20:28] Ep. 39 : Up. 92500 : Sen. 5,823,591 : Cost 0.49926281 : Time 710.48s : 166130.22 words/s : L.r. 1.2477e-04
+[2019-12-10 11:29:54] Ep. 39 : Up. 93000 : Sen. 9,033,317 : Cost 0.49491322 : Time 565.96s : 208529.41 words/s : L.r. 1.2443e-04
+[2019-12-10 11:35:21] Ep. 39 : Up. 93500 : Sen. 12,273,795 : Cost 0.50027591 : Time 327.87s : 359274.66 words/s : L.r. 1.2410e-04
+[2019-12-10 11:40:19] Ep. 39 : Up. 94000 : Sen. 15,353,321 : Cost 0.49482420 : Time 297.27s : 378116.01 words/s : L.r. 1.2377e-04
+[2019-12-10 11:40:25] Seen 15446171 samples
+[2019-12-10 11:40:25] Starting epoch 40
+[2019-12-10 11:40:25] [data] Shuffling data
+[2019-12-10 11:40:26] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 11:47:30] Ep. 40 : Up. 94500 : Sen. 3,113,790 : Cost 0.49937853 : Time 431.72s : 269880.64 words/s : L.r. 1.2344e-04
+[2019-12-10 11:53:05] Ep. 40 : Up. 95000 : Sen. 6,401,099 : Cost 0.50331360 : Time 334.16s : 355066.25 words/s : L.r. 1.2312e-04
+[2019-12-10 11:53:05] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 11:53:08] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 11:53:12] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 11:53:20] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 11:53:21] [valid] Ep. 40 : Up. 95000 : ce-mean-words : 1.36426 : new best
+[2019-12-10 11:53:22] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 11:53:23] [valid] Ep. 40 : Up. 95000 : perplexity : 3.91282 : new best
+[2019-12-10 11:53:29] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 11:53:30] [valid] Ep. 40 : Up. 95000 : translation : 33.43 : new best
+[2019-12-10 11:58:42] Ep. 40 : Up. 95500 : Sen. 9,602,716 : Cost 0.49918306 : Time 337.88s : 343067.00 words/s : L.r. 1.2279e-04
+[2019-12-10 12:04:14] Ep. 40 : Up. 96000 : Sen. 12,817,417 : Cost 0.49438840 : Time 331.71s : 357404.64 words/s : L.r. 1.2247e-04
+[2019-12-10 12:08:34] Seen 15446171 samples
+[2019-12-10 12:08:34] Starting epoch 41
+[2019-12-10 12:08:34] [data] Shuffling data
+[2019-12-10 12:08:35] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 12:10:49] Ep. 41 : Up. 96500 : Sen. 496,633 : Cost 0.50059545 : Time 394.57s : 286254.51 words/s : L.r. 1.2216e-04
+[2019-12-10 12:16:19] Ep. 41 : Up. 97000 : Sen. 3,715,439 : Cost 0.49461329 : Time 330.55s : 357224.91 words/s : L.r. 1.2184e-04
+[2019-12-10 12:21:54] Ep. 41 : Up. 97500 : Sen. 6,931,405 : Cost 0.49877360 : Time 335.16s : 349139.94 words/s : L.r. 1.2153e-04
+[2019-12-10 12:27:41] Ep. 41 : Up. 98000 : Sen. 10,168,736 : Cost 0.50067145 : Time 346.82s : 337970.03 words/s : L.r. 1.2122e-04
+[2019-12-10 12:33:05] Ep. 41 : Up. 98500 : Sen. 13,405,610 : Cost 0.49853718 : Time 323.86s : 364828.25 words/s : L.r. 1.2091e-04
+[2019-12-10 12:36:17] Seen 15446171 samples
+[2019-12-10 12:36:17] Starting epoch 42
+[2019-12-10 12:36:17] [data] Shuffling data
+[2019-12-10 12:36:18] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 12:39:33] Ep. 42 : Up. 99000 : Sen. 1,040,249 : Cost 0.49713182 : Time 387.62s : 288940.37 words/s : L.r. 1.2060e-04
+[2019-12-10 12:44:54] Ep. 42 : Up. 99500 : Sen. 4,266,748 : Cost 0.49501497 : Time 320.86s : 366682.36 words/s : L.r. 1.2030e-04
+[2019-12-10 12:50:17] Ep. 42 : Up. 100000 : Sen. 7,522,294 : Cost 0.50072992 : Time 322.89s : 366614.55 words/s : L.r. 1.2000e-04
+[2019-12-10 12:50:17] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 12:50:20] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 12:50:24] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 12:50:31] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 12:50:32] [valid] Ep. 42 : Up. 100000 : ce-mean-words : 1.36293 : new best
+[2019-12-10 12:50:33] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 12:50:35] [valid] Ep. 42 : Up. 100000 : perplexity : 3.90763 : new best
+[2019-12-10 12:50:40] [valid] Ep. 42 : Up. 100000 : translation : 33.42 : stalled 1 times (last best: 33.43)
+[2019-12-10 12:55:46] Ep. 42 : Up. 100500 : Sen. 10,748,155 : Cost 0.50274968 : Time 329.89s : 352809.81 words/s : L.r. 1.1970e-04
+[2019-12-10 13:01:07] Ep. 42 : Up. 101000 : Sen. 13,962,288 : Cost 0.49448606 : Time 320.57s : 368616.08 words/s : L.r. 1.1940e-04
+[2019-12-10 13:03:31] Seen 15446171 samples
+[2019-12-10 13:03:31] Starting epoch 43
+[2019-12-10 13:03:31] [data] Shuffling data
+[2019-12-10 13:03:32] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 13:07:42] Ep. 43 : Up. 101500 : Sen. 1,593,301 : Cost 0.49779046 : Time 395.09s : 283173.08 words/s : L.r. 1.1911e-04
+[2019-12-10 13:13:12] Ep. 43 : Up. 102000 : Sen. 4,857,120 : Cost 0.49829432 : Time 330.11s : 358864.05 words/s : L.r. 1.1882e-04
+[2019-12-10 13:19:02] Ep. 43 : Up. 102500 : Sen. 8,085,624 : Cost 0.49934414 : Time 349.62s : 336120.28 words/s : L.r. 1.1853e-04
+[2019-12-10 13:24:23] Ep. 43 : Up. 103000 : Sen. 11,326,239 : Cost 0.49423259 : Time 321.54s : 367376.97 words/s : L.r. 1.1824e-04
+[2019-12-10 13:31:02] Ep. 43 : Up. 103500 : Sen. 14,543,118 : Cost 0.49974990 : Time 398.18s : 296894.59 words/s : L.r. 1.1795e-04
+[2019-12-10 13:32:46] Seen 15446171 samples
+[2019-12-10 13:32:46] Starting epoch 44
+[2019-12-10 13:32:46] [data] Shuffling data
+[2019-12-10 13:32:48] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 13:41:33] Ep. 44 : Up. 104000 : Sen. 2,186,394 : Cost 0.49829894 : Time 631.70s : 176106.29 words/s : L.r. 1.1767e-04
+[2019-12-10 13:51:36] Ep. 44 : Up. 104500 : Sen. 5,450,494 : Cost 0.49780560 : Time 602.55s : 196942.18 words/s : L.r. 1.1739e-04
+[2019-12-10 14:00:49] Ep. 44 : Up. 105000 : Sen. 8,704,198 : Cost 0.50185585 : Time 552.95s : 213431.72 words/s : L.r. 1.1711e-04
+[2019-12-10 14:00:49] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 14:00:56] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 14:01:04] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 14:01:19] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 14:01:22] [valid] Ep. 44 : Up. 105000 : ce-mean-words : 1.36229 : new best
+[2019-12-10 14:01:24] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 14:01:27] [valid] Ep. 44 : Up. 105000 : perplexity : 3.90513 : new best
+[2019-12-10 14:01:39] [valid] Ep. 44 : Up. 105000 : translation : 33.34 : stalled 2 times (last best: 33.43)
+[2019-12-10 14:10:08] Ep. 44 : Up. 105500 : Sen. 11,899,686 : Cost 0.49733815 : Time 559.35s : 208433.70 words/s : L.r. 1.1683e-04
+[2019-12-10 14:19:14] Ep. 44 : Up. 106000 : Sen. 15,098,789 : Cost 0.49914050 : Time 546.02s : 212949.10 words/s : L.r. 1.1655e-04
+[2019-12-10 14:19:59] Seen 15446171 samples
+[2019-12-10 14:19:59] Starting epoch 45
+[2019-12-10 14:19:59] [data] Shuffling data
+[2019-12-10 14:20:01] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 14:29:51] Ep. 45 : Up. 106500 : Sen. 2,827,147 : Cost 0.49973285 : Time 636.82s : 179137.83 words/s : L.r. 1.1628e-04
+[2019-12-10 14:40:10] Ep. 45 : Up. 107000 : Sen. 6,003,536 : Cost 0.49372554 : Time 619.59s : 189298.04 words/s : L.r. 1.1601e-04
+[2019-12-10 14:49:06] Ep. 45 : Up. 107500 : Sen. 9,250,895 : Cost 0.49882179 : Time 535.37s : 219867.60 words/s : L.r. 1.1574e-04
+[2019-12-10 14:58:17] Ep. 45 : Up. 108000 : Sen. 12,480,400 : Cost 0.49974695 : Time 551.55s : 213755.84 words/s : L.r. 1.1547e-04
+[2019-12-10 15:05:49] Seen 15446171 samples
+[2019-12-10 15:05:49] Starting epoch 46
+[2019-12-10 15:05:49] [data] Shuffling data
+[2019-12-10 15:05:50] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 15:08:35] Ep. 46 : Up. 108500 : Sen. 143,586 : Cost 0.49542677 : Time 617.51s : 182713.62 words/s : L.r. 1.1520e-04
+[2019-12-10 15:17:33] Ep. 46 : Up. 109000 : Sen. 3,359,974 : Cost 0.49973887 : Time 537.68s : 218586.40 words/s : L.r. 1.1494e-04
+[2019-12-10 15:26:49] Ep. 46 : Up. 109500 : Sen. 6,657,961 : Cost 0.49776098 : Time 556.23s : 214758.63 words/s : L.r. 1.1468e-04
+[2019-12-10 15:37:32] Ep. 46 : Up. 110000 : Sen. 9,854,733 : Cost 0.49975276 : Time 643.26s : 181088.45 words/s : L.r. 1.1442e-04
+[2019-12-10 15:37:32] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 15:37:38] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 15:37:44] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 15:38:00] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 15:38:04] [valid] Ep. 46 : Up. 110000 : ce-mean-words : 1.36133 : new best
+[2019-12-10 15:38:06] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 15:38:10] [valid] Ep. 46 : Up. 110000 : perplexity : 3.9014 : new best
+[2019-12-10 15:38:22] [valid] Ep. 46 : Up. 110000 : translation : 33.34 : stalled 3 times (last best: 33.43)
+[2019-12-10 15:50:46] Ep. 46 : Up. 110500 : Sen. 13,096,832 : Cost 0.49676254 : Time 793.67s : 148719.55 words/s : L.r. 1.1416e-04
+[2019-12-10 15:56:41] Seen 15446171 samples
+[2019-12-10 15:56:41] Starting epoch 47
+[2019-12-10 15:56:41] [data] Shuffling data
+[2019-12-10 15:56:43] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 16:00:40] Ep. 47 : Up. 111000 : Sen. 714,376 : Cost 0.49976286 : Time 593.92s : 187372.70 words/s : L.r. 1.1390e-04
+[2019-12-10 16:09:56] Ep. 47 : Up. 111500 : Sen. 3,947,785 : Cost 0.49430007 : Time 556.43s : 213090.23 words/s : L.r. 1.1364e-04
+[2019-12-10 16:20:34] Ep. 47 : Up. 112000 : Sen. 7,157,533 : Cost 0.49831641 : Time 637.82s : 183314.68 words/s : L.r. 1.1339e-04
+[2019-12-10 16:29:40] Ep. 47 : Up. 112500 : Sen. 10,427,240 : Cost 0.49865857 : Time 546.03s : 218847.51 words/s : L.r. 1.1314e-04
+[2019-12-10 16:38:40] Ep. 47 : Up. 113000 : Sen. 13,657,633 : Cost 0.50026327 : Time 539.77s : 215376.95 words/s : L.r. 1.1289e-04
+[2019-12-10 16:43:15] Seen 15446171 samples
+[2019-12-10 16:43:15] Starting epoch 48
+[2019-12-10 16:43:15] [data] Shuffling data
+[2019-12-10 16:43:17] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 16:49:18] Ep. 48 : Up. 113500 : Sen. 1,304,798 : Cost 0.50008678 : Time 638.00s : 175891.69 words/s : L.r. 1.1264e-04
+[2019-12-10 16:58:31] Ep. 48 : Up. 114000 : Sen. 4,501,881 : Cost 0.49698451 : Time 552.91s : 212526.50 words/s : L.r. 1.1239e-04
+[2019-12-10 17:07:38] Ep. 48 : Up. 114500 : Sen. 7,784,629 : Cost 0.49808183 : Time 546.94s : 215983.38 words/s : L.r. 1.1214e-04
+[2019-12-10 17:16:48] Ep. 48 : Up. 115000 : Sen. 10,986,640 : Cost 0.49753055 : Time 550.16s : 213758.76 words/s : L.r. 1.1190e-04
+[2019-12-10 17:16:48] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 17:16:58] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 17:17:06] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 17:17:24] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-ce-mean-words.npz
+[2019-12-10 17:17:28] [valid] Ep. 48 : Up. 115000 : ce-mean-words : 1.36076 : new best
+[2019-12-10 17:17:29] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-perplexity.npz
+[2019-12-10 17:17:32] [valid] Ep. 48 : Up. 115000 : perplexity : 3.89914 : new best
+[2019-12-10 17:17:44] [valid] Ep. 48 : Up. 115000 : translation : 33.33 : stalled 4 times (last best: 33.43)
+[2019-12-10 17:25:31] Ep. 48 : Up. 115500 : Sen. 14,242,008 : Cost 0.49859312 : Time 523.69s : 225838.21 words/s : L.r. 1.1166e-04
+[2019-12-10 17:27:21] Seen 15446171 samples
+[2019-12-10 17:27:21] Starting epoch 49
+[2019-12-10 17:27:21] [data] Shuffling data
+[2019-12-10 17:27:23] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 17:32:25] Ep. 49 : Up. 116000 : Sen. 1,863,482 : Cost 0.49824059 : Time 413.54s : 269825.56 words/s : L.r. 1.1142e-04
+[2019-12-10 17:39:10] Ep. 49 : Up. 116500 : Sen. 5,100,151 : Cost 0.49701831 : Time 405.37s : 292493.69 words/s : L.r. 1.1118e-04
+[2019-12-10 17:45:17] Ep. 49 : Up. 117000 : Sen. 8,304,761 : Cost 0.49860284 : Time 366.26s : 316637.93 words/s : L.r. 1.1094e-04
+[2019-12-10 17:51:16] Ep. 49 : Up. 117500 : Sen. 11,551,172 : Cost 0.50136620 : Time 359.35s : 330396.48 words/s : L.r. 1.1070e-04
+[2019-12-10 17:57:14] Ep. 49 : Up. 118000 : Sen. 14,821,726 : Cost 0.49896657 : Time 357.85s : 329951.12 words/s : L.r. 1.1047e-04
+[2019-12-10 17:58:13] Seen 15446171 samples
+[2019-12-10 17:58:13] Starting epoch 50
+[2019-12-10 17:58:13] [data] Shuffling data
+[2019-12-10 17:58:14] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 18:04:19] Ep. 50 : Up. 118500 : Sen. 2,474,685 : Cost 0.49356017 : Time 425.50s : 266742.37 words/s : L.r. 1.1024e-04
+[2019-12-10 18:10:16] Ep. 50 : Up. 119000 : Sen. 5,685,149 : Cost 0.49666098 : Time 357.18s : 329824.04 words/s : L.r. 1.1000e-04
+[2019-12-10 18:15:54] Ep. 50 : Up. 119500 : Sen. 8,917,585 : Cost 0.50172997 : Time 337.61s : 344360.10 words/s : L.r. 1.0977e-04
+[2019-12-10 18:21:50] Ep. 50 : Up. 120000 : Sen. 12,163,212 : Cost 0.49945071 : Time 356.35s : 330430.31 words/s : L.r. 1.0954e-04
+[2019-12-10 18:21:50] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 18:21:54] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 18:21:57] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 18:22:05] [valid] Ep. 50 : Up. 120000 : ce-mean-words : 1.36136 : stalled 1 times (last best: 1.36076)
+[2019-12-10 18:22:06] [valid] Ep. 50 : Up. 120000 : perplexity : 3.90149 : stalled 1 times (last best: 3.89914)
+[2019-12-10 18:22:12] [valid] Ep. 50 : Up. 120000 : translation : 33.39 : stalled 5 times (last best: 33.43)
+[2019-12-10 18:27:01] Ep. 50 : Up. 120500 : Sen. 15,284,187 : Cost 0.49639395 : Time 310.91s : 366702.61 words/s : L.r. 1.0932e-04
+[2019-12-10 18:27:16] Seen 15446171 samples
+[2019-12-10 18:27:16] Starting epoch 51
+[2019-12-10 18:27:16] [data] Shuffling data
+[2019-12-10 18:27:16] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 18:34:34] Ep. 51 : Up. 121000 : Sen. 3,031,648 : Cost 0.49712107 : Time 452.50s : 257181.43 words/s : L.r. 1.0909e-04
+[2019-12-10 18:40:14] Ep. 51 : Up. 121500 : Sen. 6,254,664 : Cost 0.49820143 : Time 340.21s : 343656.24 words/s : L.r. 1.0887e-04
+[2019-12-10 18:45:56] Ep. 51 : Up. 122000 : Sen. 9,474,430 : Cost 0.49717483 : Time 341.52s : 346008.16 words/s : L.r. 1.0864e-04
+[2019-12-10 18:51:35] Ep. 51 : Up. 122500 : Sen. 12,764,706 : Cost 0.50158072 : Time 339.04s : 349239.94 words/s : L.r. 1.0842e-04
+[2019-12-10 18:56:06] Seen 15446171 samples
+[2019-12-10 18:56:06] Starting epoch 52
+[2019-12-10 18:56:06] [data] Shuffling data
+[2019-12-10 18:56:07] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 18:58:12] Ep. 52 : Up. 123000 : Sen. 406,164 : Cost 0.49721697 : Time 397.79s : 281914.52 words/s : L.r. 1.0820e-04
+[2019-12-10 19:03:50] Ep. 52 : Up. 123500 : Sen. 3,596,924 : Cost 0.49414551 : Time 337.20s : 350744.44 words/s : L.r. 1.0798e-04
+[2019-12-10 19:09:25] Ep. 52 : Up. 124000 : Sen. 6,831,611 : Cost 0.50089902 : Time 335.18s : 348200.67 words/s : L.r. 1.0776e-04
+[2019-12-10 19:15:23] Ep. 52 : Up. 124500 : Sen. 10,103,130 : Cost 0.50014257 : Time 357.77s : 330616.90 words/s : L.r. 1.0755e-04
+[2019-12-10 19:20:54] Ep. 52 : Up. 125000 : Sen. 13,365,867 : Cost 0.50148290 : Time 331.62s : 355184.50 words/s : L.r. 1.0733e-04
+[2019-12-10 19:20:54] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 19:20:58] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 19:21:01] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 19:21:08] [valid] Ep. 52 : Up. 125000 : ce-mean-words : 1.36211 : stalled 2 times (last best: 1.36076)
+[2019-12-10 19:21:09] [valid] Ep. 52 : Up. 125000 : perplexity : 3.90444 : stalled 2 times (last best: 3.89914)
+[2019-12-10 19:21:15] [valid] Ep. 52 : Up. 125000 : translation : 33.28 : stalled 6 times (last best: 33.43)
+[2019-12-10 19:24:21] Seen 15446171 samples
+[2019-12-10 19:24:21] Starting epoch 53
+[2019-12-10 19:24:21] [data] Shuffling data
+[2019-12-10 19:24:22] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 19:27:11] Ep. 53 : Up. 125500 : Sen. 986,560 : Cost 0.49310949 : Time 377.24s : 298918.17 words/s : L.r. 1.0712e-04
+[2019-12-10 19:33:19] Ep. 53 : Up. 126000 : Sen. 4,221,272 : Cost 0.49771664 : Time 367.33s : 320049.54 words/s : L.r. 1.0690e-04
+[2019-12-10 19:39:05] Ep. 53 : Up. 126500 : Sen. 7,457,566 : Cost 0.49983945 : Time 345.88s : 339968.93 words/s : L.r. 1.0669e-04
+[2019-12-10 19:44:40] Ep. 53 : Up. 127000 : Sen. 10,665,734 : Cost 0.49610081 : Time 335.46s : 351079.66 words/s : L.r. 1.0648e-04
+[2019-12-10 19:50:19] Ep. 53 : Up. 127500 : Sen. 13,927,893 : Cost 0.50065523 : Time 339.19s : 348650.91 words/s : L.r. 1.0627e-04
+[2019-12-10 19:52:50] Seen 15446171 samples
+[2019-12-10 19:52:50] Starting epoch 54
+[2019-12-10 19:52:50] [data] Shuffling data
+[2019-12-10 19:52:51] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 19:56:54] Ep. 54 : Up. 128000 : Sen. 1,582,033 : Cost 0.49718276 : Time 394.83s : 283344.91 words/s : L.r. 1.0607e-04
+[2019-12-10 20:02:39] Ep. 54 : Up. 128500 : Sen. 4,816,097 : Cost 0.49662116 : Time 344.64s : 343659.60 words/s : L.r. 1.0586e-04
+[2019-12-10 20:08:38] Ep. 54 : Up. 129000 : Sen. 8,043,423 : Cost 0.49916270 : Time 359.59s : 326921.35 words/s : L.r. 1.0565e-04
+[2019-12-10 20:14:06] Ep. 54 : Up. 129500 : Sen. 11,283,950 : Cost 0.50108224 : Time 328.19s : 356901.03 words/s : L.r. 1.0545e-04
+[2019-12-10 20:19:49] Ep. 54 : Up. 130000 : Sen. 14,489,689 : Cost 0.49610320 : Time 342.55s : 345545.24 words/s : L.r. 1.0525e-04
+[2019-12-10 20:19:49] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 20:19:52] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 20:19:56] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 20:20:03] [valid] Ep. 54 : Up. 130000 : ce-mean-words : 1.36241 : stalled 3 times (last best: 1.36076)
+[2019-12-10 20:20:04] [valid] Ep. 54 : Up. 130000 : perplexity : 3.90558 : stalled 3 times (last best: 3.89914)
+[2019-12-10 20:20:10] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 20:20:11] [valid] Ep. 54 : Up. 130000 : translation : 33.47 : new best
+[2019-12-10 20:21:33] Seen 15446171 samples
+[2019-12-10 20:21:33] Starting epoch 55
+[2019-12-10 20:21:33] [data] Shuffling data
+[2019-12-10 20:21:34] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 20:26:58] Ep. 55 : Up. 130500 : Sen. 2,171,834 : Cost 0.49744681 : Time 428.66s : 262681.52 words/s : L.r. 1.0505e-04
+[2019-12-10 20:32:40] Ep. 55 : Up. 131000 : Sen. 5,425,963 : Cost 0.49761429 : Time 341.93s : 348584.46 words/s : L.r. 1.0484e-04
+[2019-12-10 20:38:09] Ep. 55 : Up. 131500 : Sen. 8,614,276 : Cost 0.49646261 : Time 329.37s : 353147.86 words/s : L.r. 1.0464e-04
+[2019-12-10 20:43:53] Ep. 55 : Up. 132000 : Sen. 11,887,291 : Cost 0.50217372 : Time 343.74s : 344746.44 words/s : L.r. 1.0445e-04
+[2019-12-10 20:49:25] Ep. 55 : Up. 132500 : Sen. 15,084,385 : Cost 0.50038159 : Time 332.70s : 348028.11 words/s : L.r. 1.0425e-04
+[2019-12-10 20:50:00] Seen 15446171 samples
+[2019-12-10 20:50:00] Starting epoch 56
+[2019-12-10 20:50:00] [data] Shuffling data
+[2019-12-10 20:50:01] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 20:56:07] Ep. 56 : Up. 133000 : Sen. 2,707,713 : Cost 0.49394092 : Time 401.90s : 281158.10 words/s : L.r. 1.0405e-04
+[2019-12-10 21:01:51] Ep. 56 : Up. 133500 : Sen. 5,988,364 : Cost 0.50126261 : Time 343.48s : 344291.30 words/s : L.r. 1.0386e-04
+[2019-12-10 21:07:54] Ep. 56 : Up. 134000 : Sen. 9,161,024 : Cost 0.49284774 : Time 362.74s : 322911.78 words/s : L.r. 1.0366e-04
+[2019-12-10 21:13:25] Ep. 56 : Up. 134500 : Sen. 12,401,962 : Cost 0.49919602 : Time 331.48s : 354680.61 words/s : L.r. 1.0347e-04
+[2019-12-10 21:18:28] Seen 15446171 samples
+[2019-12-10 21:18:28] Starting epoch 57
+[2019-12-10 21:18:28] [data] Shuffling data
+[2019-12-10 21:18:29] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 21:20:14] Ep. 57 : Up. 135000 : Sen. 55,782 : Cost 0.50001377 : Time 409.13s : 274682.17 words/s : L.r. 1.0328e-04
+[2019-12-10 21:20:14] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 21:20:18] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 21:20:21] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 21:20:30] [valid] Ep. 57 : Up. 135000 : ce-mean-words : 1.36289 : stalled 4 times (last best: 1.36076)
+[2019-12-10 21:20:31] [valid] Ep. 57 : Up. 135000 : perplexity : 3.90747 : stalled 4 times (last best: 3.89914)
+[2019-12-10 21:20:37] [valid] Ep. 57 : Up. 135000 : translation : 33.46 : stalled 1 times (last best: 33.47)
+[2019-12-10 21:25:58] Ep. 57 : Up. 135500 : Sen. 3,315,860 : Cost 0.50343108 : Time 343.97s : 339900.85 words/s : L.r. 1.0309e-04
+[2019-12-10 21:31:41] Ep. 57 : Up. 136000 : Sen. 6,514,738 : Cost 0.49281490 : Time 343.39s : 344408.37 words/s : L.r. 1.0290e-04
+[2019-12-10 21:37:19] Ep. 57 : Up. 136500 : Sen. 9,737,079 : Cost 0.49988887 : Time 337.09s : 349944.25 words/s : L.r. 1.0271e-04
+[2019-12-10 21:42:52] Ep. 57 : Up. 137000 : Sen. 13,000,000 : Cost 0.50083047 : Time 333.77s : 352062.59 words/s : L.r. 1.0252e-04
+[2019-12-10 21:47:06] Seen 15446171 samples
+[2019-12-10 21:47:06] Starting epoch 58
+[2019-12-10 21:47:06] [data] Shuffling data
+[2019-12-10 21:47:07] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 21:49:37] Ep. 58 : Up. 137500 : Sen. 638,272 : Cost 0.49408588 : Time 404.21s : 280264.48 words/s : L.r. 1.0234e-04
+[2019-12-10 21:55:15] Ep. 58 : Up. 138000 : Sen. 3,867,381 : Cost 0.49898246 : Time 338.38s : 347226.27 words/s : L.r. 1.0215e-04
+[2019-12-10 22:01:32] Ep. 58 : Up. 138500 : Sen. 7,101,075 : Cost 0.50172359 : Time 377.48s : 308349.94 words/s : L.r. 1.0197e-04
+[2019-12-10 22:07:58] Ep. 58 : Up. 139000 : Sen. 10,348,022 : Cost 0.49899372 : Time 386.03s : 306787.39 words/s : L.r. 1.0178e-04
+[2019-12-10 22:13:49] Ep. 58 : Up. 139500 : Sen. 13,588,081 : Cost 0.49476045 : Time 350.18s : 337119.58 words/s : L.r. 1.0160e-04
+[2019-12-10 22:16:47] Seen 15446171 samples
+[2019-12-10 22:16:47] Starting epoch 59
+[2019-12-10 22:16:47] [data] Shuffling data
+[2019-12-10 22:16:48] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 22:20:27] Ep. 59 : Up. 140000 : Sen. 1,207,901 : Cost 0.49955204 : Time 398.04s : 280568.38 words/s : L.r. 1.0142e-04
+[2019-12-10 22:20:27] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 22:20:30] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 22:20:33] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 22:20:40] [valid] Ep. 59 : Up. 140000 : ce-mean-words : 1.363 : stalled 5 times (last best: 1.36076)
+[2019-12-10 22:20:41] [valid] Ep. 59 : Up. 140000 : perplexity : 3.90789 : stalled 5 times (last best: 3.89914)
+[2019-12-10 22:20:47] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.best-translation.npz
+[2019-12-10 22:20:49] [valid] Ep. 59 : Up. 140000 : translation : 33.57 : new best
+[2019-12-10 22:26:06] Ep. 59 : Up. 140500 : Sen. 4,431,210 : Cost 0.49731231 : Time 339.75s : 344817.00 words/s : L.r. 1.0124e-04
+[2019-12-10 22:31:39] Ep. 59 : Up. 141000 : Sen. 7,697,162 : Cost 0.50341344 : Time 332.30s : 354407.70 words/s : L.r. 1.0106e-04
+[2019-12-10 22:37:19] Ep. 59 : Up. 141500 : Sen. 10,931,691 : Cost 0.49702895 : Time 340.05s : 348899.74 words/s : L.r. 1.0088e-04
+[2019-12-10 22:43:53] Ep. 59 : Up. 142000 : Sen. 14,152,075 : Cost 0.49859098 : Time 393.86s : 296765.12 words/s : L.r. 1.0070e-04
+[2019-12-10 22:45:48] Seen 15446171 samples
+[2019-12-10 22:45:48] Starting epoch 60
+[2019-12-10 22:45:48] [data] Shuffling data
+[2019-12-10 22:45:49] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 22:50:44] Ep. 60 : Up. 142500 : Sen. 1,803,795 : Cost 0.49779692 : Time 411.13s : 273352.38 words/s : L.r. 1.0052e-04
+[2019-12-10 22:57:45] Ep. 60 : Up. 143000 : Sen. 5,017,680 : Cost 0.49532586 : Time 421.15s : 280687.62 words/s : L.r. 1.0035e-04
+[2019-12-10 23:04:05] Ep. 60 : Up. 143500 : Sen. 8,239,029 : Cost 0.49910876 : Time 380.49s : 309183.27 words/s : L.r. 1.0017e-04
+[2019-12-10 23:09:59] Ep. 60 : Up. 144000 : Sen. 11,503,104 : Cost 0.50007188 : Time 353.46s : 332719.75 words/s : L.r. 1.0000e-04
+[2019-12-10 23:15:32] Ep. 60 : Up. 144500 : Sen. 14,725,351 : Cost 0.49805701 : Time 332.78s : 352910.09 words/s : L.r. 9.9827e-05
+[2019-12-10 23:16:37] Seen 15446171 samples
+[2019-12-10 23:16:37] Starting epoch 61
+[2019-12-10 23:16:37] [data] Shuffling data
+[2019-12-10 23:16:38] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 23:22:52] Ep. 61 : Up. 145000 : Sen. 2,387,104 : Cost 0.49951404 : Time 439.86s : 256997.84 words/s : L.r. 9.9655e-05
+[2019-12-10 23:22:52] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-10 23:22:55] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-10 23:22:59] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-10 23:23:07] [valid] Ep. 61 : Up. 145000 : ce-mean-words : 1.36348 : stalled 6 times (last best: 1.36076)
+[2019-12-10 23:23:07] [valid] Ep. 61 : Up. 145000 : perplexity : 3.90977 : stalled 6 times (last best: 3.89914)
+[2019-12-10 23:23:13] [valid] Ep. 61 : Up. 145000 : translation : 33.51 : stalled 1 times (last best: 33.57)
+[2019-12-10 23:28:53] Ep. 61 : Up. 145500 : Sen. 5,621,919 : Cost 0.49972537 : Time 361.87s : 325420.30 words/s : L.r. 9.9483e-05
+[2019-12-10 23:34:44] Ep. 61 : Up. 146000 : Sen. 8,862,620 : Cost 0.49851751 : Time 350.58s : 336194.02 words/s : L.r. 9.9313e-05
+[2019-12-10 23:41:03] Ep. 61 : Up. 146500 : Sen. 12,080,638 : Cost 0.49818483 : Time 378.92s : 309972.11 words/s : L.r. 9.9143e-05
+[2019-12-10 23:46:26] Ep. 61 : Up. 147000 : Sen. 15,245,813 : Cost 0.49712667 : Time 323.62s : 355158.79 words/s : L.r. 9.8974e-05
+[2019-12-10 23:46:45] Seen 15446171 samples
+[2019-12-10 23:46:45] Starting epoch 62
+[2019-12-10 23:46:45] [data] Shuffling data
+[2019-12-10 23:46:46] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-10 23:52:28] Ep. 62 : Up. 147500 : Sen. 2,953,760 : Cost 0.49977967 : Time 361.23s : 317306.41 words/s : L.r. 9.8806e-05
+[2019-12-10 23:57:31] Ep. 62 : Up. 148000 : Sen. 6,169,837 : Cost 0.49661481 : Time 302.94s : 388268.06 words/s : L.r. 9.8639e-05
+[2019-12-11 00:02:19] Ep. 62 : Up. 148500 : Sen. 9,382,997 : Cost 0.49740782 : Time 288.36s : 409196.17 words/s : L.r. 9.8473e-05
+[2019-12-11 00:07:06] Ep. 62 : Up. 149000 : Sen. 12,676,969 : Cost 0.50333816 : Time 287.38s : 408912.09 words/s : L.r. 9.8308e-05
+[2019-12-11 00:11:16] Seen 15446171 samples
+[2019-12-11 00:11:16] Starting epoch 63
+[2019-12-11 00:11:16] [data] Shuffling data
+[2019-12-11 00:11:17] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 00:12:58] Ep. 63 : Up. 149500 : Sen. 287,245 : Cost 0.49605361 : Time 351.46s : 317402.48 words/s : L.r. 9.8143e-05
+[2019-12-11 00:17:43] Ep. 63 : Up. 150000 : Sen. 3,535,592 : Cost 0.50341582 : Time 285.10s : 413693.32 words/s : L.r. 9.7980e-05
+[2019-12-11 00:17:43] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 00:17:46] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 00:17:50] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 00:17:57] [valid] Ep. 63 : Up. 150000 : ce-mean-words : 1.36519 : stalled 7 times (last best: 1.36076)
+[2019-12-11 00:17:58] [valid] Ep. 63 : Up. 150000 : perplexity : 3.91645 : stalled 7 times (last best: 3.89914)
+[2019-12-11 00:18:03] [valid] Ep. 63 : Up. 150000 : translation : 33.39 : stalled 2 times (last best: 33.57)
+[2019-12-11 00:22:47] Ep. 63 : Up. 150500 : Sen. 6,723,140 : Cost 0.49232960 : Time 303.65s : 386226.30 words/s : L.r. 9.7817e-05
+[2019-12-11 00:27:34] Ep. 63 : Up. 151000 : Sen. 10,000,000 : Cost 0.50016081 : Time 287.75s : 413610.20 words/s : L.r. 9.7655e-05
+[2019-12-11 00:32:31] Ep. 63 : Up. 151500 : Sen. 13,212,110 : Cost 0.49777398 : Time 296.66s : 395865.36 words/s : L.r. 9.7493e-05
+[2019-12-11 00:35:43] Seen 15446171 samples
+[2019-12-11 00:35:43] Starting epoch 64
+[2019-12-11 00:35:43] [data] Shuffling data
+[2019-12-11 00:35:44] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 00:38:14] Ep. 64 : Up. 152000 : Sen. 877,017 : Cost 0.49989620 : Time 342.94s : 327894.18 words/s : L.r. 9.7333e-05
+[2019-12-11 00:43:15] Ep. 64 : Up. 152500 : Sen. 4,106,680 : Cost 0.49620298 : Time 301.06s : 392604.30 words/s : L.r. 9.7173e-05
+[2019-12-11 00:47:59] Ep. 64 : Up. 153000 : Sen. 7,398,497 : Cost 0.50559384 : Time 284.03s : 412189.61 words/s : L.r. 9.7014e-05
+[2019-12-11 00:52:50] Ep. 64 : Up. 153500 : Sen. 10,583,654 : Cost 0.49321893 : Time 290.88s : 408133.44 words/s : L.r. 9.6856e-05
+[2019-12-11 00:57:33] Ep. 64 : Up. 154000 : Sen. 13,819,151 : Cost 0.50174743 : Time 283.18s : 411943.15 words/s : L.r. 9.6699e-05
+[2019-12-11 00:59:58] Seen 15446171 samples
+[2019-12-11 00:59:58] Starting epoch 65
+[2019-12-11 00:59:58] [data] Shuffling data
+[2019-12-11 00:59:59] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 01:03:20] Ep. 65 : Up. 154500 : Sen. 1,404,791 : Cost 0.49447346 : Time 347.16s : 319324.66 words/s : L.r. 9.6542e-05
+[2019-12-11 01:08:05] Ep. 65 : Up. 155000 : Sen. 4,650,617 : Cost 0.49745476 : Time 284.84s : 415203.15 words/s : L.r. 9.6386e-05
+[2019-12-11 01:08:05] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 01:08:08] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 01:08:12] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 01:08:19] [valid] Ep. 65 : Up. 155000 : ce-mean-words : 1.36628 : stalled 8 times (last best: 1.36076)
+[2019-12-11 01:08:19] [valid] Ep. 65 : Up. 155000 : perplexity : 3.92072 : stalled 8 times (last best: 3.89914)
+[2019-12-11 01:08:25] [valid] Ep. 65 : Up. 155000 : translation : 33.5 : stalled 3 times (last best: 33.57)
+[2019-12-11 01:13:03] Ep. 65 : Up. 155500 : Sen. 7,894,421 : Cost 0.49985486 : Time 297.85s : 396432.85 words/s : L.r. 9.6231e-05
+[2019-12-11 01:17:57] Ep. 65 : Up. 156000 : Sen. 11,110,880 : Cost 0.49900684 : Time 293.95s : 399764.68 words/s : L.r. 9.6077e-05
+[2019-12-11 01:22:43] Ep. 65 : Up. 156500 : Sen. 14,374,108 : Cost 0.50019479 : Time 286.17s : 409661.69 words/s : L.r. 9.5923e-05
+[2019-12-11 01:24:15] Seen 15446171 samples
+[2019-12-11 01:24:15] Starting epoch 66
+[2019-12-11 01:24:15] [data] Shuffling data
+[2019-12-11 01:24:16] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 01:28:26] Ep. 66 : Up. 157000 : Sen. 1,992,320 : Cost 0.49659452 : Time 342.73s : 328197.08 words/s : L.r. 9.5770e-05
+[2019-12-11 01:33:21] Ep. 66 : Up. 157500 : Sen. 5,241,907 : Cost 0.49947727 : Time 295.12s : 400985.69 words/s : L.r. 9.5618e-05
+[2019-12-11 01:38:10] Ep. 66 : Up. 158000 : Sen. 8,498,668 : Cost 0.49937245 : Time 289.38s : 409851.42 words/s : L.r. 9.5467e-05
+[2019-12-11 01:42:53] Ep. 66 : Up. 158500 : Sen. 11,700,000 : Cost 0.50189745 : Time 282.26s : 411337.20 words/s : L.r. 9.5316e-05
+[2019-12-11 01:47:41] Ep. 66 : Up. 159000 : Sen. 14,930,072 : Cost 0.49602506 : Time 288.82s : 408593.40 words/s : L.r. 9.5166e-05
+[2019-12-11 01:48:26] Seen 15446171 samples
+[2019-12-11 01:48:26] Starting epoch 67
+[2019-12-11 01:48:26] [data] Shuffling data
+[2019-12-11 01:48:27] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 01:53:27] Ep. 67 : Up. 159500 : Sen. 2,595,003 : Cost 0.49876878 : Time 345.32s : 325148.39 words/s : L.r. 9.5017e-05
+[2019-12-11 01:58:10] Ep. 67 : Up. 160000 : Sen. 5,810,106 : Cost 0.49745125 : Time 283.29s : 415265.19 words/s : L.r. 9.4868e-05
+[2019-12-11 01:58:10] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 01:58:13] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 01:58:17] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 01:58:24] [valid] Ep. 67 : Up. 160000 : ce-mean-words : 1.36853 : stalled 9 times (last best: 1.36076)
+[2019-12-11 01:58:25] [valid] Ep. 67 : Up. 160000 : perplexity : 3.92956 : stalled 9 times (last best: 3.89914)
+[2019-12-11 01:58:31] [valid] Ep. 67 : Up. 160000 : translation : 33.38 : stalled 4 times (last best: 33.57)
+[2019-12-11 02:03:38] Ep. 67 : Up. 160500 : Sen. 9,065,993 : Cost 0.49874043 : Time 327.84s : 362086.03 words/s : L.r. 9.4720e-05
+[2019-12-11 02:08:25] Ep. 67 : Up. 161000 : Sen. 12,323,083 : Cost 0.49882495 : Time 286.90s : 411133.38 words/s : L.r. 9.4573e-05
+[2019-12-11 02:12:53] Ep. 67 : Up. 161500 : Sen. 15,398,124 : Cost 0.49972492 : Time 268.41s : 417717.16 words/s : L.r. 9.4427e-05
+[2019-12-11 02:12:58] Seen 15446171 samples
+[2019-12-11 02:12:58] Starting epoch 68
+[2019-12-11 02:12:58] [data] Shuffling data
+[2019-12-11 02:12:59] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 02:18:59] Ep. 68 : Up. 162000 : Sen. 3,131,611 : Cost 0.49734756 : Time 366.31s : 316901.88 words/s : L.r. 9.4281e-05
+[2019-12-11 02:23:47] Ep. 68 : Up. 162500 : Sen. 6,404,021 : Cost 0.49943787 : Time 287.48s : 414485.95 words/s : L.r. 9.4136e-05
+[2019-12-11 02:28:35] Ep. 68 : Up. 163000 : Sen. 9,627,586 : Cost 0.49972880 : Time 288.25s : 408265.72 words/s : L.r. 9.3991e-05
+[2019-12-11 02:33:22] Ep. 68 : Up. 163500 : Sen. 12,844,896 : Cost 0.49721810 : Time 286.82s : 409831.88 words/s : L.r. 9.3847e-05
+[2019-12-11 02:37:13] Seen 15446171 samples
+[2019-12-11 02:37:13] Starting epoch 69
+[2019-12-11 02:37:13] [data] Shuffling data
+[2019-12-11 02:37:14] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 02:39:14] Ep. 69 : Up. 164000 : Sen. 461,206 : Cost 0.49358976 : Time 352.20s : 318463.93 words/s : L.r. 9.3704e-05
+[2019-12-11 02:44:04] Ep. 69 : Up. 164500 : Sen. 3,750,815 : Cost 0.50463790 : Time 289.88s : 407144.51 words/s : L.r. 9.3562e-05
+[2019-12-11 02:48:52] Ep. 69 : Up. 165000 : Sen. 6,985,442 : Cost 0.49892744 : Time 288.24s : 407349.32 words/s : L.r. 9.3420e-05
+[2019-12-11 02:48:52] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 02:48:56] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 02:48:59] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 02:49:06] [valid] Ep. 69 : Up. 165000 : ce-mean-words : 1.36846 : stalled 10 times (last best: 1.36076)
+[2019-12-11 02:49:07] [valid] Ep. 69 : Up. 165000 : perplexity : 3.9293 : stalled 10 times (last best: 3.89914)
+[2019-12-11 02:49:12] [valid] Ep. 69 : Up. 165000 : translation : 33.42 : stalled 5 times (last best: 33.57)
+[2019-12-11 02:54:07] Ep. 69 : Up. 165500 : Sen. 10,230,446 : Cost 0.50114119 : Time 314.65s : 374636.66 words/s : L.r. 9.3279e-05
+[2019-12-11 02:58:59] Ep. 69 : Up. 166000 : Sen. 13,488,457 : Cost 0.50001878 : Time 292.05s : 401826.36 words/s : L.r. 9.3138e-05
+[2019-12-11 03:01:53] Seen 15446171 samples
+[2019-12-11 03:01:53] Starting epoch 70
+[2019-12-11 03:01:53] [data] Shuffling data
+[2019-12-11 03:01:54] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 03:04:48] Ep. 70 : Up. 166500 : Sen. 1,106,513 : Cost 0.49522018 : Time 349.30s : 324054.44 words/s : L.r. 9.2998e-05
+[2019-12-11 03:09:36] Ep. 70 : Up. 167000 : Sen. 4,282,563 : Cost 0.49406019 : Time 287.68s : 407026.35 words/s : L.r. 9.2859e-05
+[2019-12-11 03:14:22] Ep. 70 : Up. 167500 : Sen. 7,566,210 : Cost 0.50409067 : Time 285.99s : 410825.79 words/s : L.r. 9.2720e-05
+[2019-12-11 03:19:13] Ep. 70 : Up. 168000 : Sen. 10,785,335 : Cost 0.49668568 : Time 290.80s : 405487.24 words/s : L.r. 9.2582e-05
+[2019-12-11 03:24:13] Ep. 70 : Up. 168500 : Sen. 14,020,040 : Cost 0.50161910 : Time 299.81s : 392346.18 words/s : L.r. 9.2445e-05
+[2019-12-11 03:26:11] Seen 15446171 samples
+[2019-12-11 03:26:11] Starting epoch 71
+[2019-12-11 03:26:11] [data] Shuffling data
+[2019-12-11 03:26:12] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 03:29:54] Ep. 71 : Up. 169000 : Sen. 1,671,596 : Cost 0.49976745 : Time 341.12s : 327851.87 words/s : L.r. 9.2308e-05
+[2019-12-11 03:34:41] Ep. 71 : Up. 169500 : Sen. 4,884,202 : Cost 0.49465987 : Time 287.44s : 411418.40 words/s : L.r. 9.2171e-05
+[2019-12-11 03:39:39] Ep. 71 : Up. 170000 : Sen. 8,136,658 : Cost 0.50038999 : Time 297.37s : 395653.09 words/s : L.r. 9.2036e-05
+[2019-12-11 03:39:39] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 03:39:42] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 03:39:45] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 03:39:52] [valid] Ep. 71 : Up. 170000 : ce-mean-words : 1.37028 : stalled 11 times (last best: 1.36076)
+[2019-12-11 03:39:53] [valid] Ep. 71 : Up. 170000 : perplexity : 3.93647 : stalled 11 times (last best: 3.89914)
+[2019-12-11 03:39:58] [valid] Ep. 71 : Up. 170000 : translation : 33.37 : stalled 6 times (last best: 33.57)
+[2019-12-11 03:44:40] Ep. 71 : Up. 170500 : Sen. 11,368,165 : Cost 0.50094563 : Time 301.60s : 390997.28 words/s : L.r. 9.1901e-05
+[2019-12-11 03:49:30] Ep. 71 : Up. 171000 : Sen. 14,598,462 : Cost 0.49906161 : Time 289.61s : 404213.71 words/s : L.r. 9.1766e-05
+[2019-12-11 03:50:43] Seen 15446171 samples
+[2019-12-11 03:50:43] Starting epoch 72
+[2019-12-11 03:50:43] [data] Shuffling data
+[2019-12-11 03:50:44] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 03:55:26] Ep. 72 : Up. 171500 : Sen. 2,263,904 : Cost 0.49697247 : Time 355.82s : 317334.77 words/s : L.r. 9.1632e-05
+[2019-12-11 04:00:15] Ep. 72 : Up. 172000 : Sen. 5,471,112 : Cost 0.49707225 : Time 289.10s : 407373.55 words/s : L.r. 9.1499e-05
+[2019-12-11 04:05:02] Ep. 72 : Up. 172500 : Sen. 8,668,541 : Cost 0.49876252 : Time 287.34s : 405787.51 words/s : L.r. 9.1366e-05
+[2019-12-11 04:09:58] Ep. 72 : Up. 173000 : Sen. 11,921,845 : Cost 0.50133520 : Time 296.15s : 398459.67 words/s : L.r. 9.1234e-05
+[2019-12-11 04:14:48] Ep. 72 : Up. 173500 : Sen. 15,120,835 : Cost 0.49881729 : Time 289.50s : 403038.15 words/s : L.r. 9.1103e-05
+[2019-12-11 04:15:16] Seen 15446171 samples
+[2019-12-11 04:15:16] Starting epoch 73
+[2019-12-11 04:15:16] [data] Shuffling data
+[2019-12-11 04:15:17] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 04:20:54] Ep. 73 : Up. 174000 : Sen. 2,832,395 : Cost 0.50011867 : Time 365.93s : 311917.59 words/s : L.r. 9.0972e-05
+[2019-12-11 04:25:56] Ep. 73 : Up. 174500 : Sen. 6,034,155 : Cost 0.49485040 : Time 302.34s : 388950.92 words/s : L.r. 9.0841e-05
+[2019-12-11 04:30:49] Ep. 73 : Up. 175000 : Sen. 9,258,617 : Cost 0.49855852 : Time 293.14s : 400865.82 words/s : L.r. 9.0711e-05
+[2019-12-11 04:30:49] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 04:30:52] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 04:30:55] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 04:31:02] [valid] Ep. 73 : Up. 175000 : ce-mean-words : 1.37017 : stalled 12 times (last best: 1.36076)
+[2019-12-11 04:31:03] [valid] Ep. 73 : Up. 175000 : perplexity : 3.93603 : stalled 12 times (last best: 3.89914)
+[2019-12-11 04:31:08] [valid] Ep. 73 : Up. 175000 : translation : 33.35 : stalled 7 times (last best: 33.57)
+[2019-12-11 04:35:50] Ep. 73 : Up. 175500 : Sen. 12,529,465 : Cost 0.50178552 : Time 300.64s : 393168.11 words/s : L.r. 9.0582e-05
+[2019-12-11 04:40:11] Seen 15446171 samples
+[2019-12-11 04:40:11] Starting epoch 74
+[2019-12-11 04:40:11] [data] Shuffling data
+[2019-12-11 04:40:12] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 04:41:44] Ep. 74 : Up. 176000 : Sen. 137,345 : Cost 0.49795654 : Time 354.07s : 313852.70 words/s : L.r. 9.0453e-05
+[2019-12-11 04:46:50] Ep. 74 : Up. 176500 : Sen. 3,384,987 : Cost 0.49758726 : Time 305.96s : 386863.18 words/s : L.r. 9.0325e-05
+[2019-12-11 04:51:50] Ep. 74 : Up. 177000 : Sen. 6,642,174 : Cost 0.50292641 : Time 300.63s : 389531.43 words/s : L.r. 9.0198e-05
+[2019-12-11 04:56:42] Ep. 74 : Up. 177500 : Sen. 9,823,824 : Cost 0.49465165 : Time 291.91s : 403493.29 words/s : L.r. 9.0070e-05
+[2019-12-11 05:01:40] Ep. 74 : Up. 178000 : Sen. 13,087,601 : Cost 0.50299716 : Time 297.73s : 395438.24 words/s : L.r. 8.9944e-05
+[2019-12-11 05:05:01] Seen 15446171 samples
+[2019-12-11 05:05:01] Starting epoch 75
+[2019-12-11 05:05:01] [data] Shuffling data
+[2019-12-11 05:05:01] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 05:07:19] Ep. 75 : Up. 178500 : Sen. 702,913 : Cost 0.49636874 : Time 338.49s : 329228.83 words/s : L.r. 8.9818e-05
+[2019-12-11 05:12:06] Ep. 75 : Up. 179000 : Sen. 3,959,573 : Cost 0.49948969 : Time 287.43s : 412942.54 words/s : L.r. 8.9692e-05
+[2019-12-11 05:17:04] Ep. 75 : Up. 179500 : Sen. 7,189,274 : Cost 0.50111079 : Time 298.52s : 391489.44 words/s : L.r. 8.9567e-05
+[2019-12-11 05:21:55] Ep. 75 : Up. 180000 : Sen. 10,411,778 : Cost 0.49910951 : Time 290.08s : 403386.83 words/s : L.r. 8.9443e-05
+[2019-12-11 05:21:55] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 05:21:58] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 05:22:02] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 05:22:10] [valid] Ep. 75 : Up. 180000 : ce-mean-words : 1.36925 : stalled 13 times (last best: 1.36076)
+[2019-12-11 05:22:10] [valid] Ep. 75 : Up. 180000 : perplexity : 3.9324 : stalled 13 times (last best: 3.89914)
+[2019-12-11 05:22:16] [valid] Ep. 75 : Up. 180000 : translation : 33.29 : stalled 8 times (last best: 33.57)
+[2019-12-11 05:26:57] Ep. 75 : Up. 180500 : Sen. 13,631,810 : Cost 0.49852091 : Time 302.73s : 390173.83 words/s : L.r. 8.9319e-05
+[2019-12-11 05:29:35] Seen 15446171 samples
+[2019-12-11 05:29:35] Starting epoch 76
+[2019-12-11 05:29:35] [data] Shuffling data
+[2019-12-11 05:29:36] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 05:32:45] Ep. 76 : Up. 181000 : Sen. 1,263,237 : Cost 0.49370793 : Time 347.61s : 321304.62 words/s : L.r. 8.9195e-05
+[2019-12-11 05:37:37] Ep. 76 : Up. 181500 : Sen. 4,529,659 : Cost 0.50135273 : Time 292.25s : 406187.85 words/s : L.r. 8.9072e-05
+[2019-12-11 05:42:30] Ep. 76 : Up. 182000 : Sen. 7,758,936 : Cost 0.49835470 : Time 292.91s : 402657.87 words/s : L.r. 8.8950e-05
+[2019-12-11 05:47:28] Ep. 76 : Up. 182500 : Sen. 10,991,072 : Cost 0.50118256 : Time 298.25s : 394762.97 words/s : L.r. 8.8828e-05
+[2019-12-11 05:52:39] Ep. 76 : Up. 183000 : Sen. 14,183,453 : Cost 0.49805960 : Time 311.02s : 375347.79 words/s : L.r. 8.8707e-05
+[2019-12-11 05:54:24] Seen 15446171 samples
+[2019-12-11 05:54:24] Starting epoch 77
+[2019-12-11 05:54:24] [data] Shuffling data
+[2019-12-11 05:54:25] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 05:58:35] Ep. 77 : Up. 183500 : Sen. 1,851,547 : Cost 0.49901885 : Time 355.39s : 315631.43 words/s : L.r. 8.8586e-05
+[2019-12-11 06:03:50] Ep. 77 : Up. 184000 : Sen. 5,100,318 : Cost 0.49988103 : Time 315.55s : 376313.22 words/s : L.r. 8.8465e-05
+[2019-12-11 06:08:50] Ep. 77 : Up. 184500 : Sen. 8,345,614 : Cost 0.50116384 : Time 300.11s : 391347.27 words/s : L.r. 8.8345e-05
+[2019-12-11 06:13:46] Ep. 77 : Up. 185000 : Sen. 11,620,712 : Cost 0.50013274 : Time 295.69s : 401017.40 words/s : L.r. 8.8226e-05
+[2019-12-11 06:13:46] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 06:13:49] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 06:13:52] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 06:13:59] [valid] Ep. 77 : Up. 185000 : ce-mean-words : 1.3702 : stalled 14 times (last best: 1.36076)
+[2019-12-11 06:14:00] [valid] Ep. 77 : Up. 185000 : perplexity : 3.93612 : stalled 14 times (last best: 3.89914)
+[2019-12-11 06:14:05] [valid] Ep. 77 : Up. 185000 : translation : 33.38 : stalled 9 times (last best: 33.57)
+[2019-12-11 06:18:49] Ep. 77 : Up. 185500 : Sen. 14,766,677 : Cost 0.49600852 : Time 303.41s : 382987.52 words/s : L.r. 8.8107e-05
+[2019-12-11 06:19:47] Seen 15446171 samples
+[2019-12-11 06:19:47] Starting epoch 78
+[2019-12-11 06:19:47] [data] Shuffling data
+[2019-12-11 06:19:48] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 06:24:40] Ep. 78 : Up. 186000 : Sen. 2,387,068 : Cost 0.49372685 : Time 350.71s : 319392.94 words/s : L.r. 8.7988e-05
+[2019-12-11 06:29:26] Ep. 78 : Up. 186500 : Sen. 5,659,445 : Cost 0.50364971 : Time 286.43s : 409092.61 words/s : L.r. 8.7870e-05
+[2019-12-11 06:34:15] Ep. 78 : Up. 187000 : Sen. 8,877,608 : Cost 0.49921584 : Time 289.05s : 407854.94 words/s : L.r. 8.7753e-05
+[2019-12-11 06:39:11] Ep. 78 : Up. 187500 : Sen. 12,107,749 : Cost 0.49887028 : Time 295.29s : 399970.30 words/s : L.r. 8.7636e-05
+[2019-12-11 06:43:42] Ep. 78 : Up. 188000 : Sen. 15,257,999 : Cost 0.49817213 : Time 271.85s : 422064.61 words/s : L.r. 8.7519e-05
+[2019-12-11 06:43:59] Seen 15446171 samples
+[2019-12-11 06:43:59] Starting epoch 79
+[2019-12-11 06:43:59] [data] Shuffling data
+[2019-12-11 06:44:00] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 06:49:38] Ep. 79 : Up. 188500 : Sen. 2,980,511 : Cost 0.49828735 : Time 355.72s : 323850.05 words/s : L.r. 8.7403e-05
+[2019-12-11 06:54:33] Ep. 79 : Up. 189000 : Sen. 6,184,033 : Cost 0.49777892 : Time 294.46s : 398590.82 words/s : L.r. 8.7287e-05
+[2019-12-11 06:59:18] Ep. 79 : Up. 189500 : Sen. 9,467,742 : Cost 0.50348014 : Time 285.11s : 414700.00 words/s : L.r. 8.7172e-05
+[2019-12-11 07:04:06] Ep. 79 : Up. 190000 : Sen. 12,721,852 : Cost 0.49788803 : Time 287.96s : 409411.02 words/s : L.r. 8.7057e-05
+[2019-12-11 07:04:06] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 07:04:09] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 07:04:13] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 07:04:20] [valid] Ep. 79 : Up. 190000 : ce-mean-words : 1.3716 : stalled 15 times (last best: 1.36076)
+[2019-12-11 07:04:21] [valid] Ep. 79 : Up. 190000 : perplexity : 3.94165 : stalled 15 times (last best: 3.89914)
+[2019-12-11 07:04:26] [valid] Ep. 79 : Up. 190000 : translation : 33.37 : stalled 10 times (last best: 33.57)
+[2019-12-11 07:08:23] Seen 15446171 samples
+[2019-12-11 07:08:23] Starting epoch 80
+[2019-12-11 07:08:23] [data] Shuffling data
+[2019-12-11 07:08:23] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 07:10:10] Ep. 80 : Up. 190500 : Sen. 335,329 : Cost 0.49756905 : Time 363.89s : 308440.73 words/s : L.r. 8.6943e-05
+[2019-12-11 07:14:54] Ep. 80 : Up. 191000 : Sen. 3,580,601 : Cost 0.50001621 : Time 284.86s : 412847.27 words/s : L.r. 8.6829e-05
+[2019-12-11 07:19:41] Ep. 80 : Up. 191500 : Sen. 6,784,327 : Cost 0.49790484 : Time 286.77s : 408337.60 words/s : L.r. 8.6716e-05
+[2019-12-11 07:24:38] Ep. 80 : Up. 192000 : Sen. 10,060,642 : Cost 0.50081122 : Time 296.47s : 401301.61 words/s : L.r. 8.6603e-05
+[2019-12-11 07:29:26] Ep. 80 : Up. 192500 : Sen. 13,262,366 : Cost 0.49760824 : Time 288.41s : 404918.97 words/s : L.r. 8.6490e-05
+[2019-12-11 07:32:35] Seen 15446171 samples
+[2019-12-11 07:32:35] Starting epoch 81
+[2019-12-11 07:32:35] [data] Shuffling data
+[2019-12-11 07:32:36] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 07:35:10] Ep. 81 : Up. 193000 : Sen. 884,018 : Cost 0.49691877 : Time 344.20s : 326410.52 words/s : L.r. 8.6378e-05
+[2019-12-11 07:40:21] Ep. 81 : Up. 193500 : Sen. 4,153,260 : Cost 0.50199944 : Time 310.93s : 380768.76 words/s : L.r. 8.6266e-05
+[2019-12-11 07:45:11] Ep. 81 : Up. 194000 : Sen. 7,396,569 : Cost 0.50055301 : Time 289.63s : 405392.37 words/s : L.r. 8.6155e-05
+[2019-12-11 07:50:06] Ep. 81 : Up. 194500 : Sen. 10,634,476 : Cost 0.49811637 : Time 295.06s : 401406.63 words/s : L.r. 8.6044e-05
+[2019-12-11 07:54:54] Ep. 81 : Up. 195000 : Sen. 13,850,739 : Cost 0.49729854 : Time 287.76s : 407915.66 words/s : L.r. 8.5934e-05
+[2019-12-11 07:54:54] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 07:54:57] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 07:55:01] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 07:55:08] [valid] Ep. 81 : Up. 195000 : ce-mean-words : 1.37215 : stalled 16 times (last best: 1.36076)
+[2019-12-11 07:55:09] [valid] Ep. 81 : Up. 195000 : perplexity : 3.94381 : stalled 16 times (last best: 3.89914)
+[2019-12-11 07:55:15] [valid] Ep. 81 : Up. 195000 : translation : 33.46 : stalled 11 times (last best: 33.57)
+[2019-12-11 07:57:28] Seen 15446171 samples
+[2019-12-11 07:57:28] Starting epoch 82
+[2019-12-11 07:57:28] [data] Shuffling data
+[2019-12-11 07:57:29] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 08:01:06] Ep. 82 : Up. 195500 : Sen. 1,506,180 : Cost 0.50115776 : Time 372.33s : 300958.53 words/s : L.r. 8.5824e-05
+[2019-12-11 08:06:03] Ep. 82 : Up. 196000 : Sen. 4,751,075 : Cost 0.49775830 : Time 296.87s : 397882.74 words/s : L.r. 8.5714e-05
+[2019-12-11 08:11:06] Ep. 82 : Up. 196500 : Sen. 7,974,955 : Cost 0.49878916 : Time 303.56s : 388529.08 words/s : L.r. 8.5605e-05
+[2019-12-11 08:16:19] Ep. 82 : Up. 197000 : Sen. 11,248,275 : Cost 0.50320405 : Time 312.31s : 378199.17 words/s : L.r. 8.5496e-05
+[2019-12-11 08:21:11] Ep. 82 : Up. 197500 : Sen. 14,458,913 : Cost 0.49640578 : Time 291.80s : 402240.65 words/s : L.r. 8.5388e-05
+[2019-12-11 08:22:35] Seen 15446171 samples
+[2019-12-11 08:22:35] Starting epoch 83
+[2019-12-11 08:22:35] [data] Shuffling data
+[2019-12-11 08:22:36] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 08:27:03] Ep. 83 : Up. 198000 : Sen. 2,065,823 : Cost 0.49878436 : Time 352.26s : 316819.10 words/s : L.r. 8.5280e-05
+[2019-12-11 08:31:50] Ep. 83 : Up. 198500 : Sen. 5,351,801 : Cost 0.50134677 : Time 286.74s : 414083.38 words/s : L.r. 8.5173e-05
+[2019-12-11 08:36:34] Ep. 83 : Up. 199000 : Sen. 8,519,777 : Cost 0.49713182 : Time 284.06s : 410637.80 words/s : L.r. 8.5066e-05
+[2019-12-11 08:41:23] Ep. 83 : Up. 199500 : Sen. 11,806,907 : Cost 0.50264281 : Time 289.55s : 409252.55 words/s : L.r. 8.4959e-05
+[2019-12-11 08:46:09] Ep. 83 : Up. 200000 : Sen. 15,025,179 : Cost 0.49815521 : Time 286.05s : 410754.82 words/s : L.r. 8.4853e-05
+[2019-12-11 08:46:09] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 08:46:13] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 08:46:16] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 08:46:25] [valid] Ep. 83 : Up. 200000 : ce-mean-words : 1.37522 : stalled 17 times (last best: 1.36076)
+[2019-12-11 08:46:25] [valid] Ep. 83 : Up. 200000 : perplexity : 3.95597 : stalled 17 times (last best: 3.89914)
+[2019-12-11 08:46:31] [valid] Ep. 83 : Up. 200000 : translation : 33.5 : stalled 12 times (last best: 33.57)
+[2019-12-11 08:47:11] Seen 15446171 samples
+[2019-12-11 08:47:11] Starting epoch 84
+[2019-12-11 08:47:11] [data] Shuffling data
+[2019-12-11 08:47:12] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 08:52:27] Ep. 84 : Up. 200500 : Sen. 2,641,760 : Cost 0.49864540 : Time 378.25s : 295681.81 words/s : L.r. 8.4747e-05
+[2019-12-11 08:57:27] Ep. 84 : Up. 201000 : Sen. 5,903,901 : Cost 0.49867168 : Time 299.71s : 395147.28 words/s : L.r. 8.4641e-05
+[2019-12-11 09:02:34] Ep. 84 : Up. 201500 : Sen. 9,168,466 : Cost 0.50099528 : Time 307.17s : 384629.20 words/s : L.r. 8.4536e-05
+[2019-12-11 09:07:23] Ep. 84 : Up. 202000 : Sen. 12,392,654 : Cost 0.50137925 : Time 288.92s : 403745.65 words/s : L.r. 8.4432e-05
+[2019-12-11 09:12:02] Seen 15446171 samples
+[2019-12-11 09:12:02] Starting epoch 85
+[2019-12-11 09:12:02] [data] Shuffling data
+[2019-12-11 09:12:02] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 09:13:24] Ep. 85 : Up. 202500 : Sen. 3,536 : Cost 0.49556798 : Time 360.29s : 312688.24 words/s : L.r. 8.4327e-05
+[2019-12-11 09:18:29] Ep. 85 : Up. 203000 : Sen. 3,237,187 : Cost 0.49938065 : Time 305.37s : 384031.87 words/s : L.r. 8.4223e-05
+[2019-12-11 09:23:28] Ep. 85 : Up. 203500 : Sen. 6,475,464 : Cost 0.50090867 : Time 299.54s : 393454.62 words/s : L.r. 8.4120e-05
+[2019-12-11 09:28:23] Ep. 85 : Up. 204000 : Sen. 9,681,830 : Cost 0.49934545 : Time 294.49s : 399064.45 words/s : L.r. 8.4017e-05
+[2019-12-11 09:33:15] Ep. 85 : Up. 204500 : Sen. 12,958,551 : Cost 0.49981597 : Time 292.35s : 405982.32 words/s : L.r. 8.3914e-05
+[2019-12-11 09:36:58] Seen 15446171 samples
+[2019-12-11 09:36:58] Starting epoch 86
+[2019-12-11 09:36:58] [data] Shuffling data
+[2019-12-11 09:36:59] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 09:39:07] Ep. 86 : Up. 205000 : Sen. 575,597 : Cost 0.49595052 : Time 351.36s : 318906.06 words/s : L.r. 8.3812e-05
+[2019-12-11 09:39:07] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 09:39:10] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 09:39:13] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 09:39:20] [valid] Ep. 86 : Up. 205000 : ce-mean-words : 1.37639 : stalled 18 times (last best: 1.36076)
+[2019-12-11 09:39:21] [valid] Ep. 86 : Up. 205000 : perplexity : 3.96059 : stalled 18 times (last best: 3.89914)
+[2019-12-11 09:39:26] [valid] Ep. 86 : Up. 205000 : translation : 33.42 : stalled 13 times (last best: 33.57)
+[2019-12-11 09:44:19] Ep. 86 : Up. 205500 : Sen. 3,825,247 : Cost 0.49870148 : Time 312.29s : 378281.72 words/s : L.r. 8.3710e-05
+[2019-12-11 09:49:30] Ep. 86 : Up. 206000 : Sen. 7,075,443 : Cost 0.50055254 : Time 310.94s : 380434.87 words/s : L.r. 8.3608e-05
+[2019-12-11 09:54:18] Ep. 86 : Up. 206500 : Sen. 10,311,000 : Cost 0.50096190 : Time 287.79s : 407923.52 words/s : L.r. 8.3507e-05
+[2019-12-11 09:59:05] Ep. 86 : Up. 207000 : Sen. 13,541,154 : Cost 0.50040251 : Time 287.03s : 409739.58 words/s : L.r. 8.3406e-05
+[2019-12-11 10:01:51] Seen 15446171 samples
+[2019-12-11 10:01:51] Starting epoch 87
+[2019-12-11 10:01:51] [data] Shuffling data
+[2019-12-11 10:01:52] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 10:04:57] Ep. 87 : Up. 207500 : Sen. 1,164,271 : Cost 0.49685425 : Time 352.54s : 315990.17 words/s : L.r. 8.3305e-05
+[2019-12-11 10:09:58] Ep. 87 : Up. 208000 : Sen. 4,434,349 : Cost 0.50026435 : Time 301.15s : 393978.06 words/s : L.r. 8.3205e-05
+[2019-12-11 10:14:50] Ep. 87 : Up. 208500 : Sen. 7,703,994 : Cost 0.50237697 : Time 291.30s : 405883.46 words/s : L.r. 8.3105e-05
+[2019-12-11 10:19:44] Ep. 87 : Up. 209000 : Sen. 10,891,465 : Cost 0.49611056 : Time 294.09s : 399050.42 words/s : L.r. 8.3006e-05
+[2019-12-11 10:24:47] Ep. 87 : Up. 209500 : Sen. 14,124,718 : Cost 0.50014395 : Time 303.48s : 389354.08 words/s : L.r. 8.2907e-05
+[2019-12-11 10:26:37] Seen 15446171 samples
+[2019-12-11 10:26:37] Starting epoch 88
+[2019-12-11 10:26:37] [data] Shuffling data
+[2019-12-11 10:26:38] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 10:30:31] Ep. 88 : Up. 210000 : Sen. 1,807,760 : Cost 0.50097328 : Time 343.90s : 326913.43 words/s : L.r. 8.2808e-05
+[2019-12-11 10:30:31] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 10:30:34] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 10:30:38] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 10:30:44] [valid] Ep. 88 : Up. 210000 : ce-mean-words : 1.3779 : stalled 19 times (last best: 1.36076)
+[2019-12-11 10:30:45] [valid] Ep. 88 : Up. 210000 : perplexity : 3.96655 : stalled 19 times (last best: 3.89914)
+[2019-12-11 10:30:51] [valid] Ep. 88 : Up. 210000 : translation : 33.48 : stalled 14 times (last best: 33.57)
+[2019-12-11 10:35:53] Ep. 88 : Up. 210500 : Sen. 5,009,808 : Cost 0.49741685 : Time 321.98s : 364718.40 words/s : L.r. 8.2709e-05
+[2019-12-11 10:40:49] Ep. 88 : Up. 211000 : Sen. 8,239,320 : Cost 0.49799758 : Time 296.14s : 396994.61 words/s : L.r. 8.2611e-05
+[2019-12-11 10:45:52] Ep. 88 : Up. 211500 : Sen. 11,468,217 : Cost 0.50046355 : Time 302.37s : 388528.01 words/s : L.r. 8.2514e-05
+[2019-12-11 10:50:49] Ep. 88 : Up. 212000 : Sen. 14,688,921 : Cost 0.50337827 : Time 297.76s : 393798.15 words/s : L.r. 8.2416e-05
+[2019-12-11 10:51:54] Seen 15446171 samples
+[2019-12-11 10:51:54] Starting epoch 89
+[2019-12-11 10:51:54] [data] Shuffling data
+[2019-12-11 10:51:55] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 10:56:58] Ep. 89 : Up. 212500 : Sen. 2,337,531 : Cost 0.49782667 : Time 368.53s : 304125.05 words/s : L.r. 8.2319e-05
+[2019-12-11 11:02:06] Ep. 89 : Up. 213000 : Sen. 5,594,540 : Cost 0.49756923 : Time 308.51s : 383262.45 words/s : L.r. 8.2223e-05
+[2019-12-11 11:07:18] Ep. 89 : Up. 213500 : Sen. 8,813,935 : Cost 0.49996731 : Time 311.18s : 379290.30 words/s : L.r. 8.2126e-05
+[2019-12-11 11:12:44] Ep. 89 : Up. 214000 : Sen. 12,056,644 : Cost 0.50042564 : Time 326.53s : 360712.12 words/s : L.r. 8.2030e-05
+[2019-12-11 11:17:33] Ep. 89 : Up. 214500 : Sen. 15,204,756 : Cost 0.49803182 : Time 288.97s : 397438.06 words/s : L.r. 8.1935e-05
+[2019-12-11 11:17:55] Seen 15446171 samples
+[2019-12-11 11:17:55] Starting epoch 90
+[2019-12-11 11:17:55] [data] Shuffling data
+[2019-12-11 11:17:56] [data] Done shuffling 15720785 sentences (cached in RAM)
+[2019-12-11 11:23:52] Ep. 90 : Up. 215000 : Sen. 2,894,510 : Cost 0.49841386 : Time 378.64s : 300985.10 words/s : L.r. 8.1839e-05
+[2019-12-11 11:23:52] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 11:23:55] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 11:23:59] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
+[2019-12-11 11:24:07] [valid] Ep. 90 : Up. 215000 : ce-mean-words : 1.37658 : stalled 20 times (last best: 1.36076)
+[2019-12-11 11:24:07] [valid] Ep. 90 : Up. 215000 : perplexity : 3.96134 : stalled 20 times (last best: 3.89914)
+[2019-12-11 11:24:13] [valid] Ep. 90 : Up. 215000 : translation : 33.47 : stalled 15 times (last best: 33.57)
+[2019-12-11 11:24:15] Training finished
+[2019-12-11 11:24:19] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.orig.npz
+[2019-12-11 11:24:22] Saving model weights and runtime parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz
+[2019-12-11 11:24:25] Saving Adam parameters to /dgx/active/jgwinnup/wmt19/marian/en-de/trans-wmt19-escjsp2ja-sp40kpre/model.npz.optimizer.npz
