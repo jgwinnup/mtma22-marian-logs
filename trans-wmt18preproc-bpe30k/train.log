@@ -1,0 +1,1245 @@
+[2018-12-20 13:20:34] [marian] Marian v1.7.0 56fc65d 2018-11-27 14:12:26 -0800
+[2018-12-20 13:20:34] [marian] Running on exorcism.scream.lab as process 29486 with command line:
+[2018-12-20 13:20:34] [marian] /tools/AmuNMT/marian/latest/bin/marian --model /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz --type transformer --devices 0 1 2 3 --sync-sgd --train-sets /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.ru /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.en --max-length 100 --vocabs /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml --mini-batch-fit --workspace 9500 --mini-batch 1000 --maxi-batch 1000 --valid-freq 5000 --save-freq 5000 --disp-freq 500 --valid-metrics ce-mean-words perplexity translation --valid-sets /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.ru /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.en --valid-script-path /fs7/active/jgwinnup/wmt19/marian/scripts/validate-newstest2014-ruen.sh --valid-translation-output /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.bpe.en.output --quiet-translation --beam-size 12 --normalize 1 --cost-type ce-mean-words --log /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/train.log --valid-log /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.log --valid-mini-batch 64 --overwrite --keep-best --early-stopping 10 --after-epochs 8 --enc-depth 6 --dec-depth 6 --tied-embeddings-all --transformer-dropout 0.1 --label-smoothing 0.1 --learn-rate 0.0003 --lr-warmup 16000 --lr-decay-inv-sqrt 16000 --lr-report --optimizer-params 0.9 0.98 1e-09 --clip-norm 5 --exponential-smoothing
+[2018-12-20 13:20:34] [config] after-batches: 0
+[2018-12-20 13:20:34] [config] after-epochs: 8
+[2018-12-20 13:20:34] [config] allow-unk: false
+[2018-12-20 13:20:34] [config] beam-size: 12
+[2018-12-20 13:20:34] [config] best-deep: false
+[2018-12-20 13:20:34] [config] char-conv-filters-num:
+[2018-12-20 13:20:34] [config]   - 200
+[2018-12-20 13:20:34] [config]   - 200
+[2018-12-20 13:20:34] [config]   - 250
+[2018-12-20 13:20:34] [config]   - 250
+[2018-12-20 13:20:34] [config]   - 300
+[2018-12-20 13:20:34] [config]   - 300
+[2018-12-20 13:20:34] [config]   - 300
+[2018-12-20 13:20:34] [config]   - 300
+[2018-12-20 13:20:34] [config] char-conv-filters-widths:
+[2018-12-20 13:20:34] [config]   - 1
+[2018-12-20 13:20:34] [config]   - 2
+[2018-12-20 13:20:34] [config]   - 3
+[2018-12-20 13:20:34] [config]   - 4
+[2018-12-20 13:20:34] [config]   - 5
+[2018-12-20 13:20:34] [config]   - 6
+[2018-12-20 13:20:34] [config]   - 7
+[2018-12-20 13:20:34] [config]   - 8
+[2018-12-20 13:20:34] [config] char-highway: 4
+[2018-12-20 13:20:34] [config] char-stride: 5
+[2018-12-20 13:20:34] [config] clip-gemm: 0
+[2018-12-20 13:20:34] [config] clip-norm: 5
+[2018-12-20 13:20:34] [config] cost-type: ce-mean-words
+[2018-12-20 13:20:34] [config] cpu-threads: 0
+[2018-12-20 13:20:34] [config] data-weighting-type: sentence
+[2018-12-20 13:20:34] [config] dec-cell: gru
+[2018-12-20 13:20:34] [config] dec-cell-base-depth: 2
+[2018-12-20 13:20:34] [config] dec-cell-high-depth: 1
+[2018-12-20 13:20:34] [config] dec-depth: 6
+[2018-12-20 13:20:34] [config] devices:
+[2018-12-20 13:20:34] [config]   - 0
+[2018-12-20 13:20:34] [config]   - 1
+[2018-12-20 13:20:34] [config]   - 2
+[2018-12-20 13:20:34] [config]   - 3
+[2018-12-20 13:20:34] [config] dim-emb: 512
+[2018-12-20 13:20:34] [config] dim-rnn: 1024
+[2018-12-20 13:20:34] [config] dim-vocabs:
+[2018-12-20 13:20:34] [config]   - 0
+[2018-12-20 13:20:34] [config]   - 0
+[2018-12-20 13:20:34] [config] disp-first: 0
+[2018-12-20 13:20:34] [config] disp-freq: 500
+[2018-12-20 13:20:34] [config] disp-label-counts: false
+[2018-12-20 13:20:34] [config] dropout-rnn: 0
+[2018-12-20 13:20:34] [config] dropout-src: 0
+[2018-12-20 13:20:34] [config] dropout-trg: 0
+[2018-12-20 13:20:34] [config] early-stopping: 10
+[2018-12-20 13:20:34] [config] embedding-fix-src: false
+[2018-12-20 13:20:34] [config] embedding-fix-trg: false
+[2018-12-20 13:20:34] [config] embedding-normalization: false
+[2018-12-20 13:20:34] [config] enc-cell: gru
+[2018-12-20 13:20:34] [config] enc-cell-depth: 1
+[2018-12-20 13:20:34] [config] enc-depth: 6
+[2018-12-20 13:20:34] [config] enc-type: bidirectional
+[2018-12-20 13:20:34] [config] exponential-smoothing: 0.0001
+[2018-12-20 13:20:34] [config] grad-dropping-momentum: 0
+[2018-12-20 13:20:34] [config] grad-dropping-rate: 0
+[2018-12-20 13:20:34] [config] grad-dropping-warmup: 100
+[2018-12-20 13:20:34] [config] guided-alignment: none
+[2018-12-20 13:20:34] [config] guided-alignment-cost: ce
+[2018-12-20 13:20:34] [config] guided-alignment-weight: 1
+[2018-12-20 13:20:34] [config] ignore-model-config: false
+[2018-12-20 13:20:34] [config] interpolate-env-vars: false
+[2018-12-20 13:20:34] [config] keep-best: true
+[2018-12-20 13:20:34] [config] label-smoothing: 0.1
+[2018-12-20 13:20:34] [config] layer-normalization: false
+[2018-12-20 13:20:34] [config] learn-rate: 0.0003
+[2018-12-20 13:20:34] [config] log: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/train.log
+[2018-12-20 13:20:34] [config] log-level: info
+[2018-12-20 13:20:34] [config] lr-decay: 0
+[2018-12-20 13:20:34] [config] lr-decay-freq: 50000
+[2018-12-20 13:20:34] [config] lr-decay-inv-sqrt: 16000
+[2018-12-20 13:20:34] [config] lr-decay-repeat-warmup: false
+[2018-12-20 13:20:34] [config] lr-decay-reset-optimizer: false
+[2018-12-20 13:20:34] [config] lr-decay-start:
+[2018-12-20 13:20:34] [config]   - 10
+[2018-12-20 13:20:34] [config]   - 1
+[2018-12-20 13:20:34] [config] lr-decay-strategy: epoch+stalled
+[2018-12-20 13:20:34] [config] lr-report: true
+[2018-12-20 13:20:34] [config] lr-warmup: 16000
+[2018-12-20 13:20:34] [config] lr-warmup-at-reload: false
+[2018-12-20 13:20:34] [config] lr-warmup-cycle: false
+[2018-12-20 13:20:34] [config] lr-warmup-start-rate: 0
+[2018-12-20 13:20:34] [config] max-length: 100
+[2018-12-20 13:20:34] [config] max-length-crop: false
+[2018-12-20 13:20:34] [config] max-length-factor: 3
+[2018-12-20 13:20:34] [config] maxi-batch: 1000
+[2018-12-20 13:20:34] [config] maxi-batch-sort: trg
+[2018-12-20 13:20:34] [config] mini-batch: 1000
+[2018-12-20 13:20:34] [config] mini-batch-fit: true
+[2018-12-20 13:20:34] [config] mini-batch-fit-step: 10
+[2018-12-20 13:20:34] [config] mini-batch-words: 0
+[2018-12-20 13:20:34] [config] model: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 13:20:34] [config] multi-node: false
+[2018-12-20 13:20:34] [config] multi-node-overlap: true
+[2018-12-20 13:20:34] [config] n-best: false
+[2018-12-20 13:20:34] [config] no-nccl: false
+[2018-12-20 13:20:34] [config] no-reload: false
+[2018-12-20 13:20:34] [config] no-restore-corpus: false
+[2018-12-20 13:20:34] [config] no-shuffle: false
+[2018-12-20 13:20:34] [config] normalize: 1
+[2018-12-20 13:20:34] [config] optimizer: adam
+[2018-12-20 13:20:34] [config] optimizer-delay: 1
+[2018-12-20 13:20:34] [config] optimizer-params:
+[2018-12-20 13:20:34] [config]   - 0.9
+[2018-12-20 13:20:34] [config]   - 0.98
+[2018-12-20 13:20:34] [config]   - 1e-09
+[2018-12-20 13:20:34] [config] overwrite: true
+[2018-12-20 13:20:34] [config] quiet: false
+[2018-12-20 13:20:34] [config] quiet-translation: true
+[2018-12-20 13:20:34] [config] relative-paths: false
+[2018-12-20 13:20:34] [config] right-left: false
+[2018-12-20 13:20:34] [config] save-freq: 5000
+[2018-12-20 13:20:34] [config] seed: 0
+[2018-12-20 13:20:34] [config] sentencepiece-alphas:
+[2018-12-20 13:20:34] [config]   []
+[2018-12-20 13:20:34] [config] sentencepiece-max-lines: 10000000
+[2018-12-20 13:20:34] [config] sentencepiece-options: ""
+[2018-12-20 13:20:34] [config] shuffle-in-ram: false
+[2018-12-20 13:20:34] [config] skip: false
+[2018-12-20 13:20:34] [config] sqlite: ""
+[2018-12-20 13:20:34] [config] sqlite-drop: false
+[2018-12-20 13:20:34] [config] sync-sgd: true
+[2018-12-20 13:20:34] [config] tempdir: /tmp
+[2018-12-20 13:20:34] [config] tied-embeddings: false
+[2018-12-20 13:20:34] [config] tied-embeddings-all: true
+[2018-12-20 13:20:34] [config] tied-embeddings-src: false
+[2018-12-20 13:20:34] [config] train-sets:
+[2018-12-20 13:20:34] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.ru
+[2018-12-20 13:20:34] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.en
+[2018-12-20 13:20:34] [config] transformer-aan-activation: swish
+[2018-12-20 13:20:34] [config] transformer-aan-depth: 2
+[2018-12-20 13:20:34] [config] transformer-aan-nogate: false
+[2018-12-20 13:20:34] [config] transformer-decoder-autoreg: self-attention
+[2018-12-20 13:20:34] [config] transformer-dim-aan: 2048
+[2018-12-20 13:20:34] [config] transformer-dim-ffn: 2048
+[2018-12-20 13:20:34] [config] transformer-dropout: 0.1
+[2018-12-20 13:20:34] [config] transformer-dropout-attention: 0
+[2018-12-20 13:20:34] [config] transformer-dropout-ffn: 0
+[2018-12-20 13:20:34] [config] transformer-ffn-activation: swish
+[2018-12-20 13:20:34] [config] transformer-ffn-depth: 2
+[2018-12-20 13:20:34] [config] transformer-guided-alignment-layer: last
+[2018-12-20 13:20:34] [config] transformer-heads: 8
+[2018-12-20 13:20:34] [config] transformer-no-projection: false
+[2018-12-20 13:20:34] [config] transformer-postprocess: dan
+[2018-12-20 13:20:34] [config] transformer-postprocess-emb: d
+[2018-12-20 13:20:34] [config] transformer-preprocess: ""
+[2018-12-20 13:20:34] [config] transformer-tied-layers:
+[2018-12-20 13:20:34] [config]   []
+[2018-12-20 13:20:34] [config] type: transformer
+[2018-12-20 13:20:34] [config] ulr: false
+[2018-12-20 13:20:34] [config] ulr-dim-emb: 0
+[2018-12-20 13:20:34] [config] ulr-dropout: 0
+[2018-12-20 13:20:34] [config] ulr-keys-vectors: ""
+[2018-12-20 13:20:34] [config] ulr-query-vectors: ""
+[2018-12-20 13:20:34] [config] ulr-softmax-temperature: 1
+[2018-12-20 13:20:34] [config] ulr-trainable-transformation: false
+[2018-12-20 13:20:34] [config] valid-freq: 5000
+[2018-12-20 13:20:34] [config] valid-log: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.log
+[2018-12-20 13:20:34] [config] valid-max-length: 1000
+[2018-12-20 13:20:34] [config] valid-metrics:
+[2018-12-20 13:20:34] [config]   - ce-mean-words
+[2018-12-20 13:20:34] [config]   - perplexity
+[2018-12-20 13:20:34] [config]   - translation
+[2018-12-20 13:20:34] [config] valid-mini-batch: 64
+[2018-12-20 13:20:34] [config] valid-script-path: /fs7/active/jgwinnup/wmt19/marian/scripts/validate-newstest2014-ruen.sh
+[2018-12-20 13:20:34] [config] valid-sets:
+[2018-12-20 13:20:34] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.ru
+[2018-12-20 13:20:34] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.en
+[2018-12-20 13:20:34] [config] valid-translation-output: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.bpe.en.output
+[2018-12-20 13:20:34] [config] vocabs:
+[2018-12-20 13:20:34] [config]   - /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:20:34] [config]   - /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:20:34] [config] word-penalty: 0
+[2018-12-20 13:20:34] [config] workspace: 9500
+[2018-12-20 13:20:34] [config] Model is being created with Marian v1.7.0 56fc65d 2018-11-27 14:12:26 -0800
+[2018-12-20 13:20:34] Using synchronous training
+[2018-12-20 13:20:34] [data] Loading vocabulary from JSON/Yaml file /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:20:34] [data] Setting vocabulary size for input 0 to 36000
+[2018-12-20 13:20:34] [data] Loading vocabulary from JSON/Yaml file /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:20:35] [data] Setting vocabulary size for input 1 to 36000
+[2018-12-20 13:20:35] [batching] Collecting statistics for batch fitting with step size 10
+[2018-12-20 13:20:35] [MPI rank 0 out of 1]: GPU[0]
+[2018-12-20 13:20:35] [MPI rank 0 out of 1]: GPU[1]
+[2018-12-20 13:20:35] [MPI rank 0 out of 1]: GPU[2]
+[2018-12-20 13:20:35] [MPI rank 0 out of 1]: GPU[3]
+[2018-12-20 13:20:37] [memory] Extending reserved space to 9600 MB (device gpu0)
+[2018-12-20 13:20:37] [memory] Extending reserved space to 9600 MB (device gpu1)
+[2018-12-20 13:20:38] [memory] Extending reserved space to 9600 MB (device gpu2)
+[2018-12-20 13:20:38] [memory] Extending reserved space to 9600 MB (device gpu3)
+[2018-12-20 13:20:38] [comm] Using NCCL 2.1.15 for GPU communication
+[2018-12-20 13:20:39] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 13:20:39] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 13:20:54] [batching] Done
+[2018-12-20 13:20:55] Error: File '/fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.ru' is empty
+[2018-12-20 13:20:55] Error: Aborted from marian::data::CorpusBase::CorpusBase(const std::vector<std::basic_string<char> >&, const std::vector<std::shared_ptr<marian::Vocab> >&, marian::Ptr<marian::Options>) in /double_extra/dev/build/marian/src/data/corpus_base.cpp:44
+
+[CALL STACK]
+[0x694fd1]          marian::data::CorpusBase::  CorpusBase  (std::vector<std::string,std::allocator<std::string>> const&,  std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>> const&,  std::shared_ptr<marian::Options>) + 0xc41
+[0x6a4eeb]          marian::data::Corpus::  Corpus  (std::vector<std::string,std::allocator<std::string>>,  std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>>,  std::shared_ptr<marian::Options>) + 0x4b
+[0x7fffba]          std::shared_ptr<marian::data::Corpus> marian::  New  <marian::data::Corpus,std::vector<std::string,std::allocator<std::string>>&,std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>>&,std::shared_ptr<marian::Options>&>(std::vector<std::string,std::allocator<std::string>>&,  std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>>&,  std::shared_ptr<marian::Options>&) + 0x7a
+[0x802797]          marian::Validator<marian::data::Corpus>::  createBatchGenerator  (bool) + 0x217
+[0x802e2b]          marian::CrossEntropyValidator::  CrossEntropyValidator  (std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>>,  std::shared_ptr<marian::Options>) + 0x29b
+[0x803296]          std::shared_ptr<marian::CrossEntropyValidator> marian::  New  <marian::CrossEntropyValidator,std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>>&,std::shared_ptr<marian::Options>&>(std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>>&,  std::shared_ptr<marian::Options>&) + 0x236
+[0x7e4fcf]          marian::  Validators  (std::vector<std::shared_ptr<marian::Vocab>,std::allocator<std::shared_ptr<marian::Vocab>>>,  std::shared_ptr<marian::Options>) + 0x35f
+[0x60d15f]          marian::Train<marian::SyncGraphGroup>::  run  ()   + 0x48f
+[0x572959]          main                                               + 0x4f9
+[0x2b7a942723d5]    __libc_start_main                                  + 0xf5
+[0x59978c]                                                            
+
+[2018-12-20 13:26:08] [marian] Marian v1.7.0 56fc65d 2018-11-27 14:12:26 -0800
+[2018-12-20 13:26:08] [marian] Running on exorcism.scream.lab as process 31236 with command line:
+[2018-12-20 13:26:08] [marian] /tools/AmuNMT/marian/latest/bin/marian --model /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz --type transformer --devices 0 1 2 3 --sync-sgd --train-sets /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.ru /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.en --max-length 100 --vocabs /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml --mini-batch-fit --workspace 9500 --mini-batch 1000 --maxi-batch 1000 --valid-freq 5000 --save-freq 5000 --disp-freq 500 --valid-metrics ce-mean-words perplexity translation --valid-sets /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.ru /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.en --valid-script-path /fs7/active/jgwinnup/wmt19/marian/scripts/validate-newstest2014-ruen.sh --valid-translation-output /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.bpe.en.output --quiet-translation --beam-size 12 --normalize 1 --cost-type ce-mean-words --log /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/train.log --valid-log /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.log --valid-mini-batch 64 --overwrite --keep-best --early-stopping 10 --after-epochs 8 --enc-depth 6 --dec-depth 6 --tied-embeddings-all --transformer-dropout 0.1 --label-smoothing 0.1 --learn-rate 0.0003 --lr-warmup 16000 --lr-decay-inv-sqrt 16000 --lr-report --optimizer-params 0.9 0.98 1e-09 --clip-norm 5 --exponential-smoothing
+[2018-12-20 13:26:08] [config] after-batches: 0
+[2018-12-20 13:26:08] [config] after-epochs: 8
+[2018-12-20 13:26:08] [config] allow-unk: false
+[2018-12-20 13:26:08] [config] beam-size: 12
+[2018-12-20 13:26:08] [config] best-deep: false
+[2018-12-20 13:26:08] [config] char-conv-filters-num:
+[2018-12-20 13:26:08] [config]   - 200
+[2018-12-20 13:26:08] [config]   - 200
+[2018-12-20 13:26:08] [config]   - 250
+[2018-12-20 13:26:08] [config]   - 250
+[2018-12-20 13:26:08] [config]   - 300
+[2018-12-20 13:26:08] [config]   - 300
+[2018-12-20 13:26:08] [config]   - 300
+[2018-12-20 13:26:08] [config]   - 300
+[2018-12-20 13:26:08] [config] char-conv-filters-widths:
+[2018-12-20 13:26:08] [config]   - 1
+[2018-12-20 13:26:08] [config]   - 2
+[2018-12-20 13:26:08] [config]   - 3
+[2018-12-20 13:26:08] [config]   - 4
+[2018-12-20 13:26:08] [config]   - 5
+[2018-12-20 13:26:08] [config]   - 6
+[2018-12-20 13:26:08] [config]   - 7
+[2018-12-20 13:26:08] [config]   - 8
+[2018-12-20 13:26:08] [config] char-highway: 4
+[2018-12-20 13:26:08] [config] char-stride: 5
+[2018-12-20 13:26:08] [config] clip-gemm: 0
+[2018-12-20 13:26:08] [config] clip-norm: 5
+[2018-12-20 13:26:08] [config] cost-type: ce-mean-words
+[2018-12-20 13:26:08] [config] cpu-threads: 0
+[2018-12-20 13:26:08] [config] data-weighting-type: sentence
+[2018-12-20 13:26:08] [config] dec-cell: gru
+[2018-12-20 13:26:08] [config] dec-cell-base-depth: 2
+[2018-12-20 13:26:08] [config] dec-cell-high-depth: 1
+[2018-12-20 13:26:08] [config] dec-depth: 6
+[2018-12-20 13:26:08] [config] devices:
+[2018-12-20 13:26:08] [config]   - 0
+[2018-12-20 13:26:08] [config]   - 1
+[2018-12-20 13:26:08] [config]   - 2
+[2018-12-20 13:26:08] [config]   - 3
+[2018-12-20 13:26:08] [config] dim-emb: 512
+[2018-12-20 13:26:08] [config] dim-rnn: 1024
+[2018-12-20 13:26:08] [config] dim-vocabs:
+[2018-12-20 13:26:08] [config]   - 0
+[2018-12-20 13:26:08] [config]   - 0
+[2018-12-20 13:26:08] [config] disp-first: 0
+[2018-12-20 13:26:08] [config] disp-freq: 500
+[2018-12-20 13:26:08] [config] disp-label-counts: false
+[2018-12-20 13:26:08] [config] dropout-rnn: 0
+[2018-12-20 13:26:08] [config] dropout-src: 0
+[2018-12-20 13:26:08] [config] dropout-trg: 0
+[2018-12-20 13:26:08] [config] early-stopping: 10
+[2018-12-20 13:26:08] [config] embedding-fix-src: false
+[2018-12-20 13:26:08] [config] embedding-fix-trg: false
+[2018-12-20 13:26:08] [config] embedding-normalization: false
+[2018-12-20 13:26:08] [config] enc-cell: gru
+[2018-12-20 13:26:08] [config] enc-cell-depth: 1
+[2018-12-20 13:26:08] [config] enc-depth: 6
+[2018-12-20 13:26:08] [config] enc-type: bidirectional
+[2018-12-20 13:26:08] [config] exponential-smoothing: 0.0001
+[2018-12-20 13:26:08] [config] grad-dropping-momentum: 0
+[2018-12-20 13:26:08] [config] grad-dropping-rate: 0
+[2018-12-20 13:26:08] [config] grad-dropping-warmup: 100
+[2018-12-20 13:26:08] [config] guided-alignment: none
+[2018-12-20 13:26:08] [config] guided-alignment-cost: ce
+[2018-12-20 13:26:08] [config] guided-alignment-weight: 1
+[2018-12-20 13:26:08] [config] ignore-model-config: false
+[2018-12-20 13:26:08] [config] interpolate-env-vars: false
+[2018-12-20 13:26:08] [config] keep-best: true
+[2018-12-20 13:26:08] [config] label-smoothing: 0.1
+[2018-12-20 13:26:08] [config] layer-normalization: false
+[2018-12-20 13:26:08] [config] learn-rate: 0.0003
+[2018-12-20 13:26:08] [config] log: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/train.log
+[2018-12-20 13:26:08] [config] log-level: info
+[2018-12-20 13:26:08] [config] lr-decay: 0
+[2018-12-20 13:26:08] [config] lr-decay-freq: 50000
+[2018-12-20 13:26:08] [config] lr-decay-inv-sqrt: 16000
+[2018-12-20 13:26:08] [config] lr-decay-repeat-warmup: false
+[2018-12-20 13:26:08] [config] lr-decay-reset-optimizer: false
+[2018-12-20 13:26:08] [config] lr-decay-start:
+[2018-12-20 13:26:08] [config]   - 10
+[2018-12-20 13:26:08] [config]   - 1
+[2018-12-20 13:26:08] [config] lr-decay-strategy: epoch+stalled
+[2018-12-20 13:26:08] [config] lr-report: true
+[2018-12-20 13:26:08] [config] lr-warmup: 16000
+[2018-12-20 13:26:08] [config] lr-warmup-at-reload: false
+[2018-12-20 13:26:08] [config] lr-warmup-cycle: false
+[2018-12-20 13:26:08] [config] lr-warmup-start-rate: 0
+[2018-12-20 13:26:08] [config] max-length: 100
+[2018-12-20 13:26:08] [config] max-length-crop: false
+[2018-12-20 13:26:08] [config] max-length-factor: 3
+[2018-12-20 13:26:08] [config] maxi-batch: 1000
+[2018-12-20 13:26:08] [config] maxi-batch-sort: trg
+[2018-12-20 13:26:08] [config] mini-batch: 1000
+[2018-12-20 13:26:08] [config] mini-batch-fit: true
+[2018-12-20 13:26:08] [config] mini-batch-fit-step: 10
+[2018-12-20 13:26:08] [config] mini-batch-words: 0
+[2018-12-20 13:26:08] [config] model: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 13:26:08] [config] multi-node: false
+[2018-12-20 13:26:08] [config] multi-node-overlap: true
+[2018-12-20 13:26:08] [config] n-best: false
+[2018-12-20 13:26:08] [config] no-nccl: false
+[2018-12-20 13:26:08] [config] no-reload: false
+[2018-12-20 13:26:08] [config] no-restore-corpus: false
+[2018-12-20 13:26:08] [config] no-shuffle: false
+[2018-12-20 13:26:08] [config] normalize: 1
+[2018-12-20 13:26:08] [config] optimizer: adam
+[2018-12-20 13:26:08] [config] optimizer-delay: 1
+[2018-12-20 13:26:08] [config] optimizer-params:
+[2018-12-20 13:26:08] [config]   - 0.9
+[2018-12-20 13:26:08] [config]   - 0.98
+[2018-12-20 13:26:08] [config]   - 1e-09
+[2018-12-20 13:26:08] [config] overwrite: true
+[2018-12-20 13:26:08] [config] quiet: false
+[2018-12-20 13:26:08] [config] quiet-translation: true
+[2018-12-20 13:26:08] [config] relative-paths: false
+[2018-12-20 13:26:08] [config] right-left: false
+[2018-12-20 13:26:08] [config] save-freq: 5000
+[2018-12-20 13:26:08] [config] seed: 0
+[2018-12-20 13:26:08] [config] sentencepiece-alphas:
+[2018-12-20 13:26:08] [config]   []
+[2018-12-20 13:26:08] [config] sentencepiece-max-lines: 10000000
+[2018-12-20 13:26:08] [config] sentencepiece-options: ""
+[2018-12-20 13:26:08] [config] shuffle-in-ram: false
+[2018-12-20 13:26:08] [config] skip: false
+[2018-12-20 13:26:08] [config] sqlite: ""
+[2018-12-20 13:26:08] [config] sqlite-drop: false
+[2018-12-20 13:26:08] [config] sync-sgd: true
+[2018-12-20 13:26:08] [config] tempdir: /tmp
+[2018-12-20 13:26:08] [config] tied-embeddings: false
+[2018-12-20 13:26:08] [config] tied-embeddings-all: true
+[2018-12-20 13:26:08] [config] tied-embeddings-src: false
+[2018-12-20 13:26:08] [config] train-sets:
+[2018-12-20 13:26:08] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.ru
+[2018-12-20 13:26:08] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.en
+[2018-12-20 13:26:08] [config] transformer-aan-activation: swish
+[2018-12-20 13:26:08] [config] transformer-aan-depth: 2
+[2018-12-20 13:26:08] [config] transformer-aan-nogate: false
+[2018-12-20 13:26:08] [config] transformer-decoder-autoreg: self-attention
+[2018-12-20 13:26:08] [config] transformer-dim-aan: 2048
+[2018-12-20 13:26:08] [config] transformer-dim-ffn: 2048
+[2018-12-20 13:26:08] [config] transformer-dropout: 0.1
+[2018-12-20 13:26:08] [config] transformer-dropout-attention: 0
+[2018-12-20 13:26:08] [config] transformer-dropout-ffn: 0
+[2018-12-20 13:26:08] [config] transformer-ffn-activation: swish
+[2018-12-20 13:26:08] [config] transformer-ffn-depth: 2
+[2018-12-20 13:26:08] [config] transformer-guided-alignment-layer: last
+[2018-12-20 13:26:08] [config] transformer-heads: 8
+[2018-12-20 13:26:08] [config] transformer-no-projection: false
+[2018-12-20 13:26:08] [config] transformer-postprocess: dan
+[2018-12-20 13:26:08] [config] transformer-postprocess-emb: d
+[2018-12-20 13:26:08] [config] transformer-preprocess: ""
+[2018-12-20 13:26:08] [config] transformer-tied-layers:
+[2018-12-20 13:26:08] [config]   []
+[2018-12-20 13:26:08] [config] type: transformer
+[2018-12-20 13:26:08] [config] ulr: false
+[2018-12-20 13:26:08] [config] ulr-dim-emb: 0
+[2018-12-20 13:26:08] [config] ulr-dropout: 0
+[2018-12-20 13:26:08] [config] ulr-keys-vectors: ""
+[2018-12-20 13:26:08] [config] ulr-query-vectors: ""
+[2018-12-20 13:26:08] [config] ulr-softmax-temperature: 1
+[2018-12-20 13:26:08] [config] ulr-trainable-transformation: false
+[2018-12-20 13:26:08] [config] valid-freq: 5000
+[2018-12-20 13:26:08] [config] valid-log: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.log
+[2018-12-20 13:26:08] [config] valid-max-length: 1000
+[2018-12-20 13:26:08] [config] valid-metrics:
+[2018-12-20 13:26:08] [config]   - ce-mean-words
+[2018-12-20 13:26:08] [config]   - perplexity
+[2018-12-20 13:26:08] [config]   - translation
+[2018-12-20 13:26:08] [config] valid-mini-batch: 64
+[2018-12-20 13:26:08] [config] valid-script-path: /fs7/active/jgwinnup/wmt19/marian/scripts/validate-newstest2014-ruen.sh
+[2018-12-20 13:26:08] [config] valid-sets:
+[2018-12-20 13:26:08] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.ru
+[2018-12-20 13:26:08] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.en
+[2018-12-20 13:26:08] [config] valid-translation-output: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.bpe.en.output
+[2018-12-20 13:26:08] [config] vocabs:
+[2018-12-20 13:26:08] [config]   - /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:26:08] [config]   - /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:26:08] [config] word-penalty: 0
+[2018-12-20 13:26:08] [config] workspace: 9500
+[2018-12-20 13:26:08] [config] Model is being created with Marian v1.7.0 56fc65d 2018-11-27 14:12:26 -0800
+[2018-12-20 13:26:08] Using synchronous training
+[2018-12-20 13:26:08] [data] Loading vocabulary from JSON/Yaml file /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:26:08] [data] Setting vocabulary size for input 0 to 36000
+[2018-12-20 13:26:08] [data] Loading vocabulary from JSON/Yaml file /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 13:26:09] [data] Setting vocabulary size for input 1 to 36000
+[2018-12-20 13:26:09] [batching] Collecting statistics for batch fitting with step size 10
+[2018-12-20 13:26:09] [MPI rank 0 out of 1]: GPU[0]
+[2018-12-20 13:26:09] [MPI rank 0 out of 1]: GPU[1]
+[2018-12-20 13:26:09] [MPI rank 0 out of 1]: GPU[2]
+[2018-12-20 13:26:09] [MPI rank 0 out of 1]: GPU[3]
+[2018-12-20 13:26:09] [memory] Extending reserved space to 9600 MB (device gpu0)
+[2018-12-20 13:26:10] [memory] Extending reserved space to 9600 MB (device gpu1)
+[2018-12-20 13:26:10] [memory] Extending reserved space to 9600 MB (device gpu2)
+[2018-12-20 13:26:11] [memory] Extending reserved space to 9600 MB (device gpu3)
+[2018-12-20 13:26:11] [comm] Using NCCL 2.1.15 for GPU communication
+[2018-12-20 13:26:11] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 13:26:11] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 13:26:27] [batching] Done
+[2018-12-20 13:26:27] [MPI rank 0 out of 1]: GPU[0]
+[2018-12-20 13:26:27] [MPI rank 0 out of 1]: GPU[1]
+[2018-12-20 13:26:27] [MPI rank 0 out of 1]: GPU[2]
+[2018-12-20 13:26:27] [MPI rank 0 out of 1]: GPU[3]
+[2018-12-20 13:26:27] [memory] Extending reserved space to 9600 MB (device gpu0)
+[2018-12-20 13:26:27] [memory] Extending reserved space to 9600 MB (device gpu1)
+[2018-12-20 13:26:27] [memory] Extending reserved space to 9600 MB (device gpu2)
+[2018-12-20 13:26:27] [memory] Extending reserved space to 9600 MB (device gpu3)
+[2018-12-20 13:26:27] [comm] Using NCCL 2.1.15 for GPU communication
+[2018-12-20 13:26:27] Training started
+[2018-12-20 13:26:27] [data] Shuffling files
+[2018-12-20 13:26:35] [data] Done reading 14381515 sentences
+[2018-12-20 13:27:40] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu2
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu3
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu1
+[2018-12-20 13:28:12] [memory] Reserving 59 MB, device gpu0
+[2018-12-20 13:28:12] [memory] Reserving 59 MB, device gpu1
+[2018-12-20 13:28:12] [memory] Reserving 59 MB, device gpu2
+[2018-12-20 13:28:12] [memory] Reserving 59 MB, device gpu3
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu2
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu1
+[2018-12-20 13:28:12] [memory] Reserving 238 MB, device gpu3
+[2018-12-20 13:28:12] [memory] Reserving 119 MB, device gpu2
+[2018-12-20 13:28:12] [memory] Reserving 119 MB, device gpu0
+[2018-12-20 13:28:12] [memory] Reserving 119 MB, device gpu1
+[2018-12-20 13:28:12] [memory] Reserving 119 MB, device gpu3
+[2018-12-20 13:31:59] Ep. 1 : Up. 500 : Sen. 441,147 : Cost 9.93003464 : Time 332.10s : 28445.80 words/s : L.r. 9.3750e-06
+[2018-12-20 13:35:52] Ep. 1 : Up. 1000 : Sen. 885,934 : Cost 8.31864452 : Time 233.05s : 41128.51 words/s : L.r. 1.8750e-05
+[2018-12-20 13:39:48] Ep. 1 : Up. 1500 : Sen. 1,335,265 : Cost 7.46121502 : Time 235.66s : 40954.66 words/s : L.r. 2.8125e-05
+[2018-12-20 13:43:41] Ep. 1 : Up. 2000 : Sen. 1,756,793 : Cost 7.18061972 : Time 233.72s : 41104.98 words/s : L.r. 3.7500e-05
+[2018-12-20 13:47:32] Ep. 1 : Up. 2500 : Sen. 2,201,991 : Cost 6.80960417 : Time 230.60s : 40264.51 words/s : L.r. 4.6875e-05
+[2018-12-20 13:51:27] Ep. 1 : Up. 3000 : Sen. 2,650,797 : Cost 6.44492435 : Time 234.73s : 41126.64 words/s : L.r. 5.6250e-05
+[2018-12-20 13:55:22] Ep. 1 : Up. 3500 : Sen. 3,090,056 : Cost 6.12246084 : Time 235.49s : 41038.70 words/s : L.r. 6.5625e-05
+[2018-12-20 13:59:16] Ep. 1 : Up. 4000 : Sen. 3,540,907 : Cost 5.92374516 : Time 233.98s : 40591.16 words/s : L.r. 7.5000e-05
+[2018-12-20 14:03:08] Ep. 1 : Up. 4500 : Sen. 3,956,765 : Cost 5.80322647 : Time 231.92s : 41005.56 words/s : L.r. 8.4375e-05
+[2018-12-20 14:06:59] Ep. 1 : Up. 5000 : Sen. 4,411,115 : Cost 5.53115511 : Time 231.47s : 40423.09 words/s : L.r. 9.3750e-05
+[2018-12-20 14:06:59] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 14:07:02] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 14:07:03] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 14:07:07] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 14:07:09] [valid] Ep. 1 : Up. 5000 : ce-mean-words : 6.00219 : new best
+[2018-12-20 14:07:09] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 14:07:11] [valid] Ep. 1 : Up. 5000 : perplexity : 404.312 : new best
+[2018-12-20 14:09:33] Error: CUDA error 2 'out of memory' - /double_extra/dev/build/marian/src/tensors/gpu/device.cu:32: cudaMalloc(&data_, size)
+[2018-12-20 14:09:33] Error: Aborted from virtual void marian::gpu::Device::reserve(size_t) in /double_extra/dev/build/marian/src/tensors/gpu/device.cu:32
+
+[CALL STACK]
+[0x198cd92]         marian::gpu::Device::  reserve  (unsigned long)    + 0x1012
+[0x6bd265]          marian::Allocator::  grow  (unsigned long)         + 0xb5
+[0x6bde64]          marian::TensorAllocator::  allocate  (std::shared_ptr<marian::TensorBase>&,  marian::Shape,  marian::Type) + 0x6f4
+[0x6cbc74]          marian::Node::  allocate  ()                       + 0x514
+[0x5f9cf7]          marian::ExpressionGraph::  forwardNext  ()         + 0x77
+[0x806a2a]          marian::BeamSearch::  search  (std::shared_ptr<marian::ExpressionGraph>,  std::shared_ptr<marian::data::CorpusBatch>) + 0x206a
+[0x808154]          marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}::  operator()  (unsigned long) const + 0x224
+[0x80cfe1]          std::future<std::result_of<marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}& (unsigned long&)>::type> marian::ThreadPool::enqueue<marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}&,unsigned long&>(std::result_of&&,(marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}&)...)::{lambda()#1}::  operator()  () const + 0x21
+[0x79d08e]          std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base,std::__future_base::_Result_base::_Deleter> (),std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<void>,std::__future_base::_Result_base::_Deleter>,void>>::  _M_invoke  (std::_Any_data const&) + 0x1e
+[0x5a1be7]          std::__future_base::_State_base::  _M_do_set  (std::function<std::unique_ptr<std::__future_base::_Result_base,std::__future_base::_Result_base::_Deleter> ()>&,  bool&) + 0x27
+[0x2ad487692e20]    pthread_once                                       + 0x50
+[0x7e7b49]          std::__future_base::_Task_state<std::future<std::result_of<marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}& (unsigned long&)>::type> marian::ThreadPool::enqueue<marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}&,unsigned long&>(std::result_of&&,(marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}&)...)::{lambda()#1},std::allocator<int>,void ()>::  _M_run  () + 0x1d9
+[0x7eabc5]          std::_Function_handler<void (),std::future<std::result_of<marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}& (unsigned long&)>::type> marian::ThreadPool::enqueue<marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}&,unsigned long&>(std::result_of&&,(marian::TranslationValidator::validate(std::vector<std::shared_ptr<marian::ExpressionGraph>,std::allocator<std::shared_ptr<marian::ExpressionGraph>>> const&)::{lambda(unsigned long)#1}&)...)::{lambda()#3}>::  _M_invoke  (std::_Any_data const&) + 0x35
+[0x5ba7a7]          marian::ThreadPool::reserve(unsigned long)::{lambda()#1}::  operator()  () const + 0x1a7
+[0x2ad48b6df070]                                                       + 0xb5070
+[0x2ad48768ddd5]                                                       + 0x7dd5
+[0x2ad48bf47b3d]    clone                                              + 0x6d
+
+[2018-12-20 14:25:19] [marian] Marian v1.7.0 56fc65d 2018-11-27 14:12:26 -0800
+[2018-12-20 14:25:19] [marian] Running on exorcism.scream.lab as process 14519 with command line:
+[2018-12-20 14:25:19] [marian] /tools/AmuNMT/marian/latest/bin/marian --model /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz --type transformer --devices 0 1 2 3 --sync-sgd --train-sets /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.ru /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.en --max-length 100 --vocabs /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml --mini-batch-fit --workspace 9500 --valid-freq 5000 --save-freq 5000 --disp-freq 500 --valid-metrics ce-mean-words perplexity translation --valid-sets /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.ru /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.en --valid-script-path /fs7/active/jgwinnup/wmt19/marian/scripts/validate-newstest2014-ruen.sh --valid-translation-output /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.bpe.en.output --quiet-translation --beam-size 12 --normalize 1 --cost-type ce-mean-words --log /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/train.log --valid-log /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.log --valid-mini-batch 64 --overwrite --keep-best --early-stopping 10 --after-epochs 8 --enc-depth 6 --dec-depth 6 --tied-embeddings-all --transformer-dropout 0.1 --label-smoothing 0.1 --learn-rate 0.0003 --lr-warmup 16000 --lr-decay-inv-sqrt 16000 --lr-report --optimizer-params 0.9 0.98 1e-09 --clip-norm 5 --exponential-smoothing
+[2018-12-20 14:25:19] [config] after-batches: 0
+[2018-12-20 14:25:19] [config] after-epochs: 8
+[2018-12-20 14:25:19] [config] allow-unk: false
+[2018-12-20 14:25:19] [config] beam-size: 12
+[2018-12-20 14:25:19] [config] best-deep: false
+[2018-12-20 14:25:19] [config] char-conv-filters-num:
+[2018-12-20 14:25:19] [config]   - 200
+[2018-12-20 14:25:19] [config]   - 200
+[2018-12-20 14:25:19] [config]   - 250
+[2018-12-20 14:25:19] [config]   - 250
+[2018-12-20 14:25:19] [config]   - 300
+[2018-12-20 14:25:19] [config]   - 300
+[2018-12-20 14:25:19] [config]   - 300
+[2018-12-20 14:25:19] [config]   - 300
+[2018-12-20 14:25:19] [config] char-conv-filters-widths:
+[2018-12-20 14:25:19] [config]   - 1
+[2018-12-20 14:25:19] [config]   - 2
+[2018-12-20 14:25:19] [config]   - 3
+[2018-12-20 14:25:19] [config]   - 4
+[2018-12-20 14:25:19] [config]   - 5
+[2018-12-20 14:25:19] [config]   - 6
+[2018-12-20 14:25:19] [config]   - 7
+[2018-12-20 14:25:19] [config]   - 8
+[2018-12-20 14:25:19] [config] char-highway: 4
+[2018-12-20 14:25:19] [config] char-stride: 5
+[2018-12-20 14:25:19] [config] clip-gemm: 0
+[2018-12-20 14:25:19] [config] clip-norm: 5
+[2018-12-20 14:25:19] [config] cost-type: ce-mean-words
+[2018-12-20 14:25:19] [config] cpu-threads: 0
+[2018-12-20 14:25:19] [config] data-weighting-type: sentence
+[2018-12-20 14:25:19] [config] dec-cell: gru
+[2018-12-20 14:25:19] [config] dec-cell-base-depth: 2
+[2018-12-20 14:25:19] [config] dec-cell-high-depth: 1
+[2018-12-20 14:25:19] [config] dec-depth: 6
+[2018-12-20 14:25:19] [config] devices:
+[2018-12-20 14:25:19] [config]   - 0
+[2018-12-20 14:25:19] [config]   - 1
+[2018-12-20 14:25:19] [config]   - 2
+[2018-12-20 14:25:19] [config]   - 3
+[2018-12-20 14:25:19] [config] dim-emb: 512
+[2018-12-20 14:25:19] [config] dim-rnn: 1024
+[2018-12-20 14:25:19] [config] dim-vocabs:
+[2018-12-20 14:25:19] [config]   - 36000
+[2018-12-20 14:25:19] [config]   - 36000
+[2018-12-20 14:25:19] [config] disp-first: 0
+[2018-12-20 14:25:19] [config] disp-freq: 500
+[2018-12-20 14:25:19] [config] disp-label-counts: false
+[2018-12-20 14:25:19] [config] dropout-rnn: 0
+[2018-12-20 14:25:19] [config] dropout-src: 0
+[2018-12-20 14:25:19] [config] dropout-trg: 0
+[2018-12-20 14:25:19] [config] early-stopping: 10
+[2018-12-20 14:25:19] [config] embedding-fix-src: false
+[2018-12-20 14:25:19] [config] embedding-fix-trg: false
+[2018-12-20 14:25:19] [config] embedding-normalization: false
+[2018-12-20 14:25:19] [config] enc-cell: gru
+[2018-12-20 14:25:19] [config] enc-cell-depth: 1
+[2018-12-20 14:25:19] [config] enc-depth: 6
+[2018-12-20 14:25:19] [config] enc-type: bidirectional
+[2018-12-20 14:25:19] [config] exponential-smoothing: 0.0001
+[2018-12-20 14:25:19] [config] grad-dropping-momentum: 0
+[2018-12-20 14:25:19] [config] grad-dropping-rate: 0
+[2018-12-20 14:25:19] [config] grad-dropping-warmup: 100
+[2018-12-20 14:25:19] [config] guided-alignment: none
+[2018-12-20 14:25:19] [config] guided-alignment-cost: ce
+[2018-12-20 14:25:19] [config] guided-alignment-weight: 1
+[2018-12-20 14:25:19] [config] ignore-model-config: false
+[2018-12-20 14:25:19] [config] interpolate-env-vars: false
+[2018-12-20 14:25:19] [config] keep-best: true
+[2018-12-20 14:25:19] [config] label-smoothing: 0.1
+[2018-12-20 14:25:19] [config] layer-normalization: false
+[2018-12-20 14:25:19] [config] learn-rate: 0.0003
+[2018-12-20 14:25:19] [config] log: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/train.log
+[2018-12-20 14:25:19] [config] log-level: info
+[2018-12-20 14:25:19] [config] lr-decay: 0
+[2018-12-20 14:25:19] [config] lr-decay-freq: 50000
+[2018-12-20 14:25:19] [config] lr-decay-inv-sqrt: 16000
+[2018-12-20 14:25:19] [config] lr-decay-repeat-warmup: false
+[2018-12-20 14:25:19] [config] lr-decay-reset-optimizer: false
+[2018-12-20 14:25:19] [config] lr-decay-start:
+[2018-12-20 14:25:19] [config]   - 10
+[2018-12-20 14:25:19] [config]   - 1
+[2018-12-20 14:25:19] [config] lr-decay-strategy: epoch+stalled
+[2018-12-20 14:25:19] [config] lr-report: true
+[2018-12-20 14:25:19] [config] lr-warmup: 16000
+[2018-12-20 14:25:19] [config] lr-warmup-at-reload: false
+[2018-12-20 14:25:19] [config] lr-warmup-cycle: false
+[2018-12-20 14:25:19] [config] lr-warmup-start-rate: 0
+[2018-12-20 14:25:19] [config] max-length: 100
+[2018-12-20 14:25:19] [config] max-length-crop: false
+[2018-12-20 14:25:19] [config] max-length-factor: 3
+[2018-12-20 14:25:19] [config] maxi-batch: 1000
+[2018-12-20 14:25:19] [config] maxi-batch-sort: trg
+[2018-12-20 14:25:19] [config] mini-batch: 1000
+[2018-12-20 14:25:19] [config] mini-batch-fit: true
+[2018-12-20 14:25:19] [config] mini-batch-fit-step: 10
+[2018-12-20 14:25:19] [config] mini-batch-words: 0
+[2018-12-20 14:25:19] [config] model: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 14:25:19] [config] multi-node: false
+[2018-12-20 14:25:19] [config] multi-node-overlap: true
+[2018-12-20 14:25:19] [config] n-best: false
+[2018-12-20 14:25:19] [config] no-nccl: false
+[2018-12-20 14:25:19] [config] no-reload: false
+[2018-12-20 14:25:19] [config] no-restore-corpus: false
+[2018-12-20 14:25:19] [config] no-shuffle: false
+[2018-12-20 14:25:19] [config] normalize: 1
+[2018-12-20 14:25:19] [config] optimizer: adam
+[2018-12-20 14:25:19] [config] optimizer-delay: 1
+[2018-12-20 14:25:19] [config] optimizer-params:
+[2018-12-20 14:25:19] [config]   - 0.9
+[2018-12-20 14:25:19] [config]   - 0.98
+[2018-12-20 14:25:19] [config]   - 1e-09
+[2018-12-20 14:25:19] [config] overwrite: true
+[2018-12-20 14:25:19] [config] quiet: false
+[2018-12-20 14:25:19] [config] quiet-translation: true
+[2018-12-20 14:25:19] [config] relative-paths: false
+[2018-12-20 14:25:19] [config] right-left: false
+[2018-12-20 14:25:19] [config] save-freq: 5000
+[2018-12-20 14:25:19] [config] seed: 0
+[2018-12-20 14:25:19] [config] sentencepiece-alphas:
+[2018-12-20 14:25:19] [config]   []
+[2018-12-20 14:25:19] [config] sentencepiece-max-lines: 10000000
+[2018-12-20 14:25:19] [config] sentencepiece-options: ""
+[2018-12-20 14:25:19] [config] shuffle-in-ram: false
+[2018-12-20 14:25:19] [config] skip: false
+[2018-12-20 14:25:19] [config] sqlite: ""
+[2018-12-20 14:25:19] [config] sqlite-drop: false
+[2018-12-20 14:25:19] [config] sync-sgd: true
+[2018-12-20 14:25:19] [config] tempdir: /tmp
+[2018-12-20 14:25:19] [config] tied-embeddings: false
+[2018-12-20 14:25:19] [config] tied-embeddings-all: true
+[2018-12-20 14:25:19] [config] tied-embeddings-src: false
+[2018-12-20 14:25:19] [config] train-sets:
+[2018-12-20 14:25:19] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.ru
+[2018-12-20 14:25:19] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/corpus.bpe30k.en
+[2018-12-20 14:25:19] [config] transformer-aan-activation: swish
+[2018-12-20 14:25:19] [config] transformer-aan-depth: 2
+[2018-12-20 14:25:19] [config] transformer-aan-nogate: false
+[2018-12-20 14:25:19] [config] transformer-decoder-autoreg: self-attention
+[2018-12-20 14:25:19] [config] transformer-dim-aan: 2048
+[2018-12-20 14:25:19] [config] transformer-dim-ffn: 2048
+[2018-12-20 14:25:19] [config] transformer-dropout: 0.1
+[2018-12-20 14:25:19] [config] transformer-dropout-attention: 0
+[2018-12-20 14:25:19] [config] transformer-dropout-ffn: 0
+[2018-12-20 14:25:19] [config] transformer-ffn-activation: swish
+[2018-12-20 14:25:19] [config] transformer-ffn-depth: 2
+[2018-12-20 14:25:19] [config] transformer-guided-alignment-layer: last
+[2018-12-20 14:25:19] [config] transformer-heads: 8
+[2018-12-20 14:25:19] [config] transformer-no-projection: false
+[2018-12-20 14:25:19] [config] transformer-postprocess: dan
+[2018-12-20 14:25:19] [config] transformer-postprocess-emb: d
+[2018-12-20 14:25:19] [config] transformer-preprocess: ""
+[2018-12-20 14:25:19] [config] transformer-tied-layers:
+[2018-12-20 14:25:19] [config]   []
+[2018-12-20 14:25:19] [config] type: transformer
+[2018-12-20 14:25:19] [config] ulr: false
+[2018-12-20 14:25:19] [config] ulr-dim-emb: 0
+[2018-12-20 14:25:19] [config] ulr-dropout: 0
+[2018-12-20 14:25:19] [config] ulr-keys-vectors: ""
+[2018-12-20 14:25:19] [config] ulr-query-vectors: ""
+[2018-12-20 14:25:19] [config] ulr-softmax-temperature: 1
+[2018-12-20 14:25:19] [config] ulr-trainable-transformation: false
+[2018-12-20 14:25:19] [config] valid-freq: 5000
+[2018-12-20 14:25:19] [config] valid-log: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.log
+[2018-12-20 14:25:19] [config] valid-max-length: 1000
+[2018-12-20 14:25:19] [config] valid-metrics:
+[2018-12-20 14:25:19] [config]   - ce-mean-words
+[2018-12-20 14:25:19] [config]   - perplexity
+[2018-12-20 14:25:19] [config]   - translation
+[2018-12-20 14:25:19] [config] valid-mini-batch: 64
+[2018-12-20 14:25:19] [config] valid-script-path: /fs7/active/jgwinnup/wmt19/marian/scripts/validate-newstest2014-ruen.sh
+[2018-12-20 14:25:19] [config] valid-sets:
+[2018-12-20 14:25:19] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.ru
+[2018-12-20 14:25:19] [config]   - /fs7/active/jgwinnup/wmt19/data/ru-en-wmt18preproc/newstest2014.bpe30k.en
+[2018-12-20 14:25:19] [config] valid-translation-output: /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/valid.bpe.en.output
+[2018-12-20 14:25:19] [config] version: v1.7.0 56fc65d 2018-11-27 14:12:26 -0800
+[2018-12-20 14:25:19] [config] vocabs:
+[2018-12-20 14:25:19] [config]   - /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 14:25:19] [config]   - /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 14:25:19] [config] word-penalty: 0
+[2018-12-20 14:25:19] [config] workspace: 9500
+[2018-12-20 14:25:19] [config] Loaded model has been created with Marian v1.7.0 56fc65d 2018-11-27 14:12:26 -0800
+[2018-12-20 14:25:19] Using synchronous training
+[2018-12-20 14:25:19] [data] Loading vocabulary from JSON/Yaml file /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 14:25:20] [data] Setting vocabulary size for input 0 to 36000
+[2018-12-20 14:25:20] [data] Loading vocabulary from JSON/Yaml file /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/vocab.ruen.yml
+[2018-12-20 14:25:20] [data] Setting vocabulary size for input 1 to 36000
+[2018-12-20 14:25:20] [batching] Collecting statistics for batch fitting with step size 10
+[2018-12-20 14:25:20] [MPI rank 0 out of 1]: GPU[0]
+[2018-12-20 14:25:20] [MPI rank 0 out of 1]: GPU[1]
+[2018-12-20 14:25:20] [MPI rank 0 out of 1]: GPU[2]
+[2018-12-20 14:25:20] [MPI rank 0 out of 1]: GPU[3]
+[2018-12-20 14:25:21] [memory] Extending reserved space to 9600 MB (device gpu0)
+[2018-12-20 14:25:21] [memory] Extending reserved space to 9600 MB (device gpu1)
+[2018-12-20 14:25:22] [memory] Extending reserved space to 9600 MB (device gpu2)
+[2018-12-20 14:25:22] [memory] Extending reserved space to 9600 MB (device gpu3)
+[2018-12-20 14:25:22] [comm] Using NCCL 2.1.15 for GPU communication
+[2018-12-20 14:25:22] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 14:25:23] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 14:25:38] [batching] Done
+[2018-12-20 14:25:38] [MPI rank 0 out of 1]: GPU[0]
+[2018-12-20 14:25:38] [MPI rank 0 out of 1]: GPU[1]
+[2018-12-20 14:25:38] [MPI rank 0 out of 1]: GPU[2]
+[2018-12-20 14:25:38] [MPI rank 0 out of 1]: GPU[3]
+[2018-12-20 14:25:38] [memory] Extending reserved space to 9600 MB (device gpu0)
+[2018-12-20 14:25:38] [memory] Extending reserved space to 9600 MB (device gpu1)
+[2018-12-20 14:25:38] [memory] Extending reserved space to 9600 MB (device gpu2)
+[2018-12-20 14:25:38] [memory] Extending reserved space to 9600 MB (device gpu3)
+[2018-12-20 14:25:38] [comm] Using NCCL 2.1.15 for GPU communication
+[2018-12-20 14:25:38] Loading model from /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 14:25:39] Loading model from /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 14:25:40] Loading model from /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 14:25:40] Loading model from /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 14:25:40] Loading Adam parameters from /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 14:25:42] [memory] Reserving 119 MB, device gpu0
+[2018-12-20 14:25:42] [memory] Reserving 119 MB, device gpu1
+[2018-12-20 14:25:42] [memory] Reserving 119 MB, device gpu2
+[2018-12-20 14:25:42] [memory] Reserving 119 MB, device gpu3
+[2018-12-20 14:25:42] [data] Restoring the corpus state to epoch 1, batch 5000
+[2018-12-20 14:25:42] [data] Shuffling files
+[2018-12-20 14:25:49] [data] Done reading 14381515 sentences
+[2018-12-20 14:26:49] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-20 14:29:12] Training started
+[2018-12-20 14:29:12] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 14:29:12] [memory] Reserving 238 MB, device gpu1
+[2018-12-20 14:29:12] [memory] Reserving 238 MB, device gpu2
+[2018-12-20 14:29:12] [memory] Reserving 238 MB, device gpu3
+[2018-12-20 14:29:12] Loading model from /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 14:29:13] [memory] Reserving 238 MB, device cpu0
+[2018-12-20 14:29:13] [memory] Reserving 59 MB, device gpu0
+[2018-12-20 14:29:13] [memory] Reserving 59 MB, device gpu1
+[2018-12-20 14:29:13] [memory] Reserving 59 MB, device gpu2
+[2018-12-20 14:29:13] [memory] Reserving 59 MB, device gpu3
+[2018-12-20 14:29:13] [memory] Reserving 238 MB, device gpu3
+[2018-12-20 14:29:13] [memory] Reserving 238 MB, device gpu2
+[2018-12-20 14:29:13] [memory] Reserving 238 MB, device gpu1
+[2018-12-20 14:29:13] [memory] Reserving 238 MB, device gpu0
+[2018-12-20 14:33:03] Ep. 1 : Up. 5500 : Sen. 4,851,906 : Cost 5.43163204 : Time 445.23s : 21651.15 words/s : L.r. 1.0313e-04
+[2018-12-20 14:36:59] Ep. 1 : Up. 6000 : Sen. 5,296,175 : Cost 5.27866793 : Time 235.70s : 40814.61 words/s : L.r. 1.1250e-04
+[2018-12-20 14:40:51] Ep. 1 : Up. 6500 : Sen. 5,720,892 : Cost 5.20926237 : Time 231.73s : 40658.25 words/s : L.r. 1.2188e-04
+[2018-12-20 14:44:45] Ep. 1 : Up. 7000 : Sen. 6,178,160 : Cost 5.02283001 : Time 234.18s : 40840.31 words/s : L.r. 1.3125e-04
+[2018-12-20 14:48:37] Ep. 1 : Up. 7500 : Sen. 6,617,154 : Cost 4.94691610 : Time 232.63s : 40550.81 words/s : L.r. 1.4063e-04
+[2018-12-20 14:52:33] Ep. 1 : Up. 8000 : Sen. 7,051,183 : Cost 4.87795305 : Time 235.34s : 41100.60 words/s : L.r. 1.5000e-04
+[2018-12-20 14:56:28] Ep. 1 : Up. 8500 : Sen. 7,485,636 : Cost 4.81335211 : Time 235.51s : 41000.01 words/s : L.r. 1.5938e-04
+[2018-12-20 15:00:22] Ep. 1 : Up. 9000 : Sen. 7,924,511 : Cost 4.69792700 : Time 233.78s : 40424.08 words/s : L.r. 1.6875e-04
+[2018-12-20 15:04:19] Ep. 1 : Up. 9500 : Sen. 8,369,828 : Cost 4.65958309 : Time 236.87s : 40609.22 words/s : L.r. 1.7813e-04
+[2018-12-20 15:08:13] Ep. 1 : Up. 10000 : Sen. 8,826,181 : Cost 4.56644249 : Time 234.11s : 40759.83 words/s : L.r. 1.8750e-04
+[2018-12-20 15:08:13] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 15:08:15] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 15:08:17] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 15:08:21] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 15:08:22] [valid] Ep. 1 : Up. 10000 : ce-mean-words : 4.96781 : new best
+[2018-12-20 15:08:23] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 15:08:24] [valid] Ep. 1 : Up. 10000 : perplexity : 143.711 : new best
+[2018-12-20 15:09:57] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 15:09:59] [valid] Ep. 1 : Up. 10000 : translation : 0 : new best
+[2018-12-20 15:13:53] Ep. 1 : Up. 10500 : Sen. 9,262,995 : Cost 4.50497723 : Time 339.92s : 27918.49 words/s : L.r. 1.9688e-04
+[2018-12-20 15:17:47] Ep. 1 : Up. 11000 : Sen. 9,693,612 : Cost 4.48760462 : Time 233.56s : 40719.67 words/s : L.r. 2.0625e-04
+[2018-12-20 15:21:40] Ep. 1 : Up. 11500 : Sen. 10,124,353 : Cost 4.37203169 : Time 233.89s : 40589.68 words/s : L.r. 2.1563e-04
+[2018-12-20 15:25:35] Ep. 1 : Up. 12000 : Sen. 10,562,541 : Cost 4.29344797 : Time 234.75s : 40874.56 words/s : L.r. 2.2500e-04
+[2018-12-20 15:29:30] Ep. 1 : Up. 12500 : Sen. 11,010,564 : Cost 4.14383316 : Time 234.50s : 40421.17 words/s : L.r. 2.3438e-04
+[2018-12-20 15:33:24] Ep. 1 : Up. 13000 : Sen. 11,448,011 : Cost 3.98036504 : Time 233.93s : 40580.50 words/s : L.r. 2.4375e-04
+[2018-12-20 15:37:17] Ep. 1 : Up. 13500 : Sen. 11,895,352 : Cost 3.83173847 : Time 233.20s : 40964.62 words/s : L.r. 2.5313e-04
+[2018-12-20 15:41:11] Ep. 1 : Up. 14000 : Sen. 12,326,823 : Cost 3.67814088 : Time 234.59s : 40643.08 words/s : L.r. 2.6250e-04
+[2018-12-20 15:45:09] Ep. 1 : Up. 14500 : Sen. 12,788,457 : Cost 3.53664422 : Time 237.44s : 40886.48 words/s : L.r. 2.7188e-04
+[2018-12-20 15:49:03] Ep. 1 : Up. 15000 : Sen. 13,203,783 : Cost 3.52182031 : Time 234.07s : 40493.44 words/s : L.r. 2.8125e-04
+[2018-12-20 15:49:03] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 15:49:04] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 15:49:06] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 15:49:10] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 15:49:11] [valid] Ep. 1 : Up. 15000 : ce-mean-words : 3.39541 : new best
+[2018-12-20 15:49:12] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 15:49:13] [valid] Ep. 1 : Up. 15000 : perplexity : 29.8267 : new best
+[2018-12-20 15:51:13] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 15:51:14] [valid] Ep. 1 : Up. 15000 : translation : 12.89 : new best
+[2018-12-20 15:55:08] Ep. 1 : Up. 15500 : Sen. 13,644,542 : Cost 3.41729164 : Time 365.54s : 25838.93 words/s : L.r. 2.9063e-04
+[2018-12-20 15:59:02] Ep. 1 : Up. 16000 : Sen. 14,079,377 : Cost 3.41925049 : Time 233.44s : 40036.94 words/s : L.r. 3.0000e-04
+[2018-12-20 16:01:31] Seen 14349805 samples
+[2018-12-20 16:01:31] Starting epoch 2
+[2018-12-20 16:01:31] [data] Shuffling files
+[2018-12-20 16:01:38] [data] Done reading 14381515 sentences
+[2018-12-20 16:02:36] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-20 16:04:25] Ep. 2 : Up. 16500 : Sen. 135,240 : Cost 3.32160282 : Time 323.33s : 28167.72 words/s : L.r. 2.9542e-04
+[2018-12-20 16:08:20] Ep. 2 : Up. 17000 : Sen. 586,611 : Cost 3.27777982 : Time 235.07s : 39984.93 words/s : L.r. 2.9104e-04
+[2018-12-20 16:12:15] Ep. 2 : Up. 17500 : Sen. 1,032,431 : Cost 3.28735185 : Time 234.26s : 40580.84 words/s : L.r. 2.8685e-04
+[2018-12-20 16:16:11] Ep. 2 : Up. 18000 : Sen. 1,473,036 : Cost 3.22674966 : Time 236.05s : 40318.14 words/s : L.r. 2.8284e-04
+[2018-12-20 16:20:06] Ep. 2 : Up. 18500 : Sen. 1,912,068 : Cost 3.20659709 : Time 235.24s : 40487.39 words/s : L.r. 2.7899e-04
+[2018-12-20 16:24:03] Ep. 2 : Up. 19000 : Sen. 2,361,464 : Cost 3.18854427 : Time 237.41s : 40705.89 words/s : L.r. 2.7530e-04
+[2018-12-20 16:27:59] Ep. 2 : Up. 19500 : Sen. 2,792,757 : Cost 3.17778420 : Time 235.65s : 40361.69 words/s : L.r. 2.7175e-04
+[2018-12-20 16:31:55] Ep. 2 : Up. 20000 : Sen. 3,231,144 : Cost 3.11908722 : Time 236.50s : 40513.30 words/s : L.r. 2.6833e-04
+[2018-12-20 16:31:55] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 16:31:57] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 16:31:59] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 16:32:03] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 16:32:04] [valid] Ep. 2 : Up. 20000 : ce-mean-words : 2.3852 : new best
+[2018-12-20 16:32:05] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 16:32:06] [valid] Ep. 2 : Up. 20000 : perplexity : 10.8612 : new best
+[2018-12-20 16:32:57] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 16:32:58] [valid] Ep. 2 : Up. 20000 : translation : 24.81 : new best
+[2018-12-20 16:36:53] Ep. 2 : Up. 20500 : Sen. 3,665,650 : Cost 3.12935472 : Time 297.29s : 31716.96 words/s : L.r. 2.6504e-04
+[2018-12-20 16:40:49] Ep. 2 : Up. 21000 : Sen. 4,105,210 : Cost 3.06699991 : Time 236.40s : 40374.01 words/s : L.r. 2.6186e-04
+[2018-12-20 16:44:46] Ep. 2 : Up. 21500 : Sen. 4,537,212 : Cost 3.10330486 : Time 236.71s : 40283.87 words/s : L.r. 2.5880e-04
+[2018-12-20 16:48:41] Ep. 2 : Up. 22000 : Sen. 4,979,870 : Cost 3.04997659 : Time 235.68s : 40327.24 words/s : L.r. 2.5584e-04
+[2018-12-20 16:52:38] Ep. 2 : Up. 22500 : Sen. 5,426,611 : Cost 3.04028058 : Time 236.67s : 40364.64 words/s : L.r. 2.5298e-04
+[2018-12-20 16:56:33] Ep. 2 : Up. 23000 : Sen. 5,868,969 : Cost 3.02186751 : Time 235.14s : 40113.89 words/s : L.r. 2.5022e-04
+[2018-12-20 17:00:32] Ep. 2 : Up. 23500 : Sen. 6,301,744 : Cost 3.03715849 : Time 238.23s : 40767.41 words/s : L.r. 2.4754e-04
+[2018-12-20 17:04:28] Ep. 2 : Up. 24000 : Sen. 6,763,147 : Cost 2.97646260 : Time 236.36s : 40444.91 words/s : L.r. 2.4495e-04
+[2018-12-20 17:08:23] Ep. 2 : Up. 24500 : Sen. 7,177,201 : Cost 3.08878040 : Time 235.04s : 40201.15 words/s : L.r. 2.4244e-04
+[2018-12-20 17:12:19] Ep. 2 : Up. 25000 : Sen. 7,627,776 : Cost 2.96716666 : Time 235.69s : 40272.52 words/s : L.r. 2.4000e-04
+[2018-12-20 17:12:19] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 17:12:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 17:12:22] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 17:12:26] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 17:12:27] [valid] Ep. 2 : Up. 25000 : ce-mean-words : 2.1014 : new best
+[2018-12-20 17:12:28] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 17:12:29] [valid] Ep. 2 : Up. 25000 : perplexity : 8.1776 : new best
+[2018-12-20 17:13:22] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 17:13:23] [valid] Ep. 2 : Up. 25000 : translation : 27.52 : new best
+[2018-12-20 17:17:21] Ep. 2 : Up. 25500 : Sen. 8,073,325 : Cost 2.92839599 : Time 301.90s : 31727.15 words/s : L.r. 2.3764e-04
+[2018-12-20 17:21:18] Ep. 2 : Up. 26000 : Sen. 8,512,892 : Cost 2.93548274 : Time 237.74s : 40287.59 words/s : L.r. 2.3534e-04
+[2018-12-20 17:25:11] Ep. 2 : Up. 26500 : Sen. 8,948,900 : Cost 3.00162816 : Time 232.92s : 40555.03 words/s : L.r. 2.3311e-04
+[2018-12-20 17:29:10] Ep. 2 : Up. 27000 : Sen. 9,416,800 : Cost 2.90655637 : Time 238.41s : 40315.70 words/s : L.r. 2.3094e-04
+[2018-12-20 17:33:05] Ep. 2 : Up. 27500 : Sen. 9,827,000 : Cost 3.00603700 : Time 235.13s : 40346.81 words/s : L.r. 2.2883e-04
+[2018-12-20 17:37:00] Ep. 2 : Up. 28000 : Sen. 10,263,698 : Cost 2.97814727 : Time 235.73s : 40284.22 words/s : L.r. 2.2678e-04
+[2018-12-20 17:40:59] Ep. 2 : Up. 28500 : Sen. 10,710,651 : Cost 2.91617060 : Time 238.96s : 40509.31 words/s : L.r. 2.2478e-04
+[2018-12-20 17:44:56] Ep. 2 : Up. 29000 : Sen. 11,153,065 : Cost 2.91640997 : Time 236.73s : 39858.46 words/s : L.r. 2.2283e-04
+[2018-12-20 17:48:53] Ep. 2 : Up. 29500 : Sen. 11,599,232 : Cost 2.88223100 : Time 236.73s : 40371.43 words/s : L.r. 2.2094e-04
+[2018-12-20 17:52:50] Ep. 2 : Up. 30000 : Sen. 12,020,676 : Cost 2.92382741 : Time 236.98s : 40217.89 words/s : L.r. 2.1909e-04
+[2018-12-20 17:52:50] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 17:52:51] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 17:52:53] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 17:52:57] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 17:52:58] [valid] Ep. 2 : Up. 30000 : ce-mean-words : 1.96448 : new best
+[2018-12-20 17:52:59] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 17:53:00] [valid] Ep. 2 : Up. 30000 : perplexity : 7.1312 : new best
+[2018-12-20 17:53:52] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 17:53:53] [valid] Ep. 2 : Up. 30000 : translation : 28.94 : new best
+[2018-12-20 17:57:51] Ep. 2 : Up. 30500 : Sen. 12,445,220 : Cost 2.91757941 : Time 300.71s : 31843.03 words/s : L.r. 2.1729e-04
+[2018-12-20 18:01:47] Ep. 2 : Up. 31000 : Sen. 12,895,361 : Cost 2.91673017 : Time 236.85s : 40199.87 words/s : L.r. 2.1553e-04
+[2018-12-20 18:05:43] Ep. 2 : Up. 31500 : Sen. 13,343,849 : Cost 2.84462333 : Time 235.46s : 40075.60 words/s : L.r. 2.1381e-04
+[2018-12-20 18:09:41] Ep. 2 : Up. 32000 : Sen. 13,784,437 : Cost 2.89100552 : Time 237.94s : 40204.81 words/s : L.r. 2.1213e-04
+[2018-12-20 18:13:30] Ep. 2 : Up. 32500 : Sen. 14,193,016 : Cost 2.91600394 : Time 229.09s : 39466.66 words/s : L.r. 2.1049e-04
+[2018-12-20 18:14:48] Seen 14339241 samples
+[2018-12-20 18:14:48] Starting epoch 3
+[2018-12-20 18:14:48] [data] Shuffling files
+[2018-12-20 18:14:55] [data] Done reading 14381515 sentences
+[2018-12-20 18:15:55] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-20 18:18:57] Ep. 3 : Up. 33000 : Sen. 279,970 : Cost 2.84831524 : Time 327.67s : 28166.46 words/s : L.r. 2.0889e-04
+[2018-12-20 18:22:55] Ep. 3 : Up. 33500 : Sen. 738,907 : Cost 2.85566807 : Time 237.25s : 40041.07 words/s : L.r. 2.0733e-04
+[2018-12-20 18:26:54] Ep. 3 : Up. 34000 : Sen. 1,163,092 : Cost 2.87270474 : Time 238.87s : 40466.91 words/s : L.r. 2.0580e-04
+[2018-12-20 18:30:50] Ep. 3 : Up. 34500 : Sen. 1,604,005 : Cost 2.84654665 : Time 236.43s : 40424.52 words/s : L.r. 2.0430e-04
+[2018-12-20 18:34:44] Ep. 3 : Up. 35000 : Sen. 2,055,280 : Cost 2.83386707 : Time 233.74s : 40220.23 words/s : L.r. 2.0284e-04
+[2018-12-20 18:34:44] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 18:34:45] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 18:34:47] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 18:34:51] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 18:34:52] [valid] Ep. 3 : Up. 35000 : ce-mean-words : 1.87943 : new best
+[2018-12-20 18:34:53] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 18:34:54] [valid] Ep. 3 : Up. 35000 : perplexity : 6.54976 : new best
+[2018-12-20 18:35:45] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 18:35:46] [valid] Ep. 3 : Up. 35000 : translation : 30.02 : new best
+[2018-12-20 18:39:42] Ep. 3 : Up. 35500 : Sen. 2,517,082 : Cost 2.84721375 : Time 298.44s : 31808.82 words/s : L.r. 2.0140e-04
+[2018-12-20 18:43:40] Ep. 3 : Up. 36000 : Sen. 2,922,617 : Cost 2.86850858 : Time 238.18s : 40335.03 words/s : L.r. 2.0000e-04
+[2018-12-20 18:47:39] Ep. 3 : Up. 36500 : Sen. 3,386,037 : Cost 2.79868937 : Time 239.10s : 40260.53 words/s : L.r. 1.9863e-04
+[2018-12-20 18:51:34] Ep. 3 : Up. 37000 : Sen. 3,817,128 : Cost 2.84252572 : Time 234.74s : 40206.41 words/s : L.r. 1.9728e-04
+[2018-12-20 18:55:32] Ep. 3 : Up. 37500 : Sen. 4,259,472 : Cost 2.82316709 : Time 237.33s : 40122.38 words/s : L.r. 1.9596e-04
+[2018-12-20 18:59:29] Ep. 3 : Up. 38000 : Sen. 4,690,577 : Cost 2.85338569 : Time 237.96s : 40252.28 words/s : L.r. 1.9467e-04
+[2018-12-20 19:03:25] Ep. 3 : Up. 38500 : Sen. 5,131,392 : Cost 2.82313299 : Time 235.04s : 40211.49 words/s : L.r. 1.9340e-04
+[2018-12-20 19:07:22] Ep. 3 : Up. 39000 : Sen. 5,566,654 : Cost 2.84913826 : Time 237.41s : 40439.86 words/s : L.r. 1.9215e-04
+[2018-12-20 19:11:19] Ep. 3 : Up. 39500 : Sen. 6,003,940 : Cost 2.78699040 : Time 237.43s : 40241.14 words/s : L.r. 1.9093e-04
+[2018-12-20 19:15:16] Ep. 3 : Up. 40000 : Sen. 6,454,596 : Cost 2.81403422 : Time 236.73s : 40145.79 words/s : L.r. 1.8974e-04
+[2018-12-20 19:15:16] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 19:15:18] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 19:15:19] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 19:15:23] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 19:15:24] [valid] Ep. 3 : Up. 40000 : ce-mean-words : 1.81766 : new best
+[2018-12-20 19:15:25] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 19:15:26] [valid] Ep. 3 : Up. 40000 : perplexity : 6.15745 : new best
+[2018-12-20 19:16:18] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 19:16:19] [valid] Ep. 3 : Up. 40000 : translation : 30.82 : new best
+[2018-12-20 19:20:15] Ep. 3 : Up. 40500 : Sen. 6,895,102 : Cost 2.80530834 : Time 298.60s : 31900.73 words/s : L.r. 1.8856e-04
+[2018-12-20 19:24:11] Ep. 3 : Up. 41000 : Sen. 7,343,590 : Cost 2.80358982 : Time 236.78s : 40253.03 words/s : L.r. 1.8741e-04
+[2018-12-20 19:28:08] Ep. 3 : Up. 41500 : Sen. 7,781,163 : Cost 2.80015278 : Time 236.08s : 40416.12 words/s : L.r. 1.8628e-04
+[2018-12-20 19:32:05] Ep. 3 : Up. 42000 : Sen. 8,234,348 : Cost 2.77035809 : Time 237.46s : 40286.74 words/s : L.r. 1.8516e-04
+[2018-12-20 19:36:04] Ep. 3 : Up. 42500 : Sen. 8,666,791 : Cost 2.79724813 : Time 239.03s : 40559.33 words/s : L.r. 1.8407e-04
+[2018-12-20 19:39:59] Ep. 3 : Up. 43000 : Sen. 9,101,167 : Cost 2.82952118 : Time 235.29s : 40200.88 words/s : L.r. 1.8300e-04
+[2018-12-20 19:43:57] Ep. 3 : Up. 43500 : Sen. 9,552,323 : Cost 2.78607488 : Time 237.34s : 40059.43 words/s : L.r. 1.8194e-04
+[2018-12-20 19:47:55] Ep. 3 : Up. 44000 : Sen. 9,975,963 : Cost 2.81591153 : Time 237.86s : 40457.98 words/s : L.r. 1.8091e-04
+[2018-12-20 19:51:54] Ep. 3 : Up. 44500 : Sen. 10,417,616 : Cost 2.77882552 : Time 239.86s : 40444.19 words/s : L.r. 1.7989e-04
+[2018-12-20 19:55:50] Ep. 3 : Up. 45000 : Sen. 10,854,984 : Cost 2.81009531 : Time 235.39s : 40375.17 words/s : L.r. 1.7889e-04
+[2018-12-20 19:55:50] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 19:55:52] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 19:55:53] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 19:55:57] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 19:55:58] [valid] Ep. 3 : Up. 45000 : ce-mean-words : 1.77407 : new best
+[2018-12-20 19:55:59] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 19:56:00] [valid] Ep. 3 : Up. 45000 : perplexity : 5.89478 : new best
+[2018-12-20 19:56:52] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 19:56:53] [valid] Ep. 3 : Up. 45000 : translation : 31.15 : new best
+[2018-12-20 20:00:50] Ep. 3 : Up. 45500 : Sen. 11,293,466 : Cost 2.77773428 : Time 300.13s : 31554.00 words/s : L.r. 1.7790e-04
+[2018-12-20 20:04:47] Ep. 3 : Up. 46000 : Sen. 11,739,589 : Cost 2.75961781 : Time 236.93s : 40599.12 words/s : L.r. 1.7693e-04
+[2018-12-20 20:08:42] Ep. 3 : Up. 46500 : Sen. 12,192,258 : Cost 2.77208972 : Time 235.52s : 40144.25 words/s : L.r. 1.7598e-04
+[2018-12-20 20:12:37] Ep. 3 : Up. 47000 : Sen. 12,618,051 : Cost 2.83766174 : Time 235.02s : 40102.50 words/s : L.r. 1.7504e-04
+[2018-12-20 20:16:36] Ep. 3 : Up. 47500 : Sen. 13,059,295 : Cost 2.71826744 : Time 238.44s : 40687.50 words/s : L.r. 1.7411e-04
+[2018-12-20 20:20:34] Ep. 3 : Up. 48000 : Sen. 13,503,124 : Cost 2.77596402 : Time 238.35s : 40437.77 words/s : L.r. 1.7321e-04
+[2018-12-20 20:24:27] Ep. 3 : Up. 48500 : Sen. 13,942,785 : Cost 2.75923514 : Time 233.31s : 40034.24 words/s : L.r. 1.7231e-04
+[2018-12-20 20:28:12] Seen 14339241 samples
+[2018-12-20 20:28:12] Starting epoch 4
+[2018-12-20 20:28:12] [data] Shuffling files
+[2018-12-20 20:28:20] [data] Done reading 14381515 sentences
+[2018-12-20 20:29:19] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-20 20:29:53] Ep. 4 : Up. 49000 : Sen. 1,272 : Cost 2.78436828 : Time 325.12s : 27120.99 words/s : L.r. 1.7143e-04
+[2018-12-20 20:33:46] Ep. 4 : Up. 49500 : Sen. 437,408 : Cost 2.75827837 : Time 233.61s : 40876.70 words/s : L.r. 1.7056e-04
+[2018-12-20 20:37:42] Ep. 4 : Up. 50000 : Sen. 893,719 : Cost 2.72407603 : Time 236.21s : 40027.74 words/s : L.r. 1.6971e-04
+[2018-12-20 20:37:42] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 20:37:44] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 20:37:46] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 20:37:50] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 20:37:51] [valid] Ep. 4 : Up. 50000 : ce-mean-words : 1.74 : new best
+[2018-12-20 20:37:52] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 20:37:53] [valid] Ep. 4 : Up. 50000 : perplexity : 5.69733 : new best
+[2018-12-20 20:38:45] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 20:38:46] [valid] Ep. 4 : Up. 50000 : translation : 31.68 : new best
+[2018-12-20 20:42:43] Ep. 4 : Up. 50500 : Sen. 1,312,407 : Cost 2.78220558 : Time 300.61s : 31951.09 words/s : L.r. 1.6886e-04
+[2018-12-20 20:46:40] Ep. 4 : Up. 51000 : Sen. 1,774,569 : Cost 2.73537779 : Time 237.00s : 40422.86 words/s : L.r. 1.6803e-04
+[2018-12-20 20:50:34] Ep. 4 : Up. 51500 : Sen. 2,203,236 : Cost 2.74206328 : Time 234.25s : 40146.72 words/s : L.r. 1.6722e-04
+[2018-12-20 20:54:30] Ep. 4 : Up. 52000 : Sen. 2,646,386 : Cost 2.76213455 : Time 235.39s : 40373.99 words/s : L.r. 1.6641e-04
+[2018-12-20 20:58:27] Ep. 4 : Up. 52500 : Sen. 3,070,189 : Cost 2.71637154 : Time 237.68s : 40475.95 words/s : L.r. 1.6562e-04
+[2018-12-20 21:02:23] Ep. 4 : Up. 53000 : Sen. 3,502,865 : Cost 2.73974800 : Time 235.88s : 40254.29 words/s : L.r. 1.6483e-04
+[2018-12-20 21:06:19] Ep. 4 : Up. 53500 : Sen. 3,961,112 : Cost 2.75040460 : Time 235.96s : 40448.35 words/s : L.r. 1.6406e-04
+[2018-12-20 21:10:15] Ep. 4 : Up. 54000 : Sen. 4,396,264 : Cost 2.74205828 : Time 235.47s : 40149.19 words/s : L.r. 1.6330e-04
+[2018-12-20 21:14:11] Ep. 4 : Up. 54500 : Sen. 4,842,566 : Cost 2.73014426 : Time 236.17s : 40697.76 words/s : L.r. 1.6255e-04
+[2018-12-20 21:18:08] Ep. 4 : Up. 55000 : Sen. 5,275,833 : Cost 2.75630569 : Time 237.57s : 40622.94 words/s : L.r. 1.6181e-04
+[2018-12-20 21:18:08] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 21:18:10] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 21:18:12] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 21:18:15] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 21:18:16] [valid] Ep. 4 : Up. 55000 : ce-mean-words : 1.71289 : new best
+[2018-12-20 21:18:17] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 21:18:19] [valid] Ep. 4 : Up. 55000 : perplexity : 5.54496 : new best
+[2018-12-20 21:19:11] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 21:19:12] [valid] Ep. 4 : Up. 55000 : translation : 31.87 : new best
+[2018-12-20 21:23:07] Ep. 4 : Up. 55500 : Sen. 5,702,985 : Cost 2.73418427 : Time 298.66s : 31633.20 words/s : L.r. 1.6108e-04
+[2018-12-20 21:27:05] Ep. 4 : Up. 56000 : Sen. 6,162,673 : Cost 2.70698714 : Time 237.45s : 40071.17 words/s : L.r. 1.6036e-04
+[2018-12-20 21:31:00] Ep. 4 : Up. 56500 : Sen. 6,607,308 : Cost 2.74427629 : Time 235.41s : 40110.01 words/s : L.r. 1.5965e-04
+[2018-12-20 21:34:59] Ep. 4 : Up. 57000 : Sen. 7,043,571 : Cost 2.70593596 : Time 239.56s : 40778.43 words/s : L.r. 1.5894e-04
+[2018-12-20 21:38:55] Ep. 4 : Up. 57500 : Sen. 7,467,907 : Cost 2.76186991 : Time 235.72s : 40144.69 words/s : L.r. 1.5825e-04
+[2018-12-20 21:42:54] Ep. 4 : Up. 58000 : Sen. 7,918,520 : Cost 2.70068336 : Time 238.96s : 40505.98 words/s : L.r. 1.5757e-04
+[2018-12-20 21:46:48] Ep. 4 : Up. 58500 : Sen. 8,358,416 : Cost 2.73375440 : Time 233.47s : 40362.47 words/s : L.r. 1.5689e-04
+[2018-12-20 21:50:44] Ep. 4 : Up. 59000 : Sen. 8,809,159 : Cost 2.71431136 : Time 236.33s : 40232.54 words/s : L.r. 1.5623e-04
+[2018-12-20 21:54:41] Ep. 4 : Up. 59500 : Sen. 9,239,038 : Cost 2.74139547 : Time 237.49s : 40478.16 words/s : L.r. 1.5557e-04
+[2018-12-20 21:58:39] Ep. 4 : Up. 60000 : Sen. 9,679,741 : Cost 2.71414185 : Time 237.66s : 40301.06 words/s : L.r. 1.5492e-04
+[2018-12-20 21:58:39] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 21:58:41] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 21:58:42] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 21:58:46] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 21:58:48] [valid] Ep. 4 : Up. 60000 : ce-mean-words : 1.69035 : new best
+[2018-12-20 21:58:48] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 21:58:50] [valid] Ep. 4 : Up. 60000 : perplexity : 5.42135 : new best
+[2018-12-20 21:59:42] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 21:59:43] [valid] Ep. 4 : Up. 60000 : translation : 32.21 : new best
+[2018-12-20 22:03:37] Ep. 4 : Up. 60500 : Sen. 10,124,759 : Cost 2.70511389 : Time 297.44s : 31429.90 words/s : L.r. 1.5428e-04
+[2018-12-20 22:07:32] Ep. 4 : Up. 61000 : Sen. 10,543,435 : Cost 2.75163674 : Time 235.59s : 40201.55 words/s : L.r. 1.5364e-04
+[2018-12-20 22:11:32] Ep. 4 : Up. 61500 : Sen. 11,002,856 : Cost 2.69357228 : Time 239.50s : 40612.63 words/s : L.r. 1.5302e-04
+[2018-12-20 22:15:26] Ep. 4 : Up. 62000 : Sen. 11,447,954 : Cost 2.69115424 : Time 234.65s : 40056.86 words/s : L.r. 1.5240e-04
+[2018-12-20 22:19:24] Ep. 4 : Up. 62500 : Sen. 11,895,179 : Cost 2.72877288 : Time 237.29s : 40591.00 words/s : L.r. 1.5179e-04
+[2018-12-20 22:23:20] Ep. 4 : Up. 63000 : Sen. 12,340,727 : Cost 2.72492814 : Time 236.19s : 40379.86 words/s : L.r. 1.5119e-04
+[2018-12-20 22:27:18] Ep. 4 : Up. 63500 : Sen. 12,771,619 : Cost 2.69588208 : Time 237.75s : 40184.39 words/s : L.r. 1.5059e-04
+[2018-12-20 22:31:13] Ep. 4 : Up. 64000 : Sen. 13,202,947 : Cost 2.74559307 : Time 235.11s : 40340.19 words/s : L.r. 1.5000e-04
+[2018-12-20 22:35:11] Ep. 4 : Up. 64500 : Sen. 13,653,441 : Cost 2.70983553 : Time 238.24s : 40185.64 words/s : L.r. 1.4942e-04
+[2018-12-20 22:39:04] Ep. 4 : Up. 65000 : Sen. 14,077,992 : Cost 2.69829702 : Time 232.92s : 40045.04 words/s : L.r. 1.4884e-04
+[2018-12-20 22:39:04] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 22:39:06] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 22:39:07] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 22:39:11] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 22:39:12] [valid] Ep. 4 : Up. 65000 : ce-mean-words : 1.6713 : new best
+[2018-12-20 22:39:13] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 22:39:14] [valid] Ep. 4 : Up. 65000 : perplexity : 5.31909 : new best
+[2018-12-20 22:40:06] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 22:40:07] [valid] Ep. 4 : Up. 65000 : translation : 32.49 : new best
+[2018-12-20 22:42:37] Seen 14339241 samples
+[2018-12-20 22:42:37] Starting epoch 5
+[2018-12-20 22:42:37] [data] Shuffling files
+[2018-12-20 22:42:44] [data] Done reading 14381515 sentences
+[2018-12-20 22:43:45] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-20 22:45:31] Ep. 5 : Up. 65500 : Sen. 142,378 : Cost 2.71791720 : Time 386.97s : 23191.20 words/s : L.r. 1.4827e-04
+[2018-12-20 22:49:27] Ep. 5 : Up. 66000 : Sen. 578,567 : Cost 2.67184329 : Time 236.67s : 39884.75 words/s : L.r. 1.4771e-04
+[2018-12-20 22:53:25] Ep. 5 : Up. 66500 : Sen. 1,027,002 : Cost 2.69451547 : Time 237.79s : 40449.39 words/s : L.r. 1.4715e-04
+[2018-12-20 22:57:21] Ep. 5 : Up. 67000 : Sen. 1,472,689 : Cost 2.65902758 : Time 235.97s : 39997.71 words/s : L.r. 1.4660e-04
+[2018-12-20 23:01:21] Ep. 5 : Up. 67500 : Sen. 1,913,380 : Cost 2.70684266 : Time 240.27s : 40485.67 words/s : L.r. 1.4606e-04
+[2018-12-20 23:05:19] Ep. 5 : Up. 68000 : Sen. 2,342,677 : Cost 2.70734572 : Time 237.49s : 40099.40 words/s : L.r. 1.4552e-04
+[2018-12-20 23:09:15] Ep. 5 : Up. 68500 : Sen. 2,788,098 : Cost 2.69773698 : Time 236.52s : 40183.66 words/s : L.r. 1.4499e-04
+[2018-12-20 23:13:14] Ep. 5 : Up. 69000 : Sen. 3,238,559 : Cost 2.66693425 : Time 238.54s : 39933.28 words/s : L.r. 1.4446e-04
+[2018-12-20 23:17:10] Ep. 5 : Up. 69500 : Sen. 3,659,724 : Cost 2.68928695 : Time 236.20s : 40140.49 words/s : L.r. 1.4394e-04
+[2018-12-20 23:21:08] Ep. 5 : Up. 70000 : Sen. 4,102,585 : Cost 2.69413233 : Time 237.50s : 40162.19 words/s : L.r. 1.4343e-04
+[2018-12-20 23:21:08] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-20 23:21:09] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-20 23:21:11] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-20 23:21:15] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-20 23:21:16] [valid] Ep. 5 : Up. 70000 : ce-mean-words : 1.65633 : new best
+[2018-12-20 23:21:17] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-20 23:21:18] [valid] Ep. 5 : Up. 70000 : perplexity : 5.24003 : new best
+[2018-12-20 23:22:09] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-20 23:22:10] [valid] Ep. 5 : Up. 70000 : translation : 32.65 : new best
+[2018-12-20 23:26:07] Ep. 5 : Up. 70500 : Sen. 4,545,046 : Cost 2.66071081 : Time 299.49s : 31736.22 words/s : L.r. 1.4292e-04
+[2018-12-20 23:30:06] Ep. 5 : Up. 71000 : Sen. 4,989,256 : Cost 2.71565676 : Time 239.06s : 40164.51 words/s : L.r. 1.4241e-04
+[2018-12-20 23:34:04] Ep. 5 : Up. 71500 : Sen. 5,424,995 : Cost 2.69196892 : Time 237.45s : 40249.36 words/s : L.r. 1.4191e-04
+[2018-12-20 23:38:03] Ep. 5 : Up. 72000 : Sen. 5,863,482 : Cost 2.66924238 : Time 239.00s : 40033.05 words/s : L.r. 1.4142e-04
+[2018-12-20 23:42:00] Ep. 5 : Up. 72500 : Sen. 6,316,262 : Cost 2.68339252 : Time 237.51s : 39893.25 words/s : L.r. 1.4093e-04
+[2018-12-20 23:45:59] Ep. 5 : Up. 73000 : Sen. 6,752,171 : Cost 2.68414426 : Time 238.83s : 40146.50 words/s : L.r. 1.4045e-04
+[2018-12-20 23:49:59] Ep. 5 : Up. 73500 : Sen. 7,203,682 : Cost 2.68545341 : Time 239.69s : 40323.74 words/s : L.r. 1.3997e-04
+[2018-12-20 23:53:55] Ep. 5 : Up. 74000 : Sen. 7,638,876 : Cost 2.71966386 : Time 236.64s : 40120.01 words/s : L.r. 1.3950e-04
+[2018-12-20 23:57:51] Ep. 5 : Up. 74500 : Sen. 8,074,367 : Cost 2.66155839 : Time 235.31s : 39822.63 words/s : L.r. 1.3903e-04
+[2018-12-21 00:01:49] Ep. 5 : Up. 75000 : Sen. 8,502,711 : Cost 2.68503523 : Time 238.71s : 40096.67 words/s : L.r. 1.3856e-04
+[2018-12-21 00:01:49] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 00:01:51] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 00:01:53] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 00:01:56] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 00:01:58] [valid] Ep. 5 : Up. 75000 : ce-mean-words : 1.64263 : new best
+[2018-12-21 00:01:58] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 00:02:00] [valid] Ep. 5 : Up. 75000 : perplexity : 5.16876 : new best
+[2018-12-21 00:02:52] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 00:02:54] [valid] Ep. 5 : Up. 75000 : translation : 32.93 : new best
+[2018-12-21 00:06:51] Ep. 5 : Up. 75500 : Sen. 8,949,135 : Cost 2.67518330 : Time 301.84s : 31613.78 words/s : L.r. 1.3810e-04
+[2018-12-21 00:10:49] Ep. 5 : Up. 76000 : Sen. 9,378,765 : Cost 2.66416764 : Time 237.76s : 40014.04 words/s : L.r. 1.3765e-04
+[2018-12-21 00:14:47] Ep. 5 : Up. 76500 : Sen. 9,829,879 : Cost 2.69505191 : Time 238.02s : 40545.26 words/s : L.r. 1.3720e-04
+[2018-12-21 00:18:44] Ep. 5 : Up. 77000 : Sen. 10,265,747 : Cost 2.68547988 : Time 236.94s : 40077.25 words/s : L.r. 1.3675e-04
+[2018-12-21 00:22:43] Ep. 5 : Up. 77500 : Sen. 10,719,251 : Cost 2.63909626 : Time 238.61s : 40109.27 words/s : L.r. 1.3631e-04
+[2018-12-21 00:26:38] Ep. 5 : Up. 78000 : Sen. 11,131,619 : Cost 2.73115921 : Time 235.71s : 40079.64 words/s : L.r. 1.3587e-04
+[2018-12-21 00:30:37] Ep. 5 : Up. 78500 : Sen. 11,590,008 : Cost 2.64599776 : Time 239.07s : 40274.78 words/s : L.r. 1.3544e-04
+[2018-12-21 00:34:34] Ep. 5 : Up. 79000 : Sen. 12,033,089 : Cost 2.69104362 : Time 237.12s : 40206.02 words/s : L.r. 1.3501e-04
+[2018-12-21 00:38:34] Ep. 5 : Up. 79500 : Sen. 12,486,383 : Cost 2.64712000 : Time 239.41s : 40525.19 words/s : L.r. 1.3459e-04
+[2018-12-21 00:42:29] Ep. 5 : Up. 80000 : Sen. 12,917,811 : Cost 2.69941258 : Time 235.50s : 39851.01 words/s : L.r. 1.3416e-04
+[2018-12-21 00:42:29] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 00:42:31] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 00:42:33] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 00:42:36] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 00:42:37] [valid] Ep. 5 : Up. 80000 : ce-mean-words : 1.62965 : new best
+[2018-12-21 00:42:38] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 00:42:39] [valid] Ep. 5 : Up. 80000 : perplexity : 5.10209 : new best
+[2018-12-21 00:43:32] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 00:43:33] [valid] Ep. 5 : Up. 80000 : translation : 33.07 : new best
+[2018-12-21 00:47:30] Ep. 5 : Up. 80500 : Sen. 13,337,176 : Cost 2.70404649 : Time 300.97s : 31418.68 words/s : L.r. 1.3375e-04
+[2018-12-21 00:51:27] Ep. 5 : Up. 81000 : Sen. 13,780,224 : Cost 2.64362597 : Time 237.10s : 40184.03 words/s : L.r. 1.3333e-04
+[2018-12-21 00:55:18] Ep. 5 : Up. 81500 : Sen. 14,204,357 : Cost 2.68003130 : Time 230.10s : 39306.94 words/s : L.r. 1.3292e-04
+[2018-12-21 00:56:33] Seen 14339241 samples
+[2018-12-21 00:56:33] Starting epoch 6
+[2018-12-21 00:56:33] [data] Shuffling files
+[2018-12-21 00:56:40] [data] Done reading 14381515 sentences
+[2018-12-21 00:57:37] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-21 01:00:44] Ep. 6 : Up. 82000 : Sen. 296,691 : Cost 2.63689923 : Time 326.64s : 28631.31 words/s : L.r. 1.3252e-04
+[2018-12-21 01:04:41] Ep. 6 : Up. 82500 : Sen. 730,923 : Cost 2.67608595 : Time 236.63s : 40065.28 words/s : L.r. 1.3212e-04
+[2018-12-21 01:08:40] Ep. 6 : Up. 83000 : Sen. 1,184,407 : Cost 2.66818285 : Time 238.89s : 40440.05 words/s : L.r. 1.3172e-04
+[2018-12-21 01:12:39] Ep. 6 : Up. 83500 : Sen. 1,604,961 : Cost 2.64380550 : Time 239.15s : 40251.51 words/s : L.r. 1.3132e-04
+[2018-12-21 01:16:36] Ep. 6 : Up. 84000 : Sen. 2,062,293 : Cost 2.65603638 : Time 237.18s : 40112.17 words/s : L.r. 1.3093e-04
+[2018-12-21 01:20:37] Ep. 6 : Up. 84500 : Sen. 2,491,981 : Cost 2.66134381 : Time 241.07s : 40224.64 words/s : L.r. 1.3054e-04
+[2018-12-21 01:24:32] Ep. 6 : Up. 85000 : Sen. 2,932,357 : Cost 2.66432595 : Time 234.91s : 39987.67 words/s : L.r. 1.3016e-04
+[2018-12-21 01:24:32] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 01:24:34] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 01:24:36] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 01:24:39] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 01:24:41] [valid] Ep. 6 : Up. 85000 : ce-mean-words : 1.62033 : new best
+[2018-12-21 01:24:42] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 01:24:43] [valid] Ep. 6 : Up. 85000 : perplexity : 5.05473 : new best
+[2018-12-21 01:25:36] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 01:25:37] [valid] Ep. 6 : Up. 85000 : translation : 33.35 : new best
+[2018-12-21 01:29:34] Ep. 6 : Up. 85500 : Sen. 3,383,594 : Cost 2.60848761 : Time 302.40s : 31359.68 words/s : L.r. 1.2978e-04
+[2018-12-21 01:33:31] Ep. 6 : Up. 86000 : Sen. 3,818,138 : Cost 2.70352197 : Time 236.68s : 40409.09 words/s : L.r. 1.2940e-04
+[2018-12-21 01:37:27] Ep. 6 : Up. 86500 : Sen. 4,256,961 : Cost 2.68422055 : Time 236.04s : 39902.88 words/s : L.r. 1.2902e-04
+[2018-12-21 01:41:26] Ep. 6 : Up. 87000 : Sen. 4,717,561 : Cost 2.63478136 : Time 239.03s : 40157.38 words/s : L.r. 1.2865e-04
+[2018-12-21 01:45:25] Ep. 6 : Up. 87500 : Sen. 5,134,502 : Cost 2.64245725 : Time 238.52s : 40257.64 words/s : L.r. 1.2829e-04
+[2018-12-21 01:49:22] Ep. 6 : Up. 88000 : Sen. 5,587,196 : Cost 2.69649553 : Time 237.19s : 40364.80 words/s : L.r. 1.2792e-04
+[2018-12-21 01:53:19] Ep. 6 : Up. 88500 : Sen. 6,026,228 : Cost 2.61138368 : Time 236.85s : 40044.57 words/s : L.r. 1.2756e-04
+[2018-12-21 01:57:15] Ep. 6 : Up. 89000 : Sen. 6,468,847 : Cost 2.65090966 : Time 236.69s : 39925.02 words/s : L.r. 1.2720e-04
+[2018-12-21 02:01:15] Ep. 6 : Up. 89500 : Sen. 6,907,724 : Cost 2.65120435 : Time 239.54s : 40545.92 words/s : L.r. 1.2684e-04
+[2018-12-21 02:05:12] Ep. 6 : Up. 90000 : Sen. 7,344,873 : Cost 2.66179466 : Time 236.81s : 40022.49 words/s : L.r. 1.2649e-04
+[2018-12-21 02:05:12] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 02:05:13] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 02:05:15] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 02:05:18] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 02:05:20] [valid] Ep. 6 : Up. 90000 : ce-mean-words : 1.61207 : new best
+[2018-12-21 02:05:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 02:05:21] [valid] Ep. 6 : Up. 90000 : perplexity : 5.0132 : new best
+[2018-12-21 02:06:14] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 02:06:15] [valid] Ep. 6 : Up. 90000 : translation : 33.45 : new best
+[2018-12-21 02:10:11] Ep. 6 : Up. 90500 : Sen. 7,777,653 : Cost 2.63783479 : Time 299.34s : 31597.16 words/s : L.r. 1.2614e-04
+[2018-12-21 02:14:08] Ep. 6 : Up. 91000 : Sen. 8,217,220 : Cost 2.68323398 : Time 236.93s : 40323.79 words/s : L.r. 1.2579e-04
+[2018-12-21 02:18:05] Ep. 6 : Up. 91500 : Sen. 8,651,217 : Cost 2.64989090 : Time 237.33s : 39823.31 words/s : L.r. 1.2545e-04
+[2018-12-21 02:22:05] Ep. 6 : Up. 92000 : Sen. 9,107,358 : Cost 2.62132931 : Time 239.69s : 40056.66 words/s : L.r. 1.2511e-04
+[2018-12-21 02:26:04] Ep. 6 : Up. 92500 : Sen. 9,544,985 : Cost 2.65024972 : Time 238.98s : 40338.74 words/s : L.r. 1.2477e-04
+[2018-12-21 02:30:01] Ep. 6 : Up. 93000 : Sen. 9,983,982 : Cost 2.65563154 : Time 236.83s : 40123.97 words/s : L.r. 1.2443e-04
+[2018-12-21 02:33:58] Ep. 6 : Up. 93500 : Sen. 10,426,097 : Cost 2.64143944 : Time 237.21s : 40238.85 words/s : L.r. 1.2410e-04
+[2018-12-21 02:37:54] Ep. 6 : Up. 94000 : Sen. 10,865,680 : Cost 2.63426995 : Time 235.70s : 40079.39 words/s : L.r. 1.2377e-04
+[2018-12-21 02:41:49] Ep. 6 : Up. 94500 : Sen. 11,292,918 : Cost 2.68587971 : Time 235.36s : 39889.89 words/s : L.r. 1.2344e-04
+[2018-12-21 02:45:47] Ep. 6 : Up. 95000 : Sen. 11,736,712 : Cost 2.65808535 : Time 238.20s : 40202.51 words/s : L.r. 1.2312e-04
+[2018-12-21 02:45:47] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 02:45:49] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 02:45:51] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 02:45:54] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 02:45:56] [valid] Ep. 6 : Up. 95000 : ce-mean-words : 1.60471 : new best
+[2018-12-21 02:45:57] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 02:45:58] [valid] Ep. 6 : Up. 95000 : perplexity : 4.9764 : new best
+[2018-12-21 02:46:49] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 02:46:50] [valid] Ep. 6 : Up. 95000 : translation : 33.59 : new best
+[2018-12-21 02:50:50] Ep. 6 : Up. 95500 : Sen. 12,182,280 : Cost 2.63784456 : Time 302.40s : 31782.50 words/s : L.r. 1.2279e-04
+[2018-12-21 02:54:47] Ep. 6 : Up. 96000 : Sen. 12,627,023 : Cost 2.63140345 : Time 237.36s : 40114.40 words/s : L.r. 1.2247e-04
+[2018-12-21 02:58:46] Ep. 6 : Up. 96500 : Sen. 13,065,009 : Cost 2.64978838 : Time 238.53s : 40508.97 words/s : L.r. 1.2216e-04
+[2018-12-21 03:02:43] Ep. 6 : Up. 97000 : Sen. 13,504,846 : Cost 2.64341331 : Time 236.95s : 40297.35 words/s : L.r. 1.2184e-04
+[2018-12-21 03:06:39] Ep. 6 : Up. 97500 : Sen. 13,939,166 : Cost 2.64022040 : Time 235.90s : 40274.01 words/s : L.r. 1.2153e-04
+[2018-12-21 03:10:21] Seen 14339241 samples
+[2018-12-21 03:10:21] Starting epoch 7
+[2018-12-21 03:10:21] [data] Shuffling files
+[2018-12-21 03:10:28] [data] Done reading 14381515 sentences
+[2018-12-21 03:11:22] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-21 03:11:57] Ep. 7 : Up. 98000 : Sen. 14,356 : Cost 2.63856554 : Time 318.89s : 27499.02 words/s : L.r. 1.2122e-04
+[2018-12-21 03:15:53] Ep. 7 : Up. 98500 : Sen. 467,188 : Cost 2.61047816 : Time 235.23s : 40991.29 words/s : L.r. 1.2091e-04
+[2018-12-21 03:19:46] Ep. 7 : Up. 99000 : Sen. 894,354 : Cost 2.67408395 : Time 233.64s : 39701.27 words/s : L.r. 1.2060e-04
+[2018-12-21 03:23:44] Ep. 7 : Up. 99500 : Sen. 1,329,143 : Cost 2.60483909 : Time 237.92s : 40664.05 words/s : L.r. 1.2030e-04
+[2018-12-21 03:27:40] Ep. 7 : Up. 100000 : Sen. 1,780,235 : Cost 2.64579678 : Time 236.15s : 40565.40 words/s : L.r. 1.2000e-04
+[2018-12-21 03:27:40] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 03:27:42] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 03:27:43] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 03:27:47] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 03:27:48] [valid] Ep. 7 : Up. 100000 : ce-mean-words : 1.59712 : new best
+[2018-12-21 03:27:49] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 03:27:50] [valid] Ep. 7 : Up. 100000 : perplexity : 4.93879 : new best
+[2018-12-21 03:28:44] [valid] Ep. 7 : Up. 100000 : translation : 33.59 : stalled 1 times
+[2018-12-21 03:32:42] Ep. 7 : Up. 100500 : Sen. 2,226,958 : Cost 2.61211872 : Time 302.13s : 31899.16 words/s : L.r. 1.1970e-04
+[2018-12-21 03:36:37] Ep. 7 : Up. 101000 : Sen. 2,660,163 : Cost 2.65070724 : Time 234.56s : 40062.43 words/s : L.r. 1.1940e-04
+[2018-12-21 03:40:35] Ep. 7 : Up. 101500 : Sen. 3,090,025 : Cost 2.61651492 : Time 238.34s : 40349.91 words/s : L.r. 1.1911e-04
+[2018-12-21 03:44:31] Ep. 7 : Up. 102000 : Sen. 3,512,815 : Cost 2.62573743 : Time 235.84s : 40538.54 words/s : L.r. 1.1882e-04
+[2018-12-21 03:48:28] Ep. 7 : Up. 102500 : Sen. 3,973,480 : Cost 2.64707947 : Time 236.30s : 40385.64 words/s : L.r. 1.1853e-04
+[2018-12-21 03:52:24] Ep. 7 : Up. 103000 : Sen. 4,414,236 : Cost 2.66870785 : Time 236.38s : 40264.80 words/s : L.r. 1.1824e-04
+[2018-12-21 03:56:21] Ep. 7 : Up. 103500 : Sen. 4,848,474 : Cost 2.59966803 : Time 236.67s : 40473.28 words/s : L.r. 1.1795e-04
+[2018-12-21 04:00:15] Ep. 7 : Up. 104000 : Sen. 5,298,840 : Cost 2.63625622 : Time 234.63s : 40066.76 words/s : L.r. 1.1767e-04
+[2018-12-21 04:04:11] Ep. 7 : Up. 104500 : Sen. 5,724,106 : Cost 2.63807964 : Time 236.09s : 40492.85 words/s : L.r. 1.1739e-04
+[2018-12-21 04:08:10] Ep. 7 : Up. 105000 : Sen. 6,184,473 : Cost 2.58471823 : Time 238.97s : 40433.85 words/s : L.r. 1.1711e-04
+[2018-12-21 04:08:10] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 04:08:12] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 04:08:14] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 04:08:18] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 04:08:19] [valid] Ep. 7 : Up. 105000 : ce-mean-words : 1.59106 : new best
+[2018-12-21 04:08:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 04:08:21] [valid] Ep. 7 : Up. 105000 : perplexity : 4.90894 : new best
+[2018-12-21 04:09:12] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 04:09:13] [valid] Ep. 7 : Up. 105000 : translation : 33.66 : new best
+[2018-12-21 04:13:10] Ep. 7 : Up. 105500 : Sen. 6,618,058 : Cost 2.62854481 : Time 299.52s : 31765.96 words/s : L.r. 1.1683e-04
+[2018-12-21 04:17:03] Ep. 7 : Up. 106000 : Sen. 7,048,841 : Cost 2.66272950 : Time 233.56s : 40165.63 words/s : L.r. 1.1655e-04
+[2018-12-21 04:20:59] Ep. 7 : Up. 106500 : Sen. 7,495,216 : Cost 2.62483215 : Time 235.54s : 40135.05 words/s : L.r. 1.1628e-04
+[2018-12-21 04:24:55] Ep. 7 : Up. 107000 : Sen. 7,921,307 : Cost 2.63796592 : Time 236.02s : 40698.74 words/s : L.r. 1.1601e-04
+[2018-12-21 04:28:53] Ep. 7 : Up. 107500 : Sen. 8,371,908 : Cost 2.60865045 : Time 238.32s : 40334.65 words/s : L.r. 1.1574e-04
+[2018-12-21 04:32:50] Ep. 7 : Up. 108000 : Sen. 8,808,335 : Cost 2.63660622 : Time 236.80s : 40338.65 words/s : L.r. 1.1547e-04
+[2018-12-21 04:36:46] Ep. 7 : Up. 108500 : Sen. 9,258,349 : Cost 2.65535021 : Time 236.22s : 40248.25 words/s : L.r. 1.1520e-04
+[2018-12-21 04:40:43] Ep. 7 : Up. 109000 : Sen. 9,698,758 : Cost 2.63095140 : Time 236.65s : 40706.78 words/s : L.r. 1.1494e-04
+[2018-12-21 04:44:38] Ep. 7 : Up. 109500 : Sen. 10,131,817 : Cost 2.60950685 : Time 235.49s : 40364.77 words/s : L.r. 1.1468e-04
+[2018-12-21 04:48:35] Ep. 7 : Up. 110000 : Sen. 10,580,408 : Cost 2.61388993 : Time 237.01s : 40309.87 words/s : L.r. 1.1442e-04
+[2018-12-21 04:48:35] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 04:48:37] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 04:48:39] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 04:48:43] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 04:48:44] [valid] Ep. 7 : Up. 110000 : ce-mean-words : 1.58498 : new best
+[2018-12-21 04:48:45] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 04:48:46] [valid] Ep. 7 : Up. 110000 : perplexity : 4.87918 : new best
+[2018-12-21 04:49:38] [valid] Ep. 7 : Up. 110000 : translation : 33.58 : stalled 1 times
+[2018-12-21 04:53:32] Ep. 7 : Up. 110500 : Sen. 11,007,787 : Cost 2.65694737 : Time 296.36s : 31791.61 words/s : L.r. 1.1416e-04
+[2018-12-21 04:57:28] Ep. 7 : Up. 111000 : Sen. 11,444,370 : Cost 2.64666486 : Time 235.80s : 40675.77 words/s : L.r. 1.1390e-04
+[2018-12-21 05:01:22] Ep. 7 : Up. 111500 : Sen. 11,882,681 : Cost 2.58083653 : Time 234.66s : 40605.03 words/s : L.r. 1.1364e-04
+[2018-12-21 05:05:17] Ep. 7 : Up. 112000 : Sen. 12,332,695 : Cost 2.60631037 : Time 234.76s : 40410.10 words/s : L.r. 1.1339e-04
+[2018-12-21 05:09:13] Ep. 7 : Up. 112500 : Sen. 12,768,118 : Cost 2.64925003 : Time 235.55s : 40897.67 words/s : L.r. 1.1314e-04
+[2018-12-21 05:13:07] Ep. 7 : Up. 113000 : Sen. 13,221,907 : Cost 2.62479734 : Time 234.78s : 40592.80 words/s : L.r. 1.1289e-04
+[2018-12-21 05:17:03] Ep. 7 : Up. 113500 : Sen. 13,657,838 : Cost 2.63464975 : Time 235.86s : 40736.54 words/s : L.r. 1.1264e-04
+[2018-12-21 05:20:55] Ep. 7 : Up. 114000 : Sen. 14,085,859 : Cost 2.64121222 : Time 231.56s : 40015.13 words/s : L.r. 1.1239e-04
+[2018-12-21 05:23:20] Seen 14339241 samples
+[2018-12-21 05:23:20] Starting epoch 8
+[2018-12-21 05:23:20] [data] Shuffling files
+[2018-12-21 05:23:26] [data] Done reading 14381515 sentences
+[2018-12-21 05:24:24] [data] Done shuffling 14381515 sentences to temp files
+[2018-12-21 05:26:15] Ep. 8 : Up. 114500 : Sen. 144,383 : Cost 2.62739563 : Time 320.24s : 27916.54 words/s : L.r. 1.1214e-04
+[2018-12-21 05:30:13] Ep. 8 : Up. 115000 : Sen. 587,836 : Cost 2.60254216 : Time 238.02s : 40688.08 words/s : L.r. 1.1190e-04
+[2018-12-21 05:30:13] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 05:30:15] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 05:30:16] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 05:30:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 05:30:21] [valid] Ep. 8 : Up. 115000 : ce-mean-words : 1.58001 : new best
+[2018-12-21 05:30:22] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 05:30:23] [valid] Ep. 8 : Up. 115000 : perplexity : 4.855 : new best
+[2018-12-21 05:31:15] [valid] Ep. 8 : Up. 115000 : translation : 33.66 : stalled 2 times
+[2018-12-21 05:35:10] Ep. 8 : Up. 115500 : Sen. 1,035,943 : Cost 2.60061598 : Time 297.31s : 31697.08 words/s : L.r. 1.1166e-04
+[2018-12-21 05:39:07] Ep. 8 : Up. 116000 : Sen. 1,474,438 : Cost 2.60078382 : Time 236.20s : 40545.76 words/s : L.r. 1.1142e-04
+[2018-12-21 05:43:00] Ep. 8 : Up. 116500 : Sen. 1,911,036 : Cost 2.64194059 : Time 233.61s : 40492.12 words/s : L.r. 1.1118e-04
+[2018-12-21 05:46:55] Ep. 8 : Up. 117000 : Sen. 2,341,556 : Cost 2.60679531 : Time 234.56s : 40715.07 words/s : L.r. 1.1094e-04
+[2018-12-21 05:50:49] Ep. 8 : Up. 117500 : Sen. 2,795,403 : Cost 2.63842964 : Time 234.55s : 40470.63 words/s : L.r. 1.1070e-04
+[2018-12-21 05:54:46] Ep. 8 : Up. 118000 : Sen. 3,224,698 : Cost 2.56656575 : Time 236.58s : 40974.54 words/s : L.r. 1.1047e-04
+[2018-12-21 05:58:36] Ep. 8 : Up. 118500 : Sen. 3,686,659 : Cost 2.61598110 : Time 230.16s : 40547.74 words/s : L.r. 1.1024e-04
+[2018-12-21 06:02:31] Ep. 8 : Up. 119000 : Sen. 4,125,664 : Cost 2.63241315 : Time 234.59s : 40658.03 words/s : L.r. 1.1000e-04
+[2018-12-21 06:06:23] Ep. 8 : Up. 119500 : Sen. 4,549,941 : Cost 2.65586615 : Time 231.67s : 40861.89 words/s : L.r. 1.0977e-04
+[2018-12-21 06:10:18] Ep. 8 : Up. 120000 : Sen. 4,996,016 : Cost 2.56937575 : Time 235.50s : 40986.07 words/s : L.r. 1.0954e-04
+[2018-12-21 06:10:18] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 06:10:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 06:10:22] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 06:10:25] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 06:10:26] [valid] Ep. 8 : Up. 120000 : ce-mean-words : 1.57602 : new best
+[2018-12-21 06:10:27] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 06:10:28] [valid] Ep. 8 : Up. 120000 : perplexity : 4.83566 : new best
+[2018-12-21 06:11:19] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 06:11:21] [valid] Ep. 8 : Up. 120000 : translation : 33.79 : new best
+[2018-12-21 06:15:16] Ep. 8 : Up. 120500 : Sen. 5,436,667 : Cost 2.63408637 : Time 297.35s : 32312.47 words/s : L.r. 1.0932e-04
+[2018-12-21 06:19:10] Ep. 8 : Up. 121000 : Sen. 5,868,873 : Cost 2.60505152 : Time 233.93s : 40431.16 words/s : L.r. 1.0909e-04
+[2018-12-21 06:23:02] Ep. 8 : Up. 121500 : Sen. 6,300,915 : Cost 2.60436344 : Time 232.28s : 40797.46 words/s : L.r. 1.0887e-04
+[2018-12-21 06:26:58] Ep. 8 : Up. 122000 : Sen. 6,760,053 : Cost 2.59501219 : Time 236.24s : 41087.08 words/s : L.r. 1.0864e-04
+[2018-12-21 06:30:51] Ep. 8 : Up. 122500 : Sen. 7,207,601 : Cost 2.64054894 : Time 232.76s : 40860.32 words/s : L.r. 1.0842e-04
+[2018-12-21 06:34:44] Ep. 8 : Up. 123000 : Sen. 7,618,281 : Cost 2.63542700 : Time 232.68s : 40821.30 words/s : L.r. 1.0820e-04
+[2018-12-21 06:38:37] Ep. 8 : Up. 123500 : Sen. 8,078,329 : Cost 2.58564210 : Time 233.67s : 40658.56 words/s : L.r. 1.0798e-04
+[2018-12-21 06:42:33] Ep. 8 : Up. 124000 : Sen. 8,518,179 : Cost 2.62660289 : Time 235.36s : 41034.51 words/s : L.r. 1.0776e-04
+[2018-12-21 06:46:26] Ep. 8 : Up. 124500 : Sen. 8,960,813 : Cost 2.60152006 : Time 233.18s : 40243.75 words/s : L.r. 1.0755e-04
+[2018-12-21 06:50:20] Ep. 8 : Up. 125000 : Sen. 9,371,966 : Cost 2.62706041 : Time 234.11s : 41187.87 words/s : L.r. 1.0733e-04
+[2018-12-21 06:50:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 06:50:22] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 06:50:23] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 06:50:27] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 06:50:28] [valid] Ep. 8 : Up. 125000 : ce-mean-words : 1.5715 : new best
+[2018-12-21 06:50:29] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 06:50:30] [valid] Ep. 8 : Up. 125000 : perplexity : 4.81388 : new best
+[2018-12-21 06:51:21] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 06:51:23] [valid] Ep. 8 : Up. 125000 : translation : 33.82 : new best
+[2018-12-21 06:55:17] Ep. 8 : Up. 125500 : Sen. 9,822,090 : Cost 2.63011742 : Time 297.04s : 32352.46 words/s : L.r. 1.0712e-04
+[2018-12-21 06:59:12] Ep. 8 : Up. 126000 : Sen. 10,276,676 : Cost 2.57308269 : Time 234.73s : 40953.08 words/s : L.r. 1.0690e-04
+[2018-12-21 07:03:04] Ep. 8 : Up. 126500 : Sen. 10,731,992 : Cost 2.60832524 : Time 232.58s : 40756.93 words/s : L.r. 1.0669e-04
+[2018-12-21 07:06:57] Ep. 8 : Up. 127000 : Sen. 11,166,395 : Cost 2.62920833 : Time 232.51s : 40901.43 words/s : L.r. 1.0648e-04
+[2018-12-21 07:10:51] Ep. 8 : Up. 127500 : Sen. 11,585,848 : Cost 2.65501261 : Time 234.26s : 40801.11 words/s : L.r. 1.0627e-04
+[2018-12-21 07:14:46] Ep. 8 : Up. 128000 : Sen. 12,042,913 : Cost 2.57785296 : Time 234.73s : 40766.82 words/s : L.r. 1.0607e-04
+[2018-12-21 07:18:41] Ep. 8 : Up. 128500 : Sen. 12,467,380 : Cost 2.61238146 : Time 235.10s : 40878.38 words/s : L.r. 1.0586e-04
+[2018-12-21 07:22:34] Ep. 8 : Up. 129000 : Sen. 12,921,839 : Cost 2.60371089 : Time 232.64s : 40542.32 words/s : L.r. 1.0565e-04
+[2018-12-21 07:26:27] Ep. 8 : Up. 129500 : Sen. 13,380,334 : Cost 2.58218884 : Time 233.24s : 40700.33 words/s : L.r. 1.0545e-04
+[2018-12-21 07:30:18] Ep. 8 : Up. 130000 : Sen. 13,793,402 : Cost 2.65705848 : Time 231.43s : 40739.06 words/s : L.r. 1.0525e-04
+[2018-12-21 07:30:18] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 07:30:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 07:30:22] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
+[2018-12-21 07:30:26] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 07:30:27] [valid] Ep. 8 : Up. 130000 : ce-mean-words : 1.56701 : new best
+[2018-12-21 07:30:28] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 07:30:29] [valid] Ep. 8 : Up. 130000 : perplexity : 4.79232 : new best
+[2018-12-21 07:31:20] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 07:31:21] [valid] Ep. 8 : Up. 130000 : translation : 33.84 : new best
+[2018-12-21 07:35:11] Ep. 8 : Up. 130500 : Sen. 14,208,808 : Cost 2.59376669 : Time 292.33s : 30919.87 words/s : L.r. 1.0505e-04
+[2018-12-21 07:36:21] Seen 14339241 samples
+[2018-12-21 07:36:21] Starting epoch 9
+[2018-12-21 07:36:21] Training finished
+[2018-12-21 07:36:22] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-ce-mean-words.npz
+[2018-12-21 07:36:23] [valid] Ep. 9 : Up. 130654 : ce-mean-words : 1.56655 : new best
+[2018-12-21 07:36:24] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-perplexity.npz
+[2018-12-21 07:36:26] [valid] Ep. 9 : Up. 130654 : perplexity : 4.7901 : new best
+[2018-12-21 07:37:18] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.best-translation.npz
+[2018-12-21 07:37:19] [valid] Ep. 9 : Up. 130654 : translation : 33.89 : new best
+[2018-12-21 07:37:19] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.orig.npz
+[2018-12-21 07:37:21] Saving model weights and runtime parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz
+[2018-12-21 07:37:22] Saving Adam parameters to /fs7/active/jgwinnup/wmt19/marian/ru-en/trans-wmt18preproc-bpe30k/model.npz.optimizer.npz
